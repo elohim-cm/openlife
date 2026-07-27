@@ -1,26 +1,338 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-inverse: var(--surface-inverse);
+
+  --color-heading: var(--heading);
+  --color-heading-secondary: var(--heading-secondary);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-text-inverse: var(--text-inverse);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-contrast: var(--brand-contrast);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-brand: var(--border-brand);
+
+  --color-icon: var(--icon);
+  --color-icon-muted: var(--icon-muted);
+
+  --color-success: var(--success);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-hover: var(--whatsapp-hover);
+
+  --color-overlay: var(--overlay);
+  --color-focus: var(--focus);
+
+  --shadow-header: var(--shadow-header);
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-button: var(--shadow-button);
+  --shadow-floating: var(--shadow-floating);
+  --shadow-phone: var(--shadow-phone);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/*theme clair*/
+
+:root {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --foreground: #272727;
+
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-muted: #f7faf6;
+  --surface-soft: #edf5ea;
+  --surface-inverse: #172018;
+
+  --heading: #165f09;
+  --heading-secondary: #282828;
+  --text: #353535;
+  --text-muted: #555555;
+  --text-subtle: #747474;
+  --text-inverse: #ffffff;
+
+  --brand: #176b0c;
+  --brand-hover: #125a08;
+  --brand-strong: #104f07;
+  --brand-soft: #e8f1e4;
+  --brand-muted: #cfe0c9;
+  --brand-contrast: #ffffff;
+
+  --accent: #dc2c18;
+  --accent-hover: #c72413;
+  --accent-soft: #ffe8e3;
+  --accent-contrast: #ffffff;
+
+  --border: #e2ebe0;
+  --border-strong: #c9d9c4;
+  --border-brand: #a9c7a0;
+
+  --icon: #176b0c;
+  --icon-muted: #c8dbc2;
+
+  --success: #1a790d;
+  --whatsapp: #18cf6a;
+  --whatsapp-hover: #10b95b;
+
+  --overlay: rgb(255 255 255 / 22%);
+  --focus: #176b0c;
+
+  --hero-overlay:
+    linear-gradient(
+      90deg,
+      rgb(255 255 255 / 100%) 0%,
+      rgb(255 255 255 / 98%) 12%,
+      rgb(255 255 255 / 91%) 24%,
+      rgb(255 255 255 / 73%) 38%,
+      rgb(255 255 255 / 39%) 54%,
+      rgb(255 255 255 / 10%) 73%,
+      rgb(255 255 255 / 4%) 100%
+    );
+
+  --hero-radial:
+    radial-gradient(
+      circle at 10% 85%,
+      rgb(255 255 255 / 98%) 0%,
+      rgb(255 255 255 / 76%) 21%,
+      rgb(255 255 255 / 0%) 53%
+    );
+
+  --mobile-app-background:
+    linear-gradient(
+      135deg,
+      #f3f8f4 0%,
+      #edf7ef 52%,
+      #e1f2e4 100%
+    );
+
+  --icon-gradient:
+    linear-gradient(
+      145deg,
+      #ed210e 0%,
+      #ff5120 100%
+    );
+
+  --shadow-header: 0 4px 20px rgb(0 0 0 / 6%);
+  --shadow-card: 0 8px 22px rgb(24 80 13 / 9%);
+  --shadow-card-hover: 0 14px 30px rgb(24 80 13 / 14%);
+  --shadow-button: 0 12px 24px rgb(219 42 24 / 25%);
+  --shadow-floating: 0 8px 22px rgb(0 0 0 / 18%);
+  --shadow-phone: 0 28px 28px rgb(33 70 42 / 22%);
+}
+
+/* theme spmbre*/
+
+.dark {
+  color-scheme: dark;
+
+  --background: #0b100c;
+  --foreground: #f1f5f1;
+
+  --surface: #111813;
+  --surface-elevated: #172019;
+  --surface-muted: #151d16;
+  --surface-soft: #1b291d;
+  --surface-inverse: #f3f7f3;
+
+  --heading: #74c863;
+  --heading-secondary: #f1f5f1;
+  --text: #d9e1da;
+  --text-muted: #b4c0b5;
+  --text-subtle: #929f94;
+  --text-inverse: #101711;
+
+  --brand: #69c157;
+  --brand-hover: #7bd069;
+  --brand-strong: #8fdd7f;
+  --brand-soft: #1d3420;
+  --brand-muted: #294a2e;
+  --brand-contrast: #0c130d;
+
+  --accent: #ff5a3d;
+  --accent-hover: #ff7057;
+  --accent-soft: #40221c;
+  --accent-contrast: #ffffff;
+
+  --border: #263329;
+  --border-strong: #354638;
+  --border-brand: #497e4e;
+
+  --icon: #73cb61;
+  --icon-muted: #426547;
+
+  --success: #71ce60;
+  --whatsapp: #20cf70;
+  --whatsapp-hover: #39dd83;
+
+  --overlay: rgb(4 8 5 / 40%);
+  --focus: #7dd86b;
+
+  --hero-overlay:
+    linear-gradient(
+      90deg,
+      rgb(11 16 12 / 100%) 0%,
+      rgb(11 16 12 / 98%) 12%,
+      rgb(11 16 12 / 92%) 25%,
+      rgb(11 16 12 / 76%) 40%,
+      rgb(11 16 12 / 48%) 57%,
+      rgb(11 16 12 / 24%) 76%,
+      rgb(11 16 12 / 16%) 100%
+    );
+
+  --hero-radial:
+    radial-gradient(
+      circle at 10% 85%,
+      rgb(11 16 12 / 98%) 0%,
+      rgb(11 16 12 / 78%) 22%,
+      rgb(11 16 12 / 0%) 54%
+    );
+
+  --mobile-app-background:
+    linear-gradient(
+      135deg,
+      #111a13 0%,
+      #142117 52%,
+      #192b1d 100%
+    );
+
+  --icon-gradient: linear-gradient( 145deg, #ff4325 0%, #e52e16 100%);
+
+  --shadow-header: 0 4px 22px rgb(0 0 0 / 35%);
+  --shadow-card: 0 8px 24px rgb(0 0 0 / 28%);
+  --shadow-card-hover: 0 16px 32px rgb(0 0 0 / 38%);
+  --shadow-button: 0 12px 26px rgb(255 67 37 / 20%);
+  --shadow-floating: 0 9px 24px rgb(0 0 0 / 45%);
+  --shadow-phone: 0 28px 32px rgb(0 0 0 / 45%);
+}
+
+* { border-color: var(--border); }
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
+
+::selection {
+  color: var(--brand-contrast);
+  background-color: var(--brand);
+}
+
+:focus-visible {outline-color: var(--focus);}
+
+/* Transitions globales limitées aux éléments thématiques. */
+[data-theme-transition] {
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Dégradés utilisant plusieurs variables complexes. */
+.hero-theme-overlay {background: var(--hero-overlay);}
+
+.hero-theme-radial {background: var(--hero-radial);}
+
+.mobile-app-theme-background {background: var(--mobile-app-background);}
+
+.theme-icon-gradient {background: var(--icon-gradient);}
+
+@media (prefers-reduced-motion: reduce) {
+  body, [data-theme-transition] {
+    transition: none;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0;opacity: 0;}
+
+  to {height: var(--radix-accordion-content-height);opacity: 1;}
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height);opacity: 1;}
+
+  to {height: 0;opacity: 0;}
+}
+
+.narrative-fixed-background {
+  background-image: url("/images/narrative/openlife-narrative.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #0c5804;
+}
+
+@media (max-width: 767px) {
+  .narrative-fixed-background {
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+
+.accordion-content[data-state="open"] {
+  animation:accordion-down 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 240ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-content[data-state="open"],
+  .accordion-content[data-state="closed"] { animation-duration: 0ms;}
+}
+
+/* Footer */
+
+.openlife-footer-background {
+  background-color: #176b0c;
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgb(255 255 255 / 7%) 1px,
+      transparent 1.4px
+    ),
+    linear-gradient(
+      135deg,
+      #176b0c 0%,
+      #145f09 48%,
+      #0f5108 100%
+    );
+
+  background-size: 22px 22px, 100% 100%;
 }

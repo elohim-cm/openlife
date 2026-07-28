@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-} from "react";
+import {useEffect,useState,useMemo} from "react";
 
 type useTypeLoopOptions = {
   phrases: readonly string[];
@@ -28,38 +25,29 @@ export function useTypeLoop({
   holdDuration = 2_200,
   reduceMotion = false,
 }: useTypeLoopOptions): useTypeLoopReturn {
-  const [phraseIndex, setPhraseIndex] =
-    useState(0);
-
-  const [
-    characterIndex,
-    setCharacterIndex,
-  ] = useState(0);
-
-  const currentPhrase =
-    phrases[phraseIndex] ?? "";
-
-  const isComplete =
-    characterIndex >= currentPhrase.length;
+  const [phraseIndex, setPhraseIndex] =useState(0);
+  const [characterIndex,setCharacterIndex,] = useState(0);
+  const phrasesSignature = useMemo(() => phrases.join("\u0000"),[phrases],);
 
   useEffect(() => {
-    if (
-      phrases.length === 0 ||
-      reduceMotion ||
-      !enabled
-    ) {
+    setPhraseIndex(0);
+    setCharacterIndex(0);
+  }, [phrasesSignature]);
+
+  const currentPhrase =phrases[phraseIndex] ?? "";
+
+  const isComplete =characterIndex >= currentPhrase.length;
+
+  useEffect(() => {
+    if (phrases.length === 0 ||reduceMotion ||!enabled) {
       return;
     }
 
     const timer = window.setTimeout(
       () => {
         if (isComplete) {
-          setPhraseIndex(
-            (currentIndex) => {
-              return (
-                (currentIndex + 1) %
-                phrases.length
-              );
+          setPhraseIndex((currentIndex) => {
+              return ((currentIndex + 1) %phrases.length);
             },
           );
 
@@ -68,16 +56,13 @@ export function useTypeLoop({
         }
 
         setCharacterIndex(
-          (currentIndex) =>
-            Math.min(
+          (currentIndex) => Math.min(
               currentIndex + 1,
               currentPhrase.length,
             ),
         );
       },
-      isComplete
-        ? holdDuration
-        : typingSpeed,
+      isComplete? holdDuration: typingSpeed,
     );
 
     return () => {

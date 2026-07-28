@@ -210,7 +210,7 @@ function ExperienceImage({item,direction,}: AnimatedPartProps) {
             transition={{duration: 0.65,ease: [0.22,1,0.36,1,],}}
             className="absolute inset-0"
           >
-            <Image src={item.imageSrc} alt={item.imageAlt} fill sizes=" (max-width: 1023px) 92vw, 55vw " className="object-contain"/>
+            <Image src={item.imageSrc} alt={item.imageAlt} fill sizes=" (max-width: 1023px) 92vw, 55vw "/>
           </motion.div>
         </AnimatePresence>
       </div>

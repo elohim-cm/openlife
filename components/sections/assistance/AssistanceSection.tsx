@@ -3,12 +3,48 @@
 import {motion,useReducedMotion,} from "framer-motion";
 
 import { AssistanceCard } from "./AssistanceCard";
-import {ASSISTANCE_CONTACTS,} from "./assistance.data";
+import {ASSISTANCE_CONTACTS,ASSISTANCE_PHONE,type AssistanceContact,type BusinessPartner,} from "./assistance.data";
 import { BusinessCard } from "./BusinessCard";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export function AssistanceSection() {
-  const shouldReduceMotion = useReducedMotion();
-  const reduceMotion = Boolean(shouldReduceMotion,);
+  const content = useSiteContent();
+  const reduceMotion = Boolean(useReducedMotion());
+  const contacts:
+    readonly AssistanceContact[] =
+      ASSISTANCE_CONTACTS.map(
+        (definition, index) => {
+          const translation =
+            content.assistance.contacts[index];
+
+          const href =
+            definition.id === "whatsapp"
+              ? `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(
+                  content.whatsapp.generalMessage,
+                )}`
+              : definition.href;
+
+          return {
+            ...definition,
+            href,
+            title: translation?.title ?? "",
+            description:
+              translation?.description ?? "",
+            value: translation?.value ?? "",
+            status: translation?.status ?? "",
+            ariaLabel:
+              translation?.ariaLabel ?? "",
+          };
+        },
+      );
+
+  const businessPartner: BusinessPartner = {
+    title: content.assistance.business.title,
+    description:content.assistance.business.description,
+    buttonLabel:content.assistance.business.buttonLabel,
+    buttonAriaLabel:content.assistance.business.buttonAriaLabel,
+    href: `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(content.whatsapp.businessMessage,)}`,
+  };
 
   return (
     <section id="assistance" aria-labelledby="assistance-title"
@@ -61,7 +97,7 @@ export function AssistanceSection() {
               sm:text-[38px]
               lg:text-[42px]
             "
-          >Besoin d’Assistance ?</h2>
+          >{content.assistance.title}</h2>
 
           <div aria-hidden="true"
             className="
@@ -86,11 +122,11 @@ export function AssistanceSection() {
             lg:gap-[27px]
           "
         >
-          {ASSISTANCE_CONTACTS.map((contact, index) => (<AssistanceCard key={contact.id} contact={contact} index={index} reduceMotion={reduceMotion}/>),)}
+          {contacts.map((contact, index) => (<AssistanceCard key={contact.id} contact={contact} index={index} reduceMotion={reduceMotion}/>),)}
         </div>
 
         <div className="mt-[64px]">
-          <BusinessCard reduceMotion={reduceMotion}/>
+          <BusinessCard reduceMotion={reduceMotion} partner={businessPartner} />
         </div>
       </div>
     </section>

@@ -62,7 +62,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
         "
       >{contact.description}</p>
 
-      <a href={contact.href} target={ isExternalLink ? "_blank" : undefined } rel={ isExternalLink? "noreferrer" : undefined }
+      <a href={contact.href} aria-label={contact.ariaLabel} target={ isExternalLink ? "_blank" : undefined } rel={ isExternalLink? "noreferrer" : undefined }
         className="
           mt-[20px]
           inline-flex min-h-10
@@ -73,7 +73,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
           leading-[1.35]
           text-heading-secondary
           transition-colors
-          duration-200
+          duration-500
           hover:text-brand
           focus-visible:outline-none
           focus-visible:ring-2

@@ -6,38 +6,26 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { useRef } from "react";
-
 import { useTypeLoop } from "@/hooks/useTypeLoop";
-
-import {
-  NARRATIVE_CONFIG,
-  NARRATIVE_PHRASES,
-} from "./narrative.data";
+import {NARRATIVE_CONFIG} from "./narrative.data";
 import { NarrativeDeco } from "./NarrativeDeco";
+import { useLocale } from "@/hooks/useLocale";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export function NarrativeSection() {
-  const sectionRef =
-    useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const { locale } = useLocale();
+  const content = useSiteContent();
 
-  const isInView = useInView(
-    sectionRef,
-    {
-      amount: 0.25,
-    },
-  );
+  const isInView = useInView(sectionRef,{amount: 0.25,},);
 
-  const shouldReduceMotion =
-    useReducedMotion();
-
-  const reduceMotion = Boolean(
-    shouldReduceMotion,
-  );
+  const reduceMotion = Boolean(useReducedMotion(),);
 
   const {
     currentPhrase,
     characterIndex,
   } = useTypeLoop({
-    phrases: NARRATIVE_PHRASES,
+    phrases: content.narrative.phrases,
     enabled: isInView,
     typingSpeed:
       NARRATIVE_CONFIG.typingSpeed,

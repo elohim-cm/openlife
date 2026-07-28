@@ -5,7 +5,7 @@ import {
   motion,
   useReducedMotion,
 } from "framer-motion";
-
+import { useSiteContent } from "@/hooks/useSiteContent";
 import { useAutoRotation } from "@/hooks/useAutoRotation";
 
 import {
@@ -118,13 +118,20 @@ function PhoneCard({
 
 export function RotatingPhones() {
   const reduceMotion = useReducedMotion();
-
+  const content = useSiteContent();
+  const screens: readonly MobileAppScreen[] =
+    MOBILE_APP_SCREENS.map((screen, index) => ({
+      ...screen,
+      alt:
+        content.mobileApp.screens[index]?.alt ??
+        "",
+    }));
   const {
     activeIndex,
     pause,
     resume,
   } = useAutoRotation({
-    itemsCount: MOBILE_APP_SCREENS.length,
+    itemsCount: screens.length,
     interval: 2000,
     enabled: !reduceMotion,
   });
@@ -143,11 +150,11 @@ export function RotatingPhones() {
         lg:h-[640px]
       "
     >
-      {MOBILE_APP_SCREENS.map((screen, index) => {
+      {screens.map((screen, index) => {
         const relativePosition = getRelativePosition(
           index,
           activeIndex,
-          MOBILE_APP_SCREENS.length,
+          screens.length,
         );
 
         const position =
@@ -156,7 +163,7 @@ export function RotatingPhones() {
 
         return (
           <PhoneCard
-            key={screen.id}
+            key={`${screen.id}-${screen.alt}`}
             screen={screen}
             position={position}
             reduceMotion={Boolean(reduceMotion)}

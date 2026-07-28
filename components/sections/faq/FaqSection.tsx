@@ -2,13 +2,28 @@
 
 import {motion,useReducedMotion,} from "framer-motion";
 import {Accordion,} from "@/components/ui/accordion";
+import { useLocale } from "@/hooks/useLocale";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 import { FaqItem } from "./FaqItem";
-import { FAQ_ITEMS } from "./faq.data";
+import { FaqItem as FaqItemType } from "./faq.data";
 
 export function FaqSection() {
-  const shouldReduceMotion = useReducedMotion();
+  const content = useSiteContent();
+  const { locale } = useLocale();
 
+  const reduceMotion = Boolean(useReducedMotion(),);
+
+  const items: readonly FaqItemType[] =
+    content.faq.items.map((item, index) => ({
+      id: item.id,
+      number: index + 1,
+      question: item.question,
+      answer: item.answer,
+      details:"details" in item ? item.details : undefined,
+    }));
+
+  
   return (
     <section id="faq" aria-labelledby="faq-title" className="
         relative overflow-hidden
@@ -43,10 +58,10 @@ export function FaqSection() {
         "
       >
         <motion.header
-          initial={shouldReduceMotion? false: {opacity: 0,y: 24,}}
+          initial={reduceMotion? false: {opacity: 0,y: 24,}}
           whileInView={{opacity: 1,y: 0,}}
           viewport={{once: true,amount: 0.6,}}
-          transition={{duration: shouldReduceMotion? 0: 0.6,ease: [0.22, 1, 0.36, 1],}}
+          transition={{duration: reduceMotion? 0: 0.6,ease: [0.22, 1, 0.36, 1],}}
           className="text-center"
         >
           <h2 id="faq-title" className="
@@ -57,7 +72,7 @@ export function FaqSection() {
               sm:text-[36px]
               lg:text-[40px]
             "
-          >Comprendre Open Life</h2>
+          >{content.faq.title}</h2>
 
           <div aria-hidden="true" className="
               mt-[9px] flex
@@ -75,7 +90,7 @@ export function FaqSection() {
               text-text-muted
               sm:text-[15px]
             "
-          >Réponses à vos interrogations essentielles</p>
+          >{content.faq.subtitle}</p>
         </motion.header>
 
         <Accordion type="single" collapsible className="
@@ -84,12 +99,12 @@ export function FaqSection() {
             space-y-[13px]
             sm:mt-[58px]
           "
-        >{FAQ_ITEMS.map((item, index) => (
+        >{items.map((item, index) => (
             <motion.div key={item.id} 
-              initial={shouldReduceMotion? false: {opacity: 0,y: 20,}}
+              initial={reduceMotion? false: {opacity: 0,y: 20,}}
               whileInView={{opacity: 1,y: 0,}}
               viewport={{once: true,amount: 0.25,}}
-              transition={{duration: shouldReduceMotion? 0: 0.45,delay: shouldReduceMotion? 0: index * 0.055,ease: [0.22, 1, 0.36, 1],}}
+              transition={{duration: reduceMotion? 0: 0.45,delay: reduceMotion? 0: index * 0.055,ease: [0.22, 1, 0.36, 1],}}
             >
               <FaqItem item={item} />
             </motion.div>

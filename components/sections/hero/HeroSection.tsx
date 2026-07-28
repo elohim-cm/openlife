@@ -72,11 +72,11 @@ export function HeroSection() {
       aria-labelledby="hero-title"
       className="
         relative isolate flex
-        min-h-[780px] w-full
+        min-h-195 w-full
         overflow-hidden
         bg-background
-        lg:h-[100svh]
-        lg:min-h-[820px]
+        lg:h-svh
+        lg:min-h-205
       "
     >
       <Image
@@ -88,7 +88,7 @@ export function HeroSection() {
         className="
           -z-30 object-cover
           object-[63%_center]
-          motion-safe:animate-[hero-image-reveal_1.3s_ease-out_both]
+          motion-safe:animate-[hero-image-reveal_1.3s_ease-[cubic-bezier(0.22,1,0.36,1)]_both]
           md:object-center
         "
       />
@@ -124,17 +124,11 @@ export function HeroSection() {
           items-center
           px-5 pb-20 pt-[130px]
           sm:px-8
-          lg:px-0
           lg:pb-16
           lg:pt-[110px]
         "
       >
-        <div
-          className="
-            relative z-10
-            w-full max-w-[620px]
-          "
-        >
+        <div className="relative z-10 w-full max-w-[800px]">
           <div
             className="
               hero-reveal
@@ -256,33 +250,19 @@ export function HeroSection() {
             className="
               hero-reveal
               hero-reveal-delay-4
-              mt-[31px]
+              mt-7.75
               flex flex-wrap
-              gap-[14px]
-              sm:gap-[22px]
+              gap-3.5
+              sm:gap-5.5
             "
           >
             {content.hero.features.map(
               (feature) => {
-                const Icon =
-                  HERO_FEATURE_ICONS[
-                    feature.id
-                  ];
-
-                if (!Icon) {
-                  return null;
-                }
+                const Icon =HERO_FEATURE_ICONS[feature.id];
+                if (!Icon) {return null;}
 
                 return (
-                  <HeroFeatureCard
-                    key={
-                      feature.id
-                    }
-                    icon={Icon}
-                    label={
-                      feature.label
-                    }
-                  />
+                  <HeroFeatureCard key={feature.id} icon={Icon} label={feature.label}/>
                 );
               },
             )}
@@ -292,37 +272,32 @@ export function HeroSection() {
             className="
               hero-reveal
               hero-reveal-delay-5
-              mt-[38px]
+              mt-9.5
               flex flex-wrap
               items-center
-              gap-[15px]
+              gap-3.75
             "
           >
             <Link
-              href={
-                HERO_LINKS.simulation
-              }
-              aria-label={
-                content.hero.actions
-                  .simulationLabel
-              }
+              href={HERO_LINKS.simulation}
+              aria-label={content.hero.actions.simulationLabel}
               className="
                 group inline-flex
-                min-h-[58px]
+                min-h-14.5
                 items-center
                 justify-center
-                gap-[10px]
+                gap-2.5
                 rounded-full
                 bg-accent
-                px-[30px]
+                px-7.5
                 text-[15px]
                 font-bold
                 text-accent-contrast
                 shadow-button
                 transition-[background-color,transform,box-shadow]
-                duration-200
-                ease-out
-                hover:-translate-y-0.5
+                duration-500
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                hover:-translate-y-1
                 hover:bg-accent-hover
                 focus-visible:outline-none
                 focus-visible:ring-2
@@ -334,9 +309,10 @@ export function HeroSection() {
               <FaUser
                 aria-hidden="true"
                 className="
-                  size-[14px]
+                  size-3.5
                   transition-transform
-                  duration-200
+                  duration-500
+                  ease-[cubic-bezier(0.22,1,0.36,1)]
                   group-hover:scale-110
                 "
               />
@@ -372,11 +348,12 @@ export function HeroSection() {
                 text-brand
                 backdrop-blur-[2px]
                 transition-[background-color,color,transform]
-                duration-200
-                ease-out
-                hover:-translate-y-0.5
+                duration-500
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                hover:-translate-y-1
                 hover:bg-brand
                 hover:text-brand-contrast
+                hover:shadow-card
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-focus
@@ -412,7 +389,7 @@ export function HeroSection() {
           rounded-full
           text-heading-secondary
           transition-colors
-          duration-200
+          duration-500
           hover:bg-surface/50
           focus-visible:outline-none
           focus-visible:ring-2

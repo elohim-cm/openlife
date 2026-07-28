@@ -371,7 +371,7 @@ export const fr = {
         description:
           "Envoyez-nous vos documents ou vos demandes détaillées par courrier électronique.",
         value:
-          "support.openlife@acamvie.com",
+          "elohimwarren.cm@gmail.com",
         status:
           "Traitement prioritaire",
         ariaLabel:
@@ -392,11 +392,9 @@ export const fr = {
   },
 
   footer: {
-    homeLabel:
-      "Retour à l’accueil Open Life",
+    homeLabel: "Retour à l’accueil Open Life",
     logoAlt: "Open Life",
-    tagline:
-      "Votre assurance, simplifiée.",
+    tagline:"Votre assurance, simplifiée.",
 
     countriesTitle: "Pays",
     countries: [
@@ -405,44 +403,39 @@ export const fr = {
         name: "Cameroun",
       },
       {
-        id:
-          "central-african-republic",
-        name:
-          "République centrafricaine",
+        id:"central-african-republic",
+        name:"RCA",
       },
     ],
 
     legalTitle: "Légal",
-    privacyPolicy:
-      "Politique de confidentialité",
-    privacyPolicyLabel:
-      "Consulter la politique de confidentialité Open Life",
+    privacyPolicy:"Politique de confidentialité",
+    privacyAriaLabel:"Consulter la politique de confidentialité Open Life",
 
     socialTitle: "Suivez-nous",
-    followOn:
-      "Suivre Open Life sur {{network}}",
 
     socialNetworks: [
       {
         id: "facebook",
         name: "Facebook",
+        ariaLabel:"Suivre Open Life sur Facebook",
       },
       {
         id: "linkedin",
         name: "LinkedIn",
+        ariaLabel:"Suivre Open Life sur LinkedIn",
       },
       {
         id: "twitter",
         name: "Twitter",
+        ariaLabel:"Suivre Open Life sur Twitter",
       },
     ],
 
-    legalText:
-      "Open Life est la propriété d’ACAM Vie S.A, société anonyme au capital social de 5 000 000 000 FCFA, régie par le Code des Assurances et agréée par le Ministère des Finances camerounais et la CIMA. Tous droits réservés, N° 320 210 1354 du 27/04/2021, OAPI, Yaoundé, Cameroun.",
+    legalNotice:"Open Life est la propriété d’ACAM Vie S.A, société anonyme au capital social de 5 000 000 000 FCFA, régie par le Code des Assurances et agréée par le Ministère des Finances camerounais et la CIMA. Tous droits réservés, N° 320 210 1354 du 27/04/2021, OAPI, Yaoundé, Cameroun.",
 
-    copyright:
-      "ACAM Vie. Tous droits réservés.",
-    developedBy:
-      "Développé par",
+    copyright:"ACAM Vie. Tous droits réservés.",
+    developedBy:"Développé par",
+    developerAriaLabel:"Visiter le site d'ELOHIM",
   },
 } as const;

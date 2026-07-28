@@ -3,6 +3,7 @@
 import {
   type PropsWithChildren,
   useCallback,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -15,24 +16,46 @@ import type {
 } from "@/types/theme";
 import {
   applyTheme,
-  THEME_COOKIE_MAX_AGE,
-  THEME_COOKIE_NAME,
-  THEME_STORAGE_KEY,
+  DEFAULT_THEME,
+  getStoredTheme,
+  getSystemTheme,
+  storeTheme,
 } from "@/utils/theme";
 
 type ThemeProviderProps =
-  PropsWithChildren<{
-    initialTheme: Theme;
-  }>;
+  PropsWithChildren;
 
 export function ThemeProvider({
-  initialTheme,
   children,
 }: ThemeProviderProps) {
   const [theme, setThemeState] =
     useState<Theme>(
-      initialTheme,
+      DEFAULT_THEME,
     );
+
+  useEffect(() => {
+    const storedTheme =
+      getStoredTheme();
+
+    const resolvedTheme =
+      storedTheme ??
+      getSystemTheme();
+
+    setThemeState(
+      resolvedTheme,
+    );
+
+    applyTheme(
+      resolvedTheme,
+    );
+
+    /* Si aucune préférence n’existait, on enregistre le thème système.*/
+    if (!storedTheme) {
+      storeTheme(
+        resolvedTheme,
+      );
+    }
+  }, []);
 
   const persistTheme =
     useCallback(
@@ -40,25 +63,7 @@ export function ThemeProvider({
         nextTheme: Theme,
       ): void => {
         applyTheme(nextTheme);
-
-        document.cookie = [
-          `${THEME_COOKIE_NAME}=${nextTheme}`,
-          "Path=/",
-          `Max-Age=${THEME_COOKIE_MAX_AGE}`,
-          "SameSite=Lax",
-        ].join("; ");
-
-        try {
-          window.localStorage.setItem(
-            THEME_STORAGE_KEY,
-            nextTheme,
-          );
-        } catch {
-          /*
-           * Le cookie et le thème visuel
-           * restent fonctionnels.
-           */
-        }
+        storeTheme(nextTheme);
       },
       [],
     );
@@ -77,14 +82,19 @@ export function ThemeProvider({
   const toggleTheme =
     useCallback((): void => {
       setThemeState(
-        (currentTheme) => {
+        (
+          currentTheme,
+        ) => {
           const nextTheme:
             Theme =
-            currentTheme === "dark"
-              ? "light"
-              : "dark";
+              currentTheme ===
+              "dark"
+                ? "light"
+                : "dark";
 
-          persistTheme(nextTheme);
+          persistTheme(
+            nextTheme,
+          );
 
           return nextTheme;
         },

@@ -33,13 +33,15 @@ export function FloatingWhatsApp() {
       )}
 
       <motion.a
-        href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={label} title={label} whileHover={
-          shouldReduceMotion? undefined : { y: -4, scale: 1.05, }
-        }
-        whileTap={ 
-          shouldReduceMotion? undefined: {scale: 0.94,}
-        }
-        className=" relative flex size-14 items-center justify-center rounded-full border border-white/30 bg-whatsapp text-white shadow-floating transition-colors duration-200 hover:bg-whatsapp-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-3 sm:size-14.5"
+        href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={label} title={label} whileHover={shouldReduceMotion? undefined : { y: -4, scale: 1.05, }}
+        whileTap={ shouldReduceMotion? undefined: {scale: 0.94,}}
+        className=" relative flex size-14 items-center justify-center rounded-full border border-white/30 bg-whatsapp text-white shadow-floating transition-colors duration-500 hover:bg-whatsapp-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-3 sm:size-14.5"
+        transition={{
+          type: "spring",
+          stiffness: 150,
+          damping: 18,
+          mass: 0.85,
+        }}
       >
         <FaWhatsapp aria-hidden="true" className="size-7" />
       </motion.a>

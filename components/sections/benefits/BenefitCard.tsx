@@ -17,7 +17,7 @@ export function BenefitCard({benefit,}: BenefitCardProps) {
         text-center
         shadow-card
         transition-[transform,box-shadow,border-color]
-        duration-300 ease-out
+        duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
         hover:-translate-y-1
         hover:border-border-brand
         hover:shadow-card-hover
@@ -38,7 +38,7 @@ export function BenefitCard({benefit,}: BenefitCardProps) {
           shadow-button
           transition-transform
           duration-300
-          ease-out
+          ease-[cubic-bezier(0.22,1,0.36,1)]
           group-hover:scale-[1.04]
         "
       >

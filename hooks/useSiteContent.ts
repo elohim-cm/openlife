@@ -2,22 +2,13 @@
 
 import { useMemo } from "react";
 
-import {
-  getSiteContent,
-  type SiteContent,
-} from "@/i18n/content";
-import {
-  useLocale,
-} from "@/hooks/useLocale";
+import {getSiteContent,type SiteContent} from "@/i18n/content";
+import {useLocale} from "@/hooks/useLocale";
 
-export function useSiteContent():
-  SiteContent {
-  const { locale } =
-    useLocale();
+export function useSiteContent():SiteContent {
+  const { locale } = useLocale();
 
-  return useMemo(
-    () =>
-      getSiteContent(
+  return useMemo(() => getSiteContent(
         locale,
       ),
     [locale],

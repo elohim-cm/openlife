@@ -14,20 +14,16 @@ export function HeroFeatureCard({
       className="
         flex h-[49px] items-center gap-[13px]
         rounded-[11px] border border-border-brand
-        bg-surface/30 px-[22px]
-        text-[#343434]
+        bg-surface/30 px-5.5
         backdrop-blur-[2px]
         transition-[background-color,border-color,transform]
-        duration-200 ease-out
-        hover:-translate-y-0.5
+        duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+        hover:-translate-y-1
         hover:border-[#8cad81]
         hover:bg-surface/50
       "
     >
-      <Icon
-        aria-hidden="true"
-        className="size-[19px] shrink-0 text-[#176809]"
-      />
+      <Icon aria-hidden="true" className="size-4.75 shrink-0 text-[#176809]"/>
 
       <span className="whitespace-nowrap text-[14px] font-medium leading-none">
         {label}

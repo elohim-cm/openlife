@@ -62,7 +62,7 @@ export function ThemeToggle({
           absolute
           transition-all
           duration-300
-          ease-out
+          ease-[cubic-bezier(0.22,1,0.36,1)]
           ${
             isDark
               ? "rotate-90 scale-0 opacity-0"
@@ -81,7 +81,7 @@ export function ThemeToggle({
           absolute
           transition-all
           duration-300
-          ease-out
+          ease-[cubic-bezier(0.22,1,0.36,1)]
           ${
             isDark
               ? "rotate-0 scale-100 opacity-100"

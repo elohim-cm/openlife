@@ -1,69 +1,66 @@
-import type {Metadata} from "next";
-import {cookies} from "next/headers";
-import {Poppins} from "next/font/google";
-import type {ReactNode} from "react";
-
-import {I18nProvider} from "@/components/i18n/i18nProvider";
-import {FloatingWhatsApp} from "@/components/layout/FloatingWhatsApp";
-import {ThemeProvider} from "@/components/theme/ThemeProvider";
-import {DEFAULT_LOCALE,LOCALE_COOKIE_NAME} from "@/i18n/config";
-import {isLocale} from "@/types/i18n";
-import type {Theme} from "@/types/theme";
-import {isTheme,THEME_COOKIE_NAME} from "@/utils/theme";
+import type {Metadata,} from "next";
+import Script from "next/script";
+import {Poppins,} from "next/font/google";
+import type {ReactNode,} from "react";
+import {I18nProvider,} from "@/components/i18n/i18nProvider";
+import {FloatingWhatsApp,} from "@/components/layout/FloatingWhatsApp";
+import {ThemeProvider,} from "@/components/theme/ThemeProvider";
+import {DEFAULT_LOCALE,} from "@/i18n/config";
+import {getSiteContent,} from "@/i18n/content";
 
 import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: [
-    "400",
-    "500",
-    "600",
-    "700",
-  ],
+  weight: ["400","500","600","700",],
   display: "swap",
   variable: "--font-poppins",
 });
 
-export const metadata:
-  Metadata = {
-    title: "OpenLife",
-    description:
-      "Digital daily savings - Épargne journalière digitale",
+const defaultContent =getSiteContent(DEFAULT_LOCALE,);
+
+export const metadata:Metadata = {
+    title:defaultContent.metadata.title,
+    description:defaultContent.metadata.description,
+    openGraph: {
+      title:defaultContent.metadata.title,
+      description:defaultContent.metadata.description,
+      type: "website",
+    },
   };
 
-type RootLayoutProps = Readonly<{children: ReactNode;}>;
+type RootLayoutProps =
+  Readonly<{
+    children: ReactNode;
+  }>;
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: RootLayoutProps) {
-  const cookieStore = await cookies();
-  const storedLocale = cookieStore.get(LOCALE_COOKIE_NAME)?.value;
-  const initialLocale = isLocale(storedLocale)? storedLocale: DEFAULT_LOCALE;
-  const storedTheme =cookieStore.get(THEME_COOKIE_NAME)?.value;
-
-  const initialTheme:
-    Theme =
-    isTheme(storedTheme)
-      ? storedTheme
-      : "light";
-
-  const htmlThemeClass =
-    initialTheme === "dark"
-      ? "dark scheme-dark"
-      : "scheme-light";
-
   return (
     <html
-      lang={initialLocale}
-      data-locale={initialLocale}
-      data-theme={initialTheme}
-      suppressHydrationWarning className={htmlThemeClass}
-      style={{colorScheme:initialTheme,}}
+      lang={DEFAULT_LOCALE}
+      data-locale={DEFAULT_LOCALE}
+      data-theme="light"
+      suppressHydrationWarning
+      className="scheme-light"
+      style={{colorScheme: "light",}}
     >
-      <body className={`${poppins.variable} bg-background font--font-poppins text-foreground antialiased`}>
-        <I18nProvider initialLocale={initialLocale}>
-          <ThemeProvider initialTheme={initialTheme}>
+      <head>
+        <Script id="openlife-local-storage" strategy="beforeInteractive" />
+      </head>
+
+      <body
+        className={`
+          ${poppins.variable}
+          bg-background
+          font-[var(--font-poppins)]
+          text-foreground
+          antialiased
+        `}
+      >
+        <I18nProvider>
+          <ThemeProvider>
             {children}
             <FloatingWhatsApp />
           </ThemeProvider>

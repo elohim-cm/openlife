@@ -375,7 +375,7 @@ export const en = {
         description:
           "Send us your documents or detailed enquiries by email.",
         value:
-          "support.openlife@acamvie.com",
+          "elohimwarren.cm@gmail.com",
         status:
           "Priority processing",
         ariaLabel:
@@ -396,11 +396,9 @@ export const en = {
   },
 
   footer: {
-    homeLabel:
-      "Return to the Open Life homepage",
+    homeLabel:"Return to the Open Life homepage",
     logoAlt: "Open Life",
-    tagline:
-      "Your insurance, simplified.",
+    tagline:"Your insurance, simplified.",
 
     countriesTitle: "Countries",
     countries: [
@@ -409,44 +407,40 @@ export const en = {
         name: "Cameroon",
       },
       {
-        id:
-          "central-african-republic",
-        name:
-          "Central African Republic",
+        id:"central-african-republic",
+        name:"CAR",
       },
     ],
 
     legalTitle: "Legal",
-    privacyPolicy:
-      "Privacy policy",
-    privacyPolicyLabel:
-      "Read the Open Life privacy policy",
+    privacyPolicy:"Privacy policy",
+    privacyAriaLabel:"Read the Open Life privacy policy",
 
     socialTitle: "Follow us",
-    followOn:
-      "Follow Open Life on {{network}}",
 
     socialNetworks: [
       {
         id: "facebook",
         name: "Facebook",
+        ariaLabel:"Follow Open Life on Facebook",
+
       },
       {
         id: "linkedin",
         name: "LinkedIn",
+        ariaLabel:"Follow Open Life on LinkedIn",
       },
       {
         id: "twitter",
         name: "Twitter",
+        ariaLabel:"Follow Open Life on Twitter",
       },
     ],
 
-    legalText:
-      "Open Life is owned by ACAM Vie S.A, a public limited company with share capital of 5,000,000,000 FCFA, governed by the Insurance Code and approved by the Cameroonian Ministry of Finance and CIMA. All rights reserved, No. 320 210 1354 of 27/04/2021, OAPI, Yaoundé, Cameroon.",
+    legalNotice:"Open Life is owned by ACAM Vie S.A, a public limited company with share capital of 5,000,000,000 FCFA, governed by the Insurance Code and approved by the Cameroonian Ministry of Finance and CIMA. All rights reserved, No. 320 210 1354 of 27/04/2021, OAPI, Yaoundé, Cameroon.",
 
-    copyright:
-      "ACAM Vie. All rights reserved.",
-    developedBy:
-      "Developed by",
+    copyright:"ACAM Vie. All rights reserved.",
+    developedBy:"Developed by",
+    developerAriaLabel:"Visit the ELOHIM website",
   },
 } as const;

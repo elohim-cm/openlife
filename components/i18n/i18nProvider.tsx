@@ -38,19 +38,15 @@ export function I18nProvider({initialLocale,children,}: I18nProviderProps) {
 
   const [i18nInstance] = useState(() => {const instance = createInstance();
 
-      void instance .use(initReactI18next) .init({
-          resources:I18N_RESOURCES,
-          lng: initialLocale,
-          fallbackLng: "fr",
-          supportedLngs: [
-            "fr",
-            "en",
-          ],
-          defaultNS:"translation",
-          interpolation: {escapeValue: false,},
-          react: {useSuspense: false,},
-          initImmediate: false,
-        });
+    instance .use(initReactI18next) .init({
+        resources: I18N_RESOURCES,
+        lng: initialLocale,
+        fallbackLng: "fr",
+        supportedLngs: ["fr", "en"],
+        defaultNS: "translation",
+        interpolation: { escapeValue: false },
+        react: { useSuspense: false },
+      } as any);
 
       return instance;
     });

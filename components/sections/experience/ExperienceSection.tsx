@@ -27,7 +27,7 @@ export function ExperienceSection() {
       );
     }, [content.experience.items,]);
 
-  const {sectionRef,activeIndex,direction,} = useScrollStory({stepsCount:experienceItems.length,});
+  const {sectionRef,activeIndex,direction,progress} = useScrollStory({stepsCount:experienceItems.length,});
 
   const activeItem =experienceItems[activeIndex];
 
@@ -90,30 +90,24 @@ export function ExperienceSection() {
               lg:pt-[60px]
             "
           >
-            <div className="
-                order-2 w-full
-                lg:order-1
-                lg:pl-[10px]
-              "
-            >
-              <div className="
+            <div className="order-2 w-full lg:order-1 lg:pl-[10px]">
+              <div
+                className="
                   relative
                   min-h-[260px]
+                  pl-[45px]
+                  sm:pl-[52px]
                   lg:min-h-[310px]
                 "
               >
-                <ExperienceText 
-                  item={ activeItem} 
-                  direction={direction}
-                />
+                <ExperienceProgress progress={progress} stepsCount={experienceItems.length}/>
+
+                <ExperienceText item={activeItem} direction={direction}/>
               </div>
             </div>
 
             <div className=" order-1 w-full lg:order-2">
-              <ExperienceImage 
-                item={activeItem}
-                direction={direction}
-              />
+              <ExperienceImage item={activeItem} direction={direction}/>
             </div>
           </div>
         </div>
@@ -127,59 +121,152 @@ type AnimatedPartProps = {
   direction: 1 | -1;
 };
 
-function ExperienceText({item,direction,}: AnimatedPartProps) {
-  const textDistance = 70;
+function ExperienceText({
+  item,
+  direction,
+}: AnimatedPartProps) {
+  const textDistance = 72;
 
   return (
-    <AnimatePresence initial={false} mode="wait" custom={direction}>
-      <motion.div key={`${item.id}-${item.title}`} custom={direction}
-        initial={{opacity: 0,y:direction === 1? textDistance: -textDistance,}}
-        animate={{opacity: 1,y: 0,}}
-        exit={{opacity: 0,y:direction === 1? -textDistance: textDistance,}}
-        transition={{duration: 0.55,ease: [0.22,1,0.36,1,],}}
-        className="
-          absolute inset-0
-          flex flex-col
-          justify-center
-        "
+    <div
+      className="
+        relative
+        min-h-[260px]
+        overflow-hidden
+        lg:min-h-[310px]
+      "
+    >
+      <AnimatePresence
+        initial={false}
+        mode="wait"
+        custom={direction}
       >
-        <h3 className="
-            text-[27px]
-            font-bold
-            leading-[1.2]
-            tracking-[-0.025em]
-            text-heading-secondary
-            sm:text-[30px]
+        <motion.div
+          key={item.id}
+          custom={direction}
+          initial={{
+            opacity: 0,
+            y:
+              direction === 1
+                ? textDistance
+                : -textDistance,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          exit={{
+            opacity: 0,
+            y:
+              direction === 1
+                ? -textDistance
+                : textDistance,
+          }}
+          transition={{
+            duration: 0.72,
+            ease: [
+              0.22,
+              1,
+              0.36,
+              1,
+            ],
+          }}
+          className="
+            absolute inset-0
+            flex flex-col
+            justify-center
           "
-        >{item.title}</h3>
+        >
+          <h3
+            className="
+              text-[27px]
+              font-bold
+              leading-[1.2]
+              tracking-[-0.025em]
+              text-heading-secondary
+              sm:text-[30px]
+              lg:text-[31px]
+            "
+          >
+            {item.title}
+          </h3>
 
-        <div className=" mt-[17px] flex items-start gap-[20px] ">
-          <div aria-hidden="true" className=" flex w-[15px] shrink-0 flex-col items-center pt-[4px] " >
-            <span className="
-                size-[11px]
-                rounded-full
-                bg-brand
-                shadow-card
-              "
-            />
-
-            {Array.from({length: 4,}).map((_, index) => (
-                <span key={index} className="mt-[7px] size-[7px] rounded-full  bg-icon-muted " />
-              ),
-            )}
-          </div>
-
-          <p className="
-              max-w-[400px]
+          <p
+            className="
+              mt-[22px]
+              max-w-[470px]
               text-[15px]
-              leading-[1.55]
+              leading-[1.65]
               text-text-muted
               sm:text-[16px]
+              lg:text-[17px]
             "
           >{item.description}</p>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+type ExperienceProgressProps = {progress: number;stepsCount: number;};
+function ExperienceProgress({progress,stepsCount,}: ExperienceProgressProps) {
+  const dotsCount =Math.max(stepsCount,1,);
+  const activeDotIndex = Math.min(
+      Math.round(
+        progress *
+          (dotsCount - 1),
+      ),
+      dotsCount - 1,
+    );
+
+  return (
+    <div
+      aria-hidden="true"
+      className="
+        absolute left-0 top-1/2
+        z-20
+        flex -translate-y-1/2
+        flex-col items-center
+        gap-[10px]
+      "
+    >
+      {Array.from({
+        length: dotsCount,
+      }).map((_, index) => {
+        const isActive = index === activeDotIndex;
+        const isPassed = index < activeDotIndex;
+
+        return (
+          <span key={index} className={`
+              block rounded-full
+              transition-[width,height,background-color,box-shadow,opacity]
+              duration-500
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${
+                isActive
+                  ? `
+                    size-[15px]
+                    bg-brand
+                    opacity-100
+                    shadow-[0_3px_10px_rgba(23,107,12,0.38)]
+                  `
+                  : isPassed
+                    ? `
+                      size-[8px]
+                      bg-brand/55
+                      opacity-90
+                    `
+                    : `
+                      size-[8px]
+                      bg-icon-muted
+                      opacity-100
+                    `
+              }
+            `}
+          />
+        );
+      })}
+    </div>
   );
 }
 

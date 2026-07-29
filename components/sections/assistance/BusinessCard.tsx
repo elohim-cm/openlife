@@ -59,7 +59,7 @@ export function BusinessCard({partner,reduceMotion,}: BusinessCardProps) {
       />
 
       <div className="relative z-10 flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-6">
-        <div className="flex size-[48px] shrink-0 items-center justify-center rounded-[13px] bg-accent-soft text-accent">
+        <div className="flex size-[48px] shrink-0 items-center justify-center rounded-[13px] bg-cta-soft text-accent">
           <FaBriefcase
             aria-hidden="true"
             className="size-[23px]"

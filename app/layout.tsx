@@ -1,6 +1,6 @@
 import type {Metadata,} from "next";
 import Script from "next/script";
-import {Poppins,} from "next/font/google";
+import {Poppins, Inter } from "next/font/google";
 import type {ReactNode,} from "react";
 import {I18nProvider,} from "@/components/i18n/i18nProvider";
 import {FloatingWhatsApp,} from "@/components/layout/FloatingWhatsApp";
@@ -9,6 +9,9 @@ import {DEFAULT_LOCALE,} from "@/i18n/config";
 import {getSiteContent,} from "@/i18n/content";
 
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,7 +46,7 @@ export default function RootLayout({
       data-locale={DEFAULT_LOCALE}
       data-theme="light"
       suppressHydrationWarning
-      className="scheme-light"
+      className={cn("scheme-light", "font-sans", inter.variable)}
       style={{colorScheme: "light",}}
     >
       <head>
@@ -54,7 +57,7 @@ export default function RootLayout({
         className={`
           ${poppins.variable}
           bg-background
-          font-[var(--font-poppins)]
+          font-(--font-poppins)
           text-foreground
           antialiased
         `}

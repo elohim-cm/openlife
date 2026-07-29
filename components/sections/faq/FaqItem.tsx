@@ -70,7 +70,7 @@ export function FaqItem({item,}: FaqItemProps) {
             duration-300
             group-hover:scale-105
             group-data-[state=open]:rotate-180
-            group-data-[state=open]:bg-accent
+            group-data-[state=open]:bg-cta
           "
         >
           <span

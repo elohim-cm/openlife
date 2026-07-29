@@ -20,14 +20,14 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
       viewport={{once: true,amount: 0.3,}}
       transition={{duration: reduceMotion? 0: 0.55,delay: reduceMotion? 0: index * 0.1,ease: [0.22, 1, 0.36, 1],}}
       whileHover={reduceMotion? undefined: {y: -7,}}
-      className="group relative flex min-h-[360px] w-full flex-col items-center overflow-hidden rounded-[20px] border border-border bg-surface-elevated px-6 pb-8 pt-[37px] text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:min-h-[380px] lg:min-h-[405px] "
+      className="group relative flex min-h-90 w-full flex-col items-center overflow-hidden rounded-[20px] border border-border bg-surface-elevated px-6 pb-8 pt-9.25 text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:min-h-95 lg:min-h-101.25 "
     >
-      <div aria-hidden="true" className=" pointer-events-none absolute left-1/2 top-0 size-[190px] -translate-x-1/2 -translate-y-[65%] rounded-full bg-brand-soft/65 blur-[45px] transition-transform duration-500 group-hover:scale-125"/>
+      <div aria-hidden="true" className=" pointer-events-none absolute left-1/2 top-0 size-47.5 -translate-x-1/2 -translate-y-65% rounded-full bg-brand-soft/65 blur-[45px] transition-transform duration-500 group-hover:scale-125"/>
 
       <div
         className="
           relative z-10
-          flex size-[68px]
+          flex size-17
           items-center justify-center
           rounded-[17px]
           bg-surface-muted
@@ -38,12 +38,12 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
           group-hover:bg-brand-soft
         "
       >
-        <Icon aria-hidden="true" className={` size-[22px] ${contact.accentClassName} `}/>
+        <Icon aria-hidden="true" className={` size-5.5 ${contact.accentClassName} `}/>
       </div>
 
       <h3
         className="
-          mt-[44px]
+          mt-11
           text-[21px] font-bold
           leading-tight
           text-heading
@@ -53,8 +53,8 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
 
       <p
         className="
-          mt-[27px]
-          max-w-[270px]
+          mt-6.75
+          max-w-67.5
           text-[14px]
           leading-[1.55]
           text-text-muted
@@ -64,7 +64,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
 
       <a href={contact.href} aria-label={contact.ariaLabel} target={ isExternalLink ? "_blank" : undefined } rel={ isExternalLink? "noreferrer" : undefined }
         className="
-          mt-[20px]
+          mt-5
           inline-flex min-h-10
           max-w-full items-center
           justify-center rounded-lg
@@ -87,7 +87,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
 
       <p
         className="
-          mt-[13px]
+          mt-3.25
           text-[11px] font-bold
           uppercase
           tracking-[0.065em]

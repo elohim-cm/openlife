@@ -288,17 +288,17 @@ export function HeroSection() {
                 justify-center
                 gap-2.5
                 rounded-full
-                bg-accent
+                bg-cta
                 px-7.5
                 text-[15px]
                 font-bold
-                text-accent-contrast
+                text-cta-contrast
                 shadow-button
                 transition-[background-color,transform,box-shadow]
                 duration-500
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 hover:-translate-y-1
-                hover:bg-accent-hover
+                hover:bg-cta-hover
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-focus

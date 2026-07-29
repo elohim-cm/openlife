@@ -7,8 +7,7 @@ export function BenefitCard({benefit,}: BenefitCardProps) {
 
   return (
     <article className="
-        group relative flex
-        min-h-[252px] w-full
+        group relative flex w-full
         flex-col items-center
         rounded-[18px]
         border border-border

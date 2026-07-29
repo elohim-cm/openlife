@@ -115,7 +115,7 @@ export function MobileAppSection() {
                     }}
                     className="flex items-start gap-[15px]"
                   >
-                    <div className="theme-icon-gradient flex size-[52px] shrink-0 items-center justify-center rounded-full text-accent-contrast shadow-button">
+                    <div className="theme-icon-gradient flex size-[52px] shrink-0 items-center justify-center rounded-full text-cta-contrast shadow-button">
                       <Icon
                         aria-hidden="true"
                         className="size-[20px]"

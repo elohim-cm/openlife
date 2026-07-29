@@ -77,19 +77,7 @@ export function Footer() {
             : 0.7,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="
-          relative z-10
-          mx-auto
-          w-[calc(100%-40px)]
-          max-w-[1520px]
-          pb-[28px]
-          pt-[54px]
-          sm:w-[calc(100%-64px)]
-          sm:pb-[30px]
-          sm:pt-[60px]
-          lg:w-[80%]
-        "
-      >
+        className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-380 pb-7 pt-13.5 sm:w-[calc(100%-64px)] sm:pb-7.5 sm:pt-15 lg:w-[80%]">
         <div
           className="
             grid grid-cols-1
@@ -98,7 +86,7 @@ export function Footer() {
             sm:gap-x-16
             sm:gap-y-12
             lg:grid-cols-[1.85fr_0.95fr_1fr_0.85fr]
-            lg:gap-[72px]
+            lg:gap-18
           "
         >
           <div>
@@ -109,7 +97,7 @@ export function Footer() {
               }
               className="
                 relative block
-                h-[82px] w-[155px]
+                h-20.5 w-38.75
                 rounded-md
                 focus-visible:outline-none
                 focus-visible:ring-2
@@ -120,23 +108,15 @@ export function Footer() {
             >
               <Image
                 src="/images/branding/openlife-logo.webp"
-                alt={
-                  content.footer.logoAlt
-                }
-                fill
-                priority={false}
-                sizes="155px"
-                className="
-                  object-contain
-                  object-left
-                  brightness-0 invert
-                "
+                alt={content.footer.logoAlt} fill
+                priority={false} sizes="155px"
+                className="object-contain object-left brightness-0 invert"
               />
             </Link>
 
             <p
               className="
-                mt-[18px]
+                mt-4.5
                 text-[16px]
                 font-medium
                 leading-[1.45]
@@ -164,13 +144,13 @@ export function Footer() {
               {content.footer.countriesTitle}
             </h2>
 
-            <ul className="mt-[27px] space-y-[7px]">
+            <ul className="mt-6.75 space-y-1.75">
               {countries.map((country) => (
                 <li
                   key={country.id}
                   className="
                     flex items-center
-                    gap-[9px]
+                    gap-2.25
                     text-[15px]
                     leading-none
                     text-white/95
@@ -180,8 +160,8 @@ export function Footer() {
                   <span
                     aria-hidden="true"
                     className="
-                      flex h-[21px]
-                      w-[27px]
+                      flex h-5.25
+                      w-6.75
                       items-center
                       overflow-hidden
                       text-[21px]
@@ -223,10 +203,10 @@ export function Footer() {
                 content.footer.privacyAriaLabel
               }
               className="
-                mt-[27px]
+                mt-6.75
                 inline-flex
                 text-[15px]
-                leading-[1.5]
+                leading-normal
                 text-white/90
                 underline-offset-4
                 transition-colors
@@ -265,11 +245,7 @@ export function Footer() {
             </h2>
 
             <ul
-              className="
-                mt-[26px]
-                flex items-center
-                gap-[12px]
-              "
+              className="mt-6.5 flex items-center gap-3"
             >
               {socialLinks.map(
                 (social) => {
@@ -288,13 +264,13 @@ export function Footer() {
                         title={social.label}
                         className="
                           group
-                          flex size-[48px]
+                          flex size-12
                           items-center
                           justify-center
                           rounded-full
                           border
                           border-white/25
-                          bg-white/[0.055]
+                          bg-white/5.5
                           text-white
                           shadow-[inset_0_0_0_1px_rgba(255,255,255,0.025)]
                           transition-[background-color,border-color,transform,box-shadow]
@@ -313,7 +289,7 @@ export function Footer() {
                         <Icon
                           aria-hidden="true"
                           className="
-                            size-[16px]
+                            size-4
                             transition-transform
                             duration-500
                             group-hover:scale-110
@@ -331,17 +307,17 @@ export function Footer() {
         <div
           aria-hidden="true"
           className="
-            mb-[33px]
-            mt-[42px]
+            mb-8.25
+            mt-10.5
             h-px w-full
-            bg-white/[0.09]
+            bg-white/9
           "
         />
 
         <p
           className="
             mx-auto
-            max-w-[1470px]
+            max-w-367.5
             text-center
             text-[12px]
             leading-[1.75]
@@ -354,7 +330,7 @@ export function Footer() {
 
         <div
           className="
-            mt-[25px]
+            mt-6.25
             flex flex-col
             items-center
             justify-between

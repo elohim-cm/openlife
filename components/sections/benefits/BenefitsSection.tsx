@@ -63,7 +63,7 @@ export function BenefitsSection() {
         </h2>
 
         <div className="
-            mt-[86px]
+            mt-7.5
             grid grid-cols-1
             gap-6
             sm:grid-cols-2

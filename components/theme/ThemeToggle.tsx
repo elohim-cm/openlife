@@ -72,7 +72,7 @@ export function ThemeToggle({
       >
         <FaMoon
           aria-hidden="true"
-          className="size-[17px]"
+          className="size-4.25"
         />
       </span>
 
@@ -91,7 +91,7 @@ export function ThemeToggle({
       >
         <FaSun
           aria-hidden="true"
-          className="size-[18px]"
+          className="size-4.5"
         />
       </span>
     </button>

@@ -11,6 +11,7 @@ export const fr = {
     companyName: "ACAM Vie",
     loading: "Chargement",
     currency: "FCFA",
+    close: "Fermer",
   },
 
   header: {
@@ -279,7 +280,7 @@ export const fr = {
         question:
           "COMMENT ÇA MARCHE ?",
         answer:
-          "Téléchargez l’application Open Life ou appelez un conseiller au (+237) 681 704 497 pour l’ouverture de votre compte. Une fois votre compte ouvert, un code pour la consultation et le paiement de vos primes vous sera attribué. Vous êtes alors client Open Life et pouvez cotiser vos primes quotidiennement afin de préparer vos projets en toute sérénité.",
+          "Téléchargez l’application Open Life ou appelez un conseiller au (+237) 658 994 705 pour l’ouverture de votre compte. Une fois votre compte ouvert, un code pour la consultation et le paiement de vos primes vous sera attribué. Vous êtes alors client Open Life et pouvez cotiser vos primes quotidiennement afin de préparer vos projets en toute sérénité.",
         details: [],
       },
       {
@@ -347,7 +348,7 @@ export const fr = {
         description:
           "Notre équipe vous répond de vive voix pour toute question urgente.",
         value:
-          "(+237) 681 704 497",
+          "(+237) 658 994 705",
         status:
           "Disponible 24h/24",
         ariaLabel:
@@ -359,7 +360,7 @@ export const fr = {
         description:
           "Contactez-nous instantanément pour un accompagnement rapide et personnalisé.",
         value:
-          "(+237) 681 704 497",
+          "(+237) 658 994 705",
         status:
           "Réponse éclair",
         ariaLabel:

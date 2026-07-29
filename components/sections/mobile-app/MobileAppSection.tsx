@@ -149,7 +149,7 @@ export function MobileAppSection() {
                   >
                     <Icon
                       aria-hidden="true"
-                      className="size-[27px] shrink-0 text-accent transition-transform duration-300 group-hover:scale-105"
+                      className="size-6.75 shrink-0 text-accent transition-transform duration-300 group-hover:scale-105"
                     />
 
                     <span className="flex flex-col">
@@ -157,7 +157,7 @@ export function MobileAppSection() {
                         {store.eyebrow}
                       </span>
 
-                      <span className="mt-[1px] text-[16px] font-bold leading-none text-heading-secondary">
+                      <span className="mt-px text-[16px] font-bold leading-none text-heading-secondary">
                         {store.label}
                       </span>
                     </span>

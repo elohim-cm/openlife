@@ -4,6 +4,13 @@ import {useMemo,} from "react";
 import {useSiteContent,} from "@/hooks/useSiteContent";
 import {BenefitCard,} from "./BenefitCard";
 import {BENEFIT_DEFINITIONS,type Benefit,} from "./Benefits.data";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function BenefitsSection() {
   const content =useSiteContent();
@@ -77,6 +84,7 @@ export function BenefitsSection() {
           )}
         </div>
       </div>
+
     </section>
   );
 }

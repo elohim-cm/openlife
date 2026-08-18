@@ -338,6 +338,154 @@ export const fr = {
     ],
   },
 
+  faqPage: {
+    title:
+      "Questions Fréquentes",
+
+    subtitle:
+      "Trouvez les réponses à vos questions",
+
+    items: [
+      {
+        id: "what-is-open-life",
+        question:
+          "Qu’est-ce que Open Life ?",
+        answer:
+          "Open Life est une solution d’épargne journalière en assurance vie 100 % digitale, sécurisée et sans frais, conçue pour répondre aux besoins des populations à faibles revenus.",
+      },
+      {
+        id: "who-can-subscribe",
+        question:
+          "Qui peut souscrire à Open Life ?",
+        answer:
+          "Toute personne âgée d’au moins 18 ans et désireuse de constituer une épargne peut souscrire à Open Life.",
+      },
+      {
+        id: "where-money-goes",
+        question:
+          "À qui dois-je remettre mon argent dans le cadre de cette épargne ?",
+        answer:
+          "L’épargne va directement du client vers son compte par USSD ou via l’application Open Life.",
+      },
+      {
+        id: "savings-interest",
+        question:
+          "Mon épargne est-elle rémunérée ?",
+        answer:
+          "Oui, votre épargne est rémunérée au taux annuel de 2 %.",
+      },
+      {
+        id: "contract-duration",
+        question:
+          "Quelle est la durée de mon contrat ?",
+        answer:
+          "La durée minimale du contrat est d’un an.",
+      },
+      {
+        id: "savings-access",
+        question:
+          "À quel moment puis-je avoir accès à mon épargne ?",
+        answer:
+          "Vous pouvez avoir accès à votre épargne après six mois révolus.",
+      },
+      {
+        id: "withdrawals-per-year",
+        question:
+          "Après les six mois, combien de rachats puis-je effectuer par an ?",
+        answer:
+          "Vous pouvez effectuer six rachats par par an, à raison d’un rachat tous les deux mois.",
+      },
+      {
+        id: "self-subscription",
+        question:
+          "Puis-je souscrire à Open Life moi-même ?",
+        answer:
+          "Non. Vous devez vous rapprocher d’un distributeur, muni de votre CNI, pour l’ouverture de votre compte d’épargne en ligne.",
+      },
+      {
+        id: "minimum-daily-savings",
+        question:
+          "Quel est le montant minimum à épargner par jour ?",
+        answer:
+          "La prime minimale est de 200 FCFA par jour.",
+      },
+      {
+        id: "maximum-daily-savings",
+        question:
+          "Quel est le montant maximum à épargner par jour ?",
+        answer:
+          "Il n’y a pas de montant maximum journalier.",
+      },
+      {
+        id: "voluntary-payments",
+        question:
+          "Puis-je faire des versements libres sur mon compte ?",
+        answer:
+          "Oui, vous pouvez effectuer des versements libres autant de fois que vous le souhaitez.",
+      },
+    ],
+  },
+
+  simulationPage: {
+    logoHomeLabel:
+      "Retourner à l’accueil Open Life",
+
+    back: "Retour",
+
+    backLabel:
+      "Retourner à la page d’accueil",
+
+    title:
+      "Effectuer une simulation",
+
+    formTitle:
+      "Informations sur la souscription",
+
+    premiumLabel:
+      "Montant de la prime (FCFA)*",
+
+    durationLabel:
+      "Durée du contrat (an(s))*",
+
+    simulate: "Simuler",
+
+    resultTitle:
+      "Évolution des valeurs de rachat",
+
+    totalContribution:
+      "Prime brute cumulée",
+
+    terminalValue:
+      "Valeur de rachat à terme",
+
+    table: {
+      id: "Id",
+      year: "Année",
+
+      contribution:
+        "Montant (FCFA)",
+
+      surrenderValue:
+        "Valeur de rachat (FCFA)",
+
+      rate: "Taux (%)",
+    },
+
+    errors: {
+      requiredPremium:
+        "Veuillez saisir un montant valide.",
+
+      minimumPremium:
+        "La prime doit être supérieure ou égale à 200 FCFA.",
+
+      requiredDuration:
+        "Veuillez saisir une durée valide.",
+
+      invalidDuration:
+        "La durée doit être un nombre entier supérieur à zéro.",
+    },
+  },
+
   assistance: {
     title: "Besoin d’assistance ?",
 

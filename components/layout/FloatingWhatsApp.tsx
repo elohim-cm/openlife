@@ -3,6 +3,7 @@
 import {motion,useReducedMotion} from "framer-motion";
 import {useMemo} from "react";
 import {FaWhatsapp} from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 import {useSiteContent} from "@/hooks/useSiteContent";
 
@@ -10,6 +11,7 @@ const WHATSAPP_PHONE = "237658994705";
 
 export function FloatingWhatsApp() {
   const content = useSiteContent();
+  const pathname = usePathname();
   const shouldReduceMotion = useReducedMotion();
   const whatsappUrl = useMemo(() => {
       const message = encodeURIComponent(
@@ -22,6 +24,12 @@ export function FloatingWhatsApp() {
     ]);
 
   const label =content.whatsapp.buttonLabel;
+
+  if (
+    pathname === "/simuler"
+  ) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-5.5 right-5.5 z-100 sm:bottom-7 sm:right-8.5">

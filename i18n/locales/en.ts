@@ -342,6 +342,154 @@ export const en = {
     ],
   },
 
+  faqPage: {
+    title:
+      "Frequently Asked Questions",
+
+    subtitle:
+      "Find the answers to your questions",
+
+    items: [
+      {
+        id: "what-is-open-life",
+        question:
+          "What is Open Life?",
+        answer:
+          "Open Life is a secure, fee-free and fully digital daily savings solution based on life insurance, designed to meet the needs of people with low incomes.",
+      },
+      {
+        id: "who-can-subscribe",
+        question:
+          "Who can subscribe to Open Life?",
+        answer:
+          "Anyone who is at least 18 years old and wishes to build savings can subscribe to Open Life.",
+      },
+      {
+        id: "where-money-goes",
+        question:
+          "Who should I give my money to as part of this savings plan?",
+        answer:
+          "The savings are transferred directly from the customer to their account through USSD or the Open Life application.",
+      },
+      {
+        id: "savings-interest",
+        question:
+          "Does my savings earn interest?",
+        answer:
+          "Yes. Your savings earn interest at an annual rate of 2%.",
+      },
+      {
+        id: "contract-duration",
+        question:
+          "How long does my contract last?",
+        answer:
+          "The minimum contract duration is one year.",
+      },
+      {
+        id: "savings-access",
+        question:
+          "When can I access my savings?",
+        answer:
+          "You can access your savings after six full months.",
+      },
+      {
+        id: "withdrawals-per-year",
+        question:
+          "After six months, how many withdrawals can I make per year?",
+        answer:
+          "You can make six withdrawals per year, at a rate of one withdrawal every two months.",
+      },
+      {
+        id: "self-subscription",
+        question:
+          "Can I subscribe to Open Life by myself?",
+        answer:
+          "No. You must visit a distributor with your national identity card to open your online savings account.",
+      },
+      {
+        id: "minimum-daily-savings",
+        question:
+          "What is the minimum amount I can save per day?",
+        answer:
+          "The minimum premium is 200 FCFA per day.",
+      },
+      {
+        id: "maximum-daily-savings",
+        question:
+          "What is the maximum amount I can save per day?",
+        answer:
+          "There is no maximum daily amount.",
+      },
+      {
+        id: "voluntary-payments",
+        question:
+          "Can I make voluntary payments into my account?",
+        answer:
+          "Yes. You can make voluntary payments as many times as you wish.",
+      },
+    ],
+  },
+
+  simulationPage: {
+    logoHomeLabel:
+      "Return to the Open Life homepage",
+
+    back: "Back",
+
+    backLabel:
+      "Return to the homepage",
+
+    title:
+      "Run a simulation",
+
+    formTitle:
+      "Subscription information",
+
+    premiumLabel:
+      "Daily premium amount (FCFA)*",
+
+    durationLabel:
+      "Contract duration (year(s))*",
+
+    simulate: "Simulate",
+
+    resultTitle:
+      "Evolution of surrender values",
+
+    totalContribution:
+      "Total gross premium",
+
+    terminalValue:
+      "Terminal surrender value",
+
+    table: {
+      id: "Id",
+      year: "Year",
+
+      contribution:
+        "Amount (FCFA)",
+
+      surrenderValue:
+        "Surrender value (FCFA)",
+
+      rate: "Rate (%)",
+    },
+
+    errors: {
+      requiredPremium:
+        "Please enter a valid amount.",
+
+      minimumPremium:
+        "The premium must be at least 200 FCFA.",
+
+      requiredDuration:
+        "Please enter a valid duration.",
+
+      invalidDuration:
+        "The duration must be a whole number greater than zero.",
+    },
+  },
+
   assistance: {
     title: "Need assistance?",
 

@@ -34,9 +34,9 @@ const HERO_FEATURE_ICONS:
 
 const HERO_LINKS = {
   simulation:
-    "#openlife-experience",
+    "/simuler",
   learnMore:
-    "#openlife-benefits",
+    "/faq",
 } as const;
 
 export function HeroSection() {

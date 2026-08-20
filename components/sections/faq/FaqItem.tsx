@@ -23,13 +23,7 @@ export function FaqItem({item,}: FaqItemProps) {
         data-[state=open]:shadow-card-hover
       "
     >
-      <AccordionTrigger className="
-          min-h-[72px]
-          gap-4 px-[18px] py-4
-          sm:min-h-[76px]
-          sm:px-[22px]
-        "
-      >
+      <AccordionTrigger className="min-h-[72px] gap-4 px-[18px] py-4">
         <span className="flex min-w-0 flex-1 items-center gap-[14px] sm:gap-[16px]">
           <span aria-hidden="true" className="
               flex size-[30px]

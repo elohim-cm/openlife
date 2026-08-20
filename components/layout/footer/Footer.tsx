@@ -437,7 +437,7 @@ export function Footer() {
                 focus-visible:ring-offset-4
                 focus-visible:ring-offset-[#073f1f]
               ">
-              ELOHIM WARREN
+              KARBURA S.A
             </a>
           </p>
         </div>

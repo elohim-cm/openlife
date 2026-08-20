@@ -230,9 +230,7 @@ export function MobileAppSection() {
                           items-center
                           justify-center
                           rounded-[19px]
-                          border
-                          border-cta-contrast/28
-                          bg-cta-contrast/5
+                          bg-cta-hover
                           text-cta-contrast
                           shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]
                           backdrop-blur-[4px]
@@ -268,7 +266,7 @@ export function MobileAppSection() {
                           font-medium
                           leading-[1.55]
                           tracking-[-0.01em]
-                          text-[var(--mobile-description)]
+                          text-[var(--mobile-feature-title)]
                           sm:text-[18px]
 "
                         >

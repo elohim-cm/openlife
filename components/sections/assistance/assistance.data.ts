@@ -32,7 +32,7 @@ export type BusinessPartner = {
   href: string;
 };
 
-export const ASSISTANCE_PHONE ="237658994705";
+export const ASSISTANCE_PHONE ="237681704497";
 
 export const ASSISTANCE_CONTACTS:
   readonly AssistanceContactDefinition[] = [
@@ -50,7 +50,7 @@ export const ASSISTANCE_CONTACTS:
     },
     {
       id: "email",
-      href: "mailto:elohimwarren.cm@gmail.com",
+      href: "mailto:support.openlife@acamvie.com",
       icon: FaEnvelope,
       accentClassName: "text-[#31d20d]",
     },

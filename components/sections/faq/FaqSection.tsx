@@ -97,7 +97,6 @@ export function FaqSection() {
             mx-auto mt-[48px]
             max-w-[1340px]
             space-y-[13px]
-            sm:mt-[58px]
           "
         >{items.map((item, index) => (
             <motion.div key={item.id} 

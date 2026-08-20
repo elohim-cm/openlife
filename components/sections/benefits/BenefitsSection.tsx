@@ -120,7 +120,7 @@ export function BenefitsSection() {
               font-semibold
               uppercase
               tracking-[0.14em]
-              text-brand
+              text-cta
               sm:text-[13px]
             "
           >

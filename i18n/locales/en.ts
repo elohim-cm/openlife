@@ -366,7 +366,7 @@ export const en = {
         question:
           "HOW DOES IT WORK?",
         answer:
-          "Download the Open Life application or call an adviser on (+237) 658 994 705 to open your account. Once your account has been opened, you will receive a code for checking your account and paying your premiums. You will then be an Open Life customer and can make daily premium payments to prepare your projects with complete peace of mind.",
+          "Download the Open Life application or call an adviser on (+237) 681 704 497 to open your account. Once your account has been opened, you will receive a code for checking your account and paying your premiums. You will then be an Open Life customer and can make daily premium payments to prepare your projects with complete peace of mind.",
         details: [],
       },
       {
@@ -582,7 +582,7 @@ export const en = {
         description:
           "Our team is available to answer urgent questions directly.",
         value:
-          "(+237) 658 994 705",
+          "(+237) 681 704 497",
         status:
           "Available 24/7",
         ariaLabel:
@@ -594,7 +594,7 @@ export const en = {
         description:
           "Contact us instantly for fast and personalised assistance.",
         value:
-          "(+237) 658 994 705",
+          "(+237) 681 704 497",
         status:
           "Fast response",
         ariaLabel:
@@ -606,7 +606,7 @@ export const en = {
         description:
           "Send us your documents or detailed enquiries by email.",
         value:
-          "elohimwarren.cm@gmail.com",
+          "support.openlife@acamvie.com",
         status:
           "Priority processing",
         ariaLabel:
@@ -675,6 +675,6 @@ export const en = {
 
     copyright:"ACAM Vie. All rights reserved.",
     developedBy:"Developed by",
-    developerAriaLabel:"Visit the ELOHIM website",
+    developerAriaLabel:"Visit the KARBURA website",
   },
 } as const;

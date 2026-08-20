@@ -92,19 +92,34 @@ export function ExperienceSection() {
           bg-[var(--experience-background)]
         "
       >
+        {/* Cerceau rouge */}
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            -left-[190px]
+            -top-[250px]
+            size-[360px]
+            rounded-full
+            bg-cta
+            sm:size-[520px]
+            lg:-left-[520px]
+            lg:-top-[820px]
+            lg:size-[1150px]
+          "
+        />
+        {/* Cerceau vert */}
         <div
           aria-hidden="true"
           className="
             pointer-events-none
             absolute
             -bottom-[58%]
-            -right-[20%]
             size-[1150px]
             rounded-full
             bg-[var(--experience-curve)]
             sm:-bottom-[72%]
-            sm:-right-[30%]
-            sm:size-[1450px]
             lg:-bottom-[86%]
             lg:-right-[24%]
           "
@@ -324,7 +339,7 @@ function ExperienceProgress({
                     duration-500
                     ${
                       isActive
-                        ? "font-bold text-brand"
+                        ? "font-bold text-icon"
                         : "font-medium text-text-muted"
                     }
                   `}

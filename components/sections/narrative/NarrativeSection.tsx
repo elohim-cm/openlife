@@ -618,7 +618,7 @@ export function NarrativeSection() {
                   className="
                     hidden size-[54px]
                     shrink-0
-                    text-success
+                    text-cta-hover
                     sm:block
                   "
                 />

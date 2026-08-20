@@ -135,7 +135,7 @@ export function BenefitCard({
                   text-[6px]
                   font-extrabold
                   tracking-[-0.04em]
-                  text-brand
+                  text-cta
                   sm:bottom-[15px]
                   sm:right-[10px]
                   sm:size-[31px]
@@ -160,7 +160,7 @@ export function BenefitCard({
                   border-[3px]
                   border-[var(--benefits-icon-background-solid)]
                   bg-[var(--benefits-icon-background-solid)]
-                  text-brand
+                  text-cta
                   sm:bottom-[11px]
                   sm:right-[8px]
                   sm:size-[31px]
@@ -205,7 +205,7 @@ export function BenefitCard({
                 font-extrabold
                 leading-[0.98]
                 tracking-[-0.055em]
-                text-brand
+                text-cta
                 ${
                   isNoFees
                     ? `

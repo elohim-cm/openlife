@@ -119,7 +119,7 @@
   --cta: #db2a18;
   --cta-hover: #c72413;
   --cta-soft: #ffe8e3;
-  --cta-contrast: #ffffff;
+  --cta-contrast: #f4efef;
 
   --border: oklch(0.922 0 0);
   --border-strong: #c9d9c4;
@@ -290,17 +290,17 @@
   --mobile-app-background:
     linear-gradient(
       115deg,
-      #073d1d 0%,
-      #064a1c 48%,
-      #087027 100%
+      #ffffff 0%,
+      #3f8f58 48%,
+      #b72b1f 100%
     );
 
   --mobile-phone-frame: #080d09;
   --mobile-store-background: #ffffff;
   --mobile-store-background-hover: #f1f9f2;
   --mobile-store-text: #142116;
-  --mobile-title: #55b936;
-  --mobile-feature-title: #62c744;
+  --mobile-title: #276a12;
+  --mobile-feature-title: #060100;
   --mobile-description: #ffffff;
 
   --experience-background: #fbfcf9;
@@ -430,7 +430,7 @@
 
   --accent: oklch(0.269 0 0);
   --cta: #ff4325;
-  --cta-hover: #ff7057;
+  --cta-hover: #ff9683;
   --cta-soft: #40221c;
   --cta-contrast: #ffffff;
 
@@ -606,7 +606,7 @@
 
   --mobile-phone-frame: #030604;
   --mobile-store-background: #f4f7f4;
-  --mobile-store-background-hover: #ffffff;
+  --mobile-store-background-hover: #db2a18;
   --mobile-store-text: #101b12;
   --mobile-title: #6ccb50;
   --mobile-feature-title: #78d45c;

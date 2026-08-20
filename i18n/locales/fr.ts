@@ -367,7 +367,7 @@ export const fr = {
         question:
           "COMMENT ÇA MARCHE ?",
         answer:
-          "Téléchargez l’application Open Life ou appelez un conseiller au (+237) 658 994 705 pour l’ouverture de votre compte. Une fois votre compte ouvert, un code pour la consultation et le paiement de vos primes vous sera attribué. Vous êtes alors client Open Life et pouvez cotiser vos primes quotidiennement afin de préparer vos projets en toute sérénité.",
+          "Téléchargez l’application Open Life ou appelez un conseiller au (+237) 681 704 497 pour l’ouverture de votre compte. Une fois votre compte ouvert, un code pour la consultation et le paiement de vos primes vous sera attribué. Vous êtes alors client Open Life et pouvez cotiser vos primes quotidiennement afin de préparer vos projets en toute sérénité.",
         details: [],
       },
       {
@@ -582,7 +582,7 @@ export const fr = {
         description:
           "Notre équipe vous répond de vive voix pour toute question urgente.",
         value:
-          "(+237) 658 994 705",
+          "(+237) 681 704 497",
         status:
           "Disponible 24h/24",
         ariaLabel:
@@ -594,7 +594,7 @@ export const fr = {
         description:
           "Contactez-nous instantanément pour un accompagnement rapide et personnalisé.",
         value:
-          "(+237) 658 994 705",
+          "(+237) 681 704 497",
         status:
           "Réponse éclair",
         ariaLabel:
@@ -604,7 +604,7 @@ export const fr = {
         id: "email",
         title: "Par e-mail",
         description:"Envoyez-nous vos documents ou vos demandes détaillées par courrier électronique.",
-        value:"elohimwarren.cm@gmail.com",
+        value:"support.openlife@acamvie.com",
         status:"Traitement prioritaire",
         ariaLabel:"Envoyer un e-mail à l’équipe Open Life",
       },

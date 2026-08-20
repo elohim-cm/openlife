@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 import {useSiteContent} from "@/hooks/useSiteContent";
 
-const WHATSAPP_PHONE = "237658994705";
+const WHATSAPP_PHONE = "237681704497";
 
 export function FloatingWhatsApp() {
   const content = useSiteContent();

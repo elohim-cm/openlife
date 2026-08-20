@@ -48,5 +48,5 @@ export const FOOTER_SOCIAL_LINKS:
 
 export const FOOTER_LINKS = {
   privacy:"/documents/politique-confidentialite-openlife.pdf",
-  developer: "https://elohim-warren.vercel.app/",
+  developer: "https://karbura.com/",
 } as const;

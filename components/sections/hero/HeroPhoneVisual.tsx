@@ -45,9 +45,9 @@ export function HeroPhoneVisual() {
     useReducedMotion(),
   );
 
-  const dashboardSrc = isDark
-    ? "/images/mobile-app/dashboard-dark.jpeg"
-    : "/images/mobile-app/dashboard-light.jpg";
+  const mockupSrc = isDark
+    ? "/images/mobile-app/mockup-hero-dark.png"
+    : "/images/mobile-app/mockup-hero-light.png";
 
   return (
     <div
@@ -91,56 +91,58 @@ export function HeroPhoneVisual() {
           absolute
           left-1/2 top-1/2
           z-20
-          h-[460px] w-[238px]
+          h-[540px] w-[497px]
           -translate-x-1/2
           -translate-y-1/2
-          rounded-[38px]
-          border-[var(--hero-phone-border)]
-          p-[7px]
-          shadow-[var(--hero-phone-shadow)]
-          sm:h-[600px]
-          sm:w-[310px]
-          sm:rounded-[44px]
-          lg:h-[650px]
-          lg:w-[336px]
+          sm:h-[680px]
+          sm:w-[625px]
+          lg:h-[760px]
+          lg:w-[700px]
         "
       >
-        <div
+        <motion.div
+          key={mockupSrc}
+          initial={
+            reduceMotion
+              ? false
+              : {
+                  opacity: 0.2,
+                }
+          }
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration:
+              reduceMotion
+                ? 0
+                : 0.45,
+          }}
           className="
-            relative h-full w-full
-            overflow-hidden
-            rounded-[39px]
+            relative
+            h-full w-full
           "
         >
-          <motion.div
-            key={dashboardSrc}
-            initial={
-              reduceMotion
-                ? false
-                : { opacity: 0.2 }
+          <Image
+            src={mockupSrc}
+            alt={
+              content.hero
+                .phoneImageAlt
             }
-            animate={{ opacity: 1 }}
-            transition={{
-              duration:
-                reduceMotion
-                  ? 0
-                  : 0.45,
-            }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={dashboardSrc}
-              alt={
-                content.hero
-                  .phoneImageAlt
-              }
-              fill
-              priority
-              // sizes="(max-width: 1023px) 310px, 336px"
-              // className="object-cover"
-            />
-          </motion.div>
-        </div>
+            fill
+            priority
+            sizes="
+              (max-width: 639px) 497px,
+              (max-width: 1023px) 625px,
+              700px
+            "
+            className="
+              object-contain
+              drop-shadow-[0_30px_45px_rgba(4,35,10,0.34)]
+              dark:drop-shadow-[0_34px_52px_rgba(0,0,0,0.52)]
+            "
+          />
+        </motion.div>
       </motion.div>
 
       {content.hero.floatingCards.map(

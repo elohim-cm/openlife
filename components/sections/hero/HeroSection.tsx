@@ -1,18 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import type {
-  IconType,
-} from "react-icons";
 import {
-  FaChartLine,
-  FaChevronDown,
-  FaClock,
-  FaShieldAlt,
-  FaUser,
-  FaWallet,
-} from "react-icons/fa";
+  ChartNoAxesCombined,
+  Clock3,
+  ShieldCheck,
+  UserRound,
+  WalletCards,
+  type LucideIcon,
+} from "lucide-react";
+import Link from "next/link";
 
 import {
   useSiteContent,
@@ -21,248 +17,207 @@ import {
 import {
   HeroFeatureCard,
 } from "./HeroFeatureCard";
+import {
+  HeroPhoneVisual,
+} from "./HeroPhoneVisual";
+import {
+  HeroTrustBar,
+} from "./HeroTrustBar";
 
 const HERO_FEATURE_ICONS:
-  Record<string, IconType> = {
+  Record<string, LucideIcon> = {
     "minimum-deposit":
-      FaWallet,
+      WalletCards,
     "interest-rate":
-      FaChartLine,
-    withdrawal:
-      FaClock,
+      ChartNoAxesCombined,
+    withdrawal: Clock3,
   };
 
 const HERO_LINKS = {
-  simulation:
-    "/simuler",
-  learnMore:
-    "/faq",
+  simulation: "/simuler",
+  learnMore: "/faq",
 } as const;
 
 export function HeroSection() {
-  const content =
-    useSiteContent();
-
-  const handleScrollDown =
-    (): void => {
-      const nextSection =
-        document.querySelector<HTMLElement>(
-          "[data-section-after-hero]",
-        );
-
-      if (nextSection) {
-        nextSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-
-        return;
-      }
-
-      window.scrollTo({
-        top:
-          window.innerHeight,
-        behavior: "smooth",
-      });
-    };
+  const content = useSiteContent();
 
   return (
     <section
       id="hero"
       aria-labelledby="hero-title"
       className="
-        relative isolate flex
-        min-h-195 w-full
-        overflow-hidden
-        bg-background
-        lg:h-svh
-        lg:min-h-205
+        relative isolate
+        min-h-[790px]
+        w-full
+        bg-[var(--hero-stage-background)]
+        lg:min-h-[825px]
       "
     >
-      <Image
-        src="/images/hero/openlife-hero.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="
-          -z-30 object-cover
-          object-[63%_center]
-          motion-safe:animate-[hero-image-reveal_1.3s_ease-[cubic-bezier(0.22,1,0.36,1)]_both]
-          md:object-center
-        "
-      />
-
       <div
         aria-hidden="true"
         className="
+          pointer-events-none
           absolute inset-0
-          -z-20 bg-overlay
-        "
-      />
-
-      <div
-        aria-hidden="true"
-        className="
-          hero-theme-overlay
-          absolute inset-0 -z-10
-        "
-      />
-
-      <div
-        aria-hidden="true"
-        className="
-          hero-theme-radial
-          absolute inset-0 -z-10
-        "
-      />
-
-      <div
-        className="
-          mx-auto flex w-full
-          max-w-[1428px]
-          items-center
-          px-5 pb-20 pt-[130px]
-          sm:px-8
-          lg:pb-16
-          lg:pt-[110px]
+          overflow-hidden
         "
       >
-        <div className="relative z-10 w-full max-w-[800px]">
+
+        <div
+          className="
+            hero-mobile-initial-photo
+            absolute inset-x-0 top-0
+          "
+        />
+        
+        <div
+          className="
+            hero-green-shape
+            absolute inset-0
+          "
+        />
+
+        <div
+          className="
+            hero-contour-pattern
+            absolute inset-0
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0 left-[43%]
+            hidden h-[230px]
+            w-[170px]
+            rounded-t-full
+            bg-[radial-gradient(ellipse_at_bottom,var(--hero-plant-glow),transparent_68%)]
+            opacity-60
+            lg:block
+          "
+        />
+      </div>
+
+      <div
+        className="
+          relative z-10
+          mx-auto grid
+          min-h-[790px]
+          w-full max-w-[1450px]
+          grid-cols-1
+          items-center
+          gap-8
+          px-5 pb-4
+          pt-[100px]
+          sm:px-8
+          lg:min-h-[825px]
+          lg:grid-cols-[47%_53%]
+          lg:gap-0
+          lg:px-10
+          lg:pb-[130px]
+          lg:pt-[105px]
+        "
+      >
+        <div
+          className="
+            relative z-20
+            max-w-[610px]
+          "
+        >
           <div
             className="
               hero-reveal
               hero-reveal-delay-1
-              mb-[18px]
-              inline-flex min-h-[41px]
-              items-center gap-[8px]
+              inline-flex
+              min-h-[36px]
+              items-center gap-2
               rounded-full
-              border border-border-brand
-              bg-brand-soft/90
-              px-[17px] py-[8px]
+              border
+              border-[var(--hero-badge-border)]
+              bg-[var(--hero-badge-background)]
+              px-4 py-2
               text-brand
-              backdrop-blur-[3px]
+              backdrop-blur-[5px]
             "
           >
-            <FaShieldAlt
+            <ShieldCheck
               aria-hidden="true"
-              className="
-                size-[14px]
-                shrink-0
-              "
+              className="size-[17px]"
+              strokeWidth={2.1}
             />
 
             <span
               className="
-                text-[13px]
-                font-medium uppercase
-                tracking-[0.07em]
-                sm:text-[15px]
+                text-[11px]
+                font-semibold
+                uppercase
+                tracking-[0.11em]
+                sm:text-[12px]
               "
             >
-              {
-                content.hero
-                  .accreditation
-              }
+              {content.hero.accreditation}
             </span>
           </div>
 
-          <div
+          <h1
+            id="hero-title"
             className="
               hero-reveal
               hero-reveal-delay-2
+              mt-6
+              text-[62px]
+              font-extrabold
+              leading-[0.98]
+              tracking-[-0.055em]
+              text-heading
+              sm:text-[76px]
+              lg:text-[88px]
             "
           >
-            <p
-              className="
-                mb-[6px]
-                text-[21px]
-                font-normal
-                leading-[1.3]
-                text-heading-secondary
-                sm:text-[23px]
-              "
-            >
-              {
-                content.hero
-                  .welcome
-              }
-            </p>
-
-            <h1
-              id="hero-title"
-              className="
-                text-[50px] font-bold
-                leading-[1.06]
-                tracking-[-0.035em]
-                text-heading
-                sm:text-[60px]
-                lg:text-[66px]
-              "
-            >
-              {
-                content.hero
-                  .title
-              }
-            </h1>
-          </div>
+            {content.hero.title}
+          </h1>
 
           <p
             className="
               hero-reveal
               hero-reveal-delay-3
-              mt-[27px]
-              max-w-[570px]
-              text-[17px]
-              font-normal
-              leading-[1.56]
-              text-text
-              sm:text-[19px]
+              mt-5
+              max-w-[520px]
+              whitespace-pre-line
+              text-[27px]
+              font-semibold
+              leading-[1.28]
+              tracking-[-0.035em]
+              text-heading-secondary
+              sm:text-[31px]
             "
           >
-            {
-              content.hero
-                .descriptionStart
-            }{" "}
-
-            <strong
-              className="
-                rounded-[3px]
-                bg-brand-soft
-                px-[7px] py-[2px]
-                font-bold
-                text-brand
-              "
-            >
-              {
-                content.hero
-                  .dailyAmount
-              }
-            </strong>{" "}
-
-            {
-              content.hero
-                .descriptionEnd
-            }
+            {content.hero.tagline}
           </p>
 
           <div
             className="
               hero-reveal
               hero-reveal-delay-4
-              mt-7.75
-              flex flex-wrap
-              gap-3.5
-              sm:gap-5.5
+              mt-7 space-y-3.5
             "
           >
             {content.hero.features.map(
               (feature) => {
-                const Icon =HERO_FEATURE_ICONS[feature.id];
-                if (!Icon) {return null;}
+                const Icon =
+                  HERO_FEATURE_ICONS[
+                    feature.id
+                  ];
+
+                if (!Icon) {
+                  return null;
+                }
 
                 return (
-                  <HeroFeatureCard key={feature.id} icon={Icon} label={feature.label}/>
+                  <HeroFeatureCard
+                    key={feature.id}
+                    icon={Icon}
+                    label={feature.label}
+                  />
                 );
               },
             )}
@@ -272,31 +227,35 @@ export function HeroSection() {
             className="
               hero-reveal
               hero-reveal-delay-5
-              mt-9.5
-              flex flex-wrap
-              items-center
-              gap-3.75
+              mt-7 flex
+              flex-wrap
+              items-center gap-4
             "
           >
             <Link
-              href={HERO_LINKS.simulation}
-              aria-label={content.hero.actions.simulationLabel}
+              href={
+                HERO_LINKS.simulation
+              }
+              aria-label={
+                content.hero.actions
+                  .simulationLabel
+              }
               className="
                 group inline-flex
-                min-h-14.5
+                min-h-[58px]
                 items-center
                 justify-center
-                gap-2.5
-                rounded-full
+                gap-3
+                rounded-[12px]
                 bg-cta
-                px-7.5
+                px-7
                 text-[15px]
-                font-bold
+                font-semibold
                 text-cta-contrast
                 shadow-button
                 transition-[background-color,transform,box-shadow]
                 duration-500
-                ease-[cubic-bezier(0.22,1,0.36,1)]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
                 hover:-translate-y-1
                 hover:bg-cta-hover
                 focus-visible:outline-none
@@ -306,15 +265,10 @@ export function HeroSection() {
                 active:translate-y-0
               "
             >
-              <FaUser
+              <UserRound
                 aria-hidden="true"
-                className="
-                  size-3.5
-                  transition-transform
-                  duration-500
-                  ease-[cubic-bezier(0.22,1,0.36,1)]
-                  group-hover:scale-110
-                "
+                className="size-[18px]"
+                strokeWidth={2}
               />
 
               <span>
@@ -326,9 +280,7 @@ export function HeroSection() {
             </Link>
 
             <Link
-              href={
-                HERO_LINKS.learnMore
-              }
+              href={HERO_LINKS.learnMore}
               aria-label={
                 content.hero.actions
                   .learnMoreLabel
@@ -338,18 +290,18 @@ export function HeroSection() {
                 min-h-[58px]
                 items-center
                 justify-center
-                rounded-full
-                border-2
+                rounded-[12px]
+                border
                 border-brand
-                bg-surface/55
-                px-[32px]
+                bg-[var(--hero-secondary-button)]
+                px-7
                 text-[15px]
-                font-bold
+                font-semibold
                 text-brand
-                backdrop-blur-[2px]
-                transition-[background-color,color,transform]
+                backdrop-blur-[4px]
+                transition-[background-color,color,transform,box-shadow]
                 duration-500
-                ease-[cubic-bezier(0.22,1,0.36,1)]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
                 hover:-translate-y-1
                 hover:bg-brand
                 hover:text-brand-contrast
@@ -368,40 +320,35 @@ export function HeroSection() {
             </Link>
           </div>
         </div>
+
+        <div
+          className="
+            relative z-10
+            mt-10 block min-w-0
+            lg:mt-0
+          "
+        >
+          <HeroPhoneVisual />
+        </div>
       </div>
 
-      <button
-        type="button"
-        aria-label={
-          content.accessibility
-            .scrollToNextSection
-        }
-        onClick={
-          handleScrollDown
-        }
+      <div
         className="
-          absolute bottom-[32px]
-          left-1/2 z-20
-          flex size-11
-          -translate-x-1/2
-          items-center
-          justify-center
-          rounded-full
-          text-heading-secondary
-          transition-colors
-          duration-500
-          hover:bg-surface/50
-          focus-visible:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-focus
-          motion-safe:animate-[hero-chevron_1.8s_ease-in-out_infinite]
+          relative z-40
+          mx-auto mt-1
+          w-[calc(100%-40px)]
+          pb-8
+          sm:w-[calc(100%-64px)]
+          lg:absolute
+          lg:bottom-[24px]
+          lg:left-1/2
+          lg:mt-0
+          lg:-translate-x-1/2
+          lg:pb-0
         "
       >
-        <FaChevronDown
-          aria-hidden="true"
-          className="size-[16px]"
-        />
-      </button>
+        <HeroTrustBar />
+      </div>
     </section>
   );
 }

@@ -135,8 +135,43 @@
   --overlay: rgb(255 255 255 / 22%);
   --focus: #176b0c;
 
-  --hover-duration: 480ms;
-  --hover-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --hover-duration: 680ms;
+  --hover-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --active-duration: 140ms;
+
+  /* Business card — thème clair */
+  --business-card-start: #0a8122;
+  --business-card-middle: #08751e;
+  --business-card-end: #056117;
+
+  --business-card-border:
+    rgb(255 255 255 / 15%);
+
+  --business-card-divider:
+    rgb(255 255 255 / 35%);
+
+  --business-card-panel:
+    rgb(6 74 22 / 72%);
+
+  --business-card-panel-border:
+    rgb(255 255 255 / 35%);
+
+  --business-card-text: #ffffff;
+
+  --business-card-text-muted:
+    rgb(255 255 255 / 86%);
+
+  --business-card-text-subtle:
+    rgb(255 255 255 / 72%);
+
+  --business-card-icon-bg: #ffffff;
+  --business-card-icon-text: #176b0c;
+
+  --business-card-button-bg: #ffffff;
+  --business-card-button-hover: #f4fff1;
+  --business-card-button-text: #163719;
+
+  --business-card-focus-offset: #08751e;
 
   --hero-overlay:
     linear-gradient(
@@ -158,13 +193,167 @@
       rgb(255 255 255 / 0%) 53%
     );
 
-  --mobile-app-background:
+  --hero-stage-background:
+    #fbfcf8;
+
+  --hero-green-start:
+    rgba(102, 168, 111, 0.459);
+
+  --hero-green-end:
+    #075514;
+
+  --hero-photo-overlay:
     linear-gradient(
       135deg,
-      #f3f8f4 0%,
-      #edf7ef 52%,
-      #e1f2e4 100%
+      rgb(12 109 25 / 52%) 0%,
+      rgb(7 85 20 / 72%) 58%,
+      rgb(4 65 14 / 84%) 100%
     );
+
+  --hero-photo-left-fade:
+    linear-gradient(
+      90deg,
+      rgb(251 252 248 / 100%) 0%,
+      rgb(251 252 248 / 96%) 24%,
+      rgb(251 252 248 / 78%) 35%,
+      rgb(251 252 248 / 34%) 49%,
+      rgb(251 252 248 / 0%) 63%
+    );
+
+  --hero-photo-left-fade-mobile:
+    linear-gradient(
+      90deg,
+      rgb(251 252 248 / 100%) 0%,
+      rgb(251 252 248 / 100%) 45%,
+      rgb(251 252 248 / 82%) 58%,
+      rgb(251 252 248 / 38%) 70%,
+      rgb(251 252 248 / 0%) 82%
+    );
+
+  --hero-badge-background:
+    rgb(246 250 244 / 90%);
+
+  --hero-badge-border:
+    rgb(23 107 12 / 16%);
+
+  --hero-feature-background:
+    rgb(244 248 241 / 92%);
+
+  --hero-feature-border:
+    rgb(23 107 12 / 12%);
+
+  --hero-secondary-button:
+    rgb(255 255 255 / 68%);
+
+  --hero-phone-frame:
+    #111713;
+
+  --hero-phone-border:
+    #202722;
+
+  --hero-phone-shadow:
+    0 34px 65px
+    rgb(7 45 14 / 34%);
+
+  --hero-floating-card:
+    rgb(255 255 255 / 96%);
+
+  --hero-floating-border:
+    rgb(23 107 12 / 12%);
+
+  --hero-floating-shadow:
+    0 18px 40px
+    rgb(14 53 18 / 16%);
+
+  --hero-trust-background:
+    rgb(255 255 255 / 94%);
+
+  --hero-trust-border:
+    rgb(23 107 12 / 12%);
+
+  --hero-trust-divider:
+    rgb(23 107 12 / 12%);
+
+  --hero-trust-shadow:
+    0 16px 36px
+    rgb(27 67 22 / 10%);
+
+  --hero-plant-glow:
+    rgb(39 111 32 / 20%);
+
+  --hero-mobile-photo-left:
+    rgb(251 252 248 / 76%);
+
+  --hero-mobile-photo-right:
+    rgb(251 252 248 / 24%);
+
+  --mobile-app-background:
+    linear-gradient(
+      115deg,
+      #073d1d 0%,
+      #064a1c 48%,
+      #087027 100%
+    );
+
+  --mobile-phone-frame: #080d09;
+  --mobile-store-background: #ffffff;
+  --mobile-store-background-hover: #f1f9f2;
+  --mobile-store-text: #142116;
+  --mobile-title: #55b936;
+  --mobile-feature-title: #62c744;
+  --mobile-description: #ffffff;
+
+  --experience-background: #fbfcf9;
+  --experience-curve: #08711d;
+  --experience-glow: rgb(235 247 232 / 68%);
+
+  --experience-card: rgb(255 255 255 / 92%);
+  --experience-card-border: rgb(23 107 12 / 14%);
+  --experience-card-shadow:
+    0 18px 45px rgb(23 70 18 / 10%);
+
+  --experience-progress-line:
+    rgb(120 142 124 / 54%);
+  --experience-progress-dot: #8d9a90;
+  --experience-progress-ring:
+    rgb(23 107 12 / 12%);
+
+  --experience-image-background:
+    rgb(255 255 255 / 94%);
+  --experience-image-border:
+    rgb(23 107 12 / 12%);
+  --experience-image-shadow:
+    0 24px 60px rgb(11 63 18 / 14%);
+
+  --benefits-background: #fbfcf9;
+
+  --benefits-badge: #f4f8f2;
+  --benefits-badge-border:
+    rgb(23 107 12 / 14%);
+
+  --benefits-card:
+    rgb(255 255 255 / 94%);
+  --benefits-card-border:
+    rgb(23 107 12 / 14%);
+
+  --benefits-card-shadow:
+    0 14px 34px
+    rgb(32 78 25 / 8%);
+
+  --benefits-card-shadow-hover:
+    0 22px 48px
+    rgb(32 78 25 / 14%);
+
+  --benefits-icon-background:
+    radial-gradient(
+      circle at 50% 45%,
+      #f7fbf5 0%,
+      #edf5ea 72%,
+      #e6f0e3 100%
+    );
+
+  --benefits-icon-background-solid:
+    #edf5ea;
 
   --icon-gradient:
     linear-gradient(
@@ -259,6 +448,40 @@
   --overlay: rgb(4 8 5 / 40%);
   --focus: #7dd86b;
 
+  /* Business card — thème sombre */
+  --business-card-start: #1a311d;
+  --business-card-middle: #122416;
+  --business-card-end: #0b170e;
+
+  --business-card-border:
+    rgb(105 193 87 / 28%);
+
+  --business-card-divider:
+    rgb(105 193 87 / 32%);
+
+  --business-card-panel:
+    rgb(105 193 87 / 9%);
+
+  --business-card-panel-border:
+    rgb(105 193 87 / 34%);
+
+  --business-card-text: #f3f7f3;
+
+  --business-card-text-muted:
+    rgb(231 240 232 / 82%);
+
+  --business-card-text-subtle:
+    rgb(213 226 215 / 68%);
+
+  --business-card-icon-bg: #69c157;
+  --business-card-icon-text: #0c130d;
+
+  --business-card-button-bg: #69c157;
+  --business-card-button-hover: #7bd069;
+  --business-card-button-text: #0c130d;
+
+  --business-card-focus-offset: #122416;
+
   --hero-overlay:
     linear-gradient(
       90deg,
@@ -279,13 +502,169 @@
       rgb(11 16 12 / 0%) 54%
     );
 
-  --mobile-app-background:
+  --hero-stage-background:
+    #0b100c;
+
+  --hero-green-start:
+    #0c3e16;
+
+  --hero-green-end:
+    #082c10;
+
+  --hero-photo-overlay:
     linear-gradient(
       135deg,
-      #111a13 0%,
-      #142117 52%,
-      #192b1d 100%
+      rgb(7 37 13 / 72%) 0%,
+      rgb(5 29 10 / 84%) 58%,
+      rgb(3 20 7 / 91%) 100%
     );
+
+  --hero-photo-left-fade:
+    linear-gradient(
+      90deg,
+      rgb(11 16 12 / 100%) 0%,
+      rgb(11 16 12 / 94%) 24%,
+      rgb(11 16 12 / 74%) 35%,
+      rgb(11 16 12 / 30%) 49%,
+      rgb(11 16 12 / 0%) 63%
+    );
+
+  --hero-photo-left-fade-mobile:
+    linear-gradient(
+      90deg,
+      rgb(11 16 12 / 100%) 0%,
+      rgb(11 16 12 / 100%) 45%,
+      rgb(11 16 12 / 80%) 58%,
+      rgb(11 16 12 / 36%) 70%,
+      rgb(11 16 12 / 0%) 82%
+    );
+
+  --hero-badge-background:
+    rgb(105 193 87 / 9%);
+
+  --hero-badge-border:
+    rgb(105 193 87 / 22%);
+
+  --hero-feature-background:
+    rgb(105 193 87 / 7%);
+
+  --hero-feature-border:
+    rgb(105 193 87 / 17%);
+
+  --hero-secondary-button:
+    rgb(17 27 19 / 75%);
+
+  --hero-phone-frame:
+    #030604;
+
+  --hero-phone-border:
+    #263229;
+
+  --hero-phone-shadow:
+    0 38px 78px
+    rgb(0 0 0 / 52%);
+
+  --hero-floating-card:
+    rgb(21 31 23 / 95%);
+
+  --hero-floating-border:
+    rgb(105 193 87 / 17%);
+
+  --hero-floating-shadow:
+    0 20px 48px
+    rgb(0 0 0 / 38%);
+
+  --hero-trust-background:
+    rgb(17 25 19 / 94%);
+
+  --hero-trust-border:
+    rgb(105 193 87 / 16%);
+
+  --hero-trust-divider:
+    rgb(105 193 87 / 15%);
+
+  --hero-trust-shadow:
+    0 20px 44px
+    rgb(0 0 0 / 38%);
+
+  --hero-plant-glow:
+    rgb(105 193 87 / 12%);
+
+  --hero-mobile-photo-left:
+    rgb(11 16 12 / 78%);
+
+  --hero-mobile-photo-right:
+    rgb(11 16 12 / 30%);
+
+  --mobile-app-background:
+    linear-gradient(
+      115deg,
+      #07120a 0%,
+      #0a2110 48%,
+      #0b3517 100%
+    );
+
+  --mobile-phone-frame: #030604;
+  --mobile-store-background: #f4f7f4;
+  --mobile-store-background-hover: #ffffff;
+  --mobile-store-text: #101b12;
+  --mobile-title: #6ccb50;
+  --mobile-feature-title: #78d45c;
+  --mobile-description: #f4f8f4;
+
+  --experience-background: #0b120d;
+  --experience-curve: #0b3c17;
+  --experience-glow: rgb(37 91 43 / 22%);
+
+  --experience-card: rgb(18 29 20 / 92%);
+  --experience-card-border:
+    rgb(112 197 92 / 18%);
+  --experience-card-shadow:
+    0 22px 52px rgb(0 0 0 / 34%);
+
+  --experience-progress-line:
+    rgb(120 145 124 / 42%);
+  --experience-progress-dot: #829086;
+  --experience-progress-ring:
+    rgb(105 193 87 / 15%);
+
+  --experience-image-background:
+    rgb(14 23 16 / 96%);
+  --experience-image-border:
+    rgb(112 197 92 / 16%);
+  --experience-image-shadow:
+    0 28px 70px rgb(0 0 0 / 42%);
+
+  --benefits-background: #0b120d;
+
+  --benefits-badge:
+    rgb(105 193 87 / 9%);
+  --benefits-badge-border:
+    rgb(105 193 87 / 22%);
+
+  --benefits-card:
+    rgb(20 30 22 / 94%);
+  --benefits-card-border:
+    rgb(105 193 87 / 16%);
+
+  --benefits-card-shadow:
+    0 16px 38px
+    rgb(0 0 0 / 28%);
+
+  --benefits-card-shadow-hover:
+    0 24px 54px
+    rgb(0 0 0 / 42%);
+
+  --benefits-icon-background:
+    radial-gradient(
+      circle at 50% 45%,
+      #213624 0%,
+      #192c1c 72%,
+      #142417 100%
+    );
+
+  --benefits-icon-background-solid:
+    #192c1c;
 
   --icon-gradient: linear-gradient( 145deg, #ff4325 0%, #e52e16 100%);
 
@@ -362,7 +741,190 @@ button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
 
 .hero-theme-radial {background: var(--hero-radial);}
 
+.hero-green-shape {
+  background-image:
+    var(--hero-photo-left-fade),
+    var(--hero-photo-overlay),
+    url("/images/hero/openlife-hero.webp"),
+    linear-gradient(
+      145deg,
+      var(--hero-green-start) 0%,
+      var(--hero-green-end) 100%
+    );
+
+  background-position:
+    center,
+    62% center,
+    center;
+
+  background-repeat:
+    no-repeat;
+
+  background-size:
+    cover;
+
+  clip-path:
+    ellipse(
+      61% 82%
+      at 88% 41%
+    );
+}
+
+.hero-contour-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='620' viewBox='0 0 620 620'%3E%3Cg fill='none' stroke='%23d9f4d4' stroke-opacity='.055' stroke-width='1'%3E%3Cpath d='M-85 540C55 370 85 125 310-15S655 15 765-105'/%3E%3Cpath d='M-65 560C75 390 105 145 330 5S675 35 785-85'/%3E%3Cpath d='M-45 580C95 410 125 165 350 25S695 55 805-65'/%3E%3Cpath d='M-25 600C115 430 145 185 370 45S715 75 825-45'/%3E%3Cpath d='M-5 620C135 450 165 205 390 65S735 95 845-25'/%3E%3Cpath d='M15 640C155 470 185 225 410 85S755 115 865-5'/%3E%3Cpath d='M35 660C175 490 205 245 430 105S775 135 885 15'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-position:
+    right center;
+
+  background-repeat:
+    repeat;
+
+  background-size:
+    620px 620px;
+
+  clip-path:
+    ellipse(
+      61% 82%
+      at 88% 41%
+    );
+}
+
+.hero-mobile-initial-photo {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .hero-mobile-initial-photo {
+    display: block;
+    height: 105svh;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        transparent 66%,
+        var(
+          --hero-stage-background
+        ) 100%
+      ),
+      linear-gradient(
+        90deg,
+        var(
+          --hero-mobile-photo-left
+        ) 0%,
+        rgb(251 252 248 / 48%) 55%,
+        var(
+          --hero-mobile-photo-right
+        ) 100%
+      ),
+      url(
+        "/images/hero/openlife-hero.webp"
+      );
+
+    background-position:
+      center,
+      center,
+      62% center;
+
+    background-repeat:
+      no-repeat;
+
+    background-size:
+      cover;
+  }
+
+  .dark
+  .hero-mobile-initial-photo {
+    background-image:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        transparent 66%,
+        var(
+          --hero-stage-background
+        ) 100%
+      ),
+      linear-gradient(
+        90deg,
+        var(
+          --hero-mobile-photo-left
+        ) 0%,
+        rgb(11 16 12 / 52%) 55%,
+        var(
+          --hero-mobile-photo-right
+        ) 100%
+      ),
+      url(
+        "/images/hero/openlife-hero.webp"
+      );
+  }
+
+  .hero-green-shape,
+  .hero-contour-pattern {
+    clip-path:
+      ellipse(
+        94% 46%
+        at 100% 100%
+      );
+
+    opacity: 1;
+  }
+
+  .hero-green-shape {
+    background-image:
+      radial-gradient(
+        circle at 70% 35%,
+        rgb(42 147 43 / 22%) 0%,
+        transparent 36%
+      ),
+      linear-gradient(
+        145deg,
+        var(--hero-green-start) 0%,
+        var(--hero-green-end) 100%
+      );
+
+    background-position:
+      center,
+      center;
+
+    background-size:
+      100% 100%,
+      100% 100%;
+  }
+
+  .hero-contour-pattern {
+    background-position:
+      right top;
+  }
+}
+
 .mobile-app-theme-background {background: var(--mobile-app-background);}
+
+.benefits-theme-background {
+  background-color:
+    var(--benefits-background);
+
+  background-image:
+    radial-gradient(
+      circle at 50% 88%,
+      rgb(78 151 60 / 8%) 0%,
+      transparent 42%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='620' viewBox='0 0 620 620'%3E%3Cg fill='none' stroke='%23176b0c' stroke-opacity='.045' stroke-width='1'%3E%3Cpath d='M-85 540C55 370 85 125 310-15S655 15 765-105'/%3E%3Cpath d='M-65 560C75 390 105 145 330 5S675 35 785-85'/%3E%3Cpath d='M-45 580C95 410 125 165 350 25S695 55 805-65'/%3E%3Cpath d='M-25 600C115 430 145 185 370 45S715 75 825-45'/%3E%3Cpath d='M-5 620C135 450 165 205 390 65S735 95 845-25'/%3E%3Cpath d='M15 640C155 470 185 225 410 85S755 115 865-5'/%3E%3Cpath d='M35 660C175 490 205 245 430 105S775 135 885 15'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-position:
+    center,
+    left bottom;
+
+  background-repeat:
+    no-repeat,
+    repeat-x;
+
+  background-size:
+    100% 100%,
+    620px 620px;
+}
 
 .theme-icon-gradient {background: var(--icon-gradient);}
 
@@ -382,26 +944,92 @@ button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
   to {height: 0;opacity: 0;}
 }
 
-.narrative-fixed-background {
-  background-image: url("/images/narrative/openlife-narrative.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #0c5804;
+.openlife-narrative-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      transparent 58%,
+      color-mix(
+        in srgb,
+        var(--brand-strong) 36%,
+        transparent
+      ) 100%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(
+        in srgb,
+        var(--brand-strong) 96%,
+        transparent
+      ) 0%,
+      color-mix(
+        in srgb,
+        var(--brand) 86%,
+        transparent
+      ) 30%,
+      color-mix(
+        in srgb,
+        var(--brand) 55%,
+        transparent
+      ) 56%,
+      color-mix(
+        in srgb,
+        var(--brand) 12%,
+        transparent
+      ) 100%
+    );
 }
 
-@media (max-width: 767px) {
-  .narrative-fixed-background {
-    background-position: center;
-    background-attachment: scroll;
-  }
+.dark .openlife-narrative-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      transparent 52%,
+      color-mix(
+        in srgb,
+        var(--background) 72%,
+        transparent
+      ) 100%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(
+        in srgb,
+        var(--background) 98%,
+        transparent
+      ) 0%,
+      color-mix(
+        in srgb,
+        var(--surface) 92%,
+        transparent
+      ) 32%,
+      color-mix(
+        in srgb,
+        var(--surface) 62%,
+        transparent
+      ) 60%,
+      color-mix(
+        in srgb,
+        var(--surface) 24%,
+        transparent
+      ) 100%
+    );
 }
 
 @media (hover: hover) and (pointer: fine) {
-  :where(a,button,[role="button"],[class*="hover:"],[class*="group-hover:"]) {
-    transition-duration:var(--hover-duration) !important;
-    transition-timing-function:var(--hover-easing) !important;
+  :where( a,button,
+    [role="button"],
+    [class*="hover:"],
+    [class*="group-hover:"]
+  ) {
+    transition-duration: var(--hover-duration) !important;
+    transition-timing-function: var(--hover-easing) !important;
+  }
+
+  :where( a,button,
+    [role="button"]
+  ):active {
+    transition-duration: var(--active-duration) !important;
   }
 }
 
@@ -418,31 +1046,96 @@ button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
   .accordion-content[data-state="closed"] { animation-duration: 0ms;}
 }
 
-/* Footer */
-.openlife-footer-background {
-  background-color: #176b0c;
+/* Business partner card */
+.openlife-business-card-background {
+  background-color: var(--business-card-middle);
+
   background-image:
     radial-gradient(
-      circle at 18% 110%,
-      rgb(65 175 40 / 18%) 0%,
-      transparent 42%
+      circle at 0% 0%,
+      color-mix(
+        in srgb,
+        var(--brand) 24%,
+        transparent
+      ) 0%,
+      transparent 35%
     ),
     radial-gradient(
-      circle at 88% -20%,
-      rgb(2 52 1 / 20%) 0%,
-      transparent 45%
+      circle at 100% 100%,
+      color-mix(
+        in srgb,
+        var(--business-card-end) 55%,
+        transparent
+      ) 0%,
+      transparent 42%
     ),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cpath d='M17 12.5v9M12.5 17h9' fill='none' stroke='%23ffffff' stroke-opacity='.045' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='260' viewBox='0 0 700 260'%3E%3Cg fill='none' stroke='%23b8e4ae' stroke-opacity='.11' stroke-width='1'%3E%3Cpath d='M-50 220C60 115 150 168 232 92S390 8 468 68s114 121 282 54'/%3E%3Cpath d='M-40 238C75 135 158 185 244 111S396 30 474 88s120 114 287 51'/%3E%3Cpath d='M-20 258C90 156 175 206 262 132S412 53 489 108s128 105 284 48'/%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(
-      105deg,
-      #176b0c 0%,
-      #146209 46%,
-      #105307 100%
+      108deg,
+      var(--business-card-start) 0%,
+      var(--business-card-middle) 48%,
+      var(--business-card-end) 100%
     );
 
-  background-repeat: no-repeat,no-repeat,repeat,no-repeat;
-  background-position:center,center,top left,center;
-  background-size:100% 100%,100% 100%,34px 34px,100% 100%;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+
+  background-position:
+    center,
+    center,
+    center,
+    center;
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    700px 260px,
+    100% 100%;
+}
+
+/* Footer */
+.openlife-footer-background {
+  background-color: #129551;
+
+  background-image:
+    radial-gradient(
+      circle at 12% 112%,
+      rgba(35, 146, 45, 0.651) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 92% -12%,
+      rgba(7, 167, 84, 0.704)0%,
+      transparent 44%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='420' viewBox='0 0 720 420'%3E%3Cg fill='none' stroke='%2377ad58' stroke-opacity='.09' stroke-width='1'%3E%3Cpath d='M-80 350C20 245 95 260 155 198S245 43 355 78s108 158 206 151 125-96 239-124'/%3E%3Cpath d='M-72 370C35 268 105 283 171 218S263 65 363 98s106 153 205 147 132-91 244-117'/%3E%3Cpath d='M-58 392C48 292 121 307 188 240S282 88 372 119s104 145 204 141 137-85 248-110'/%3E%3Cpath d='M18 420C87 348 145 353 212 281s104-144 173-119 99 132 199 132 145-78 245-96'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(
+      112deg,
+      #074e2a 0%,
+      #043c1f 48%,
+      #032f19 100%
+    );
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+
+  background-position:
+    center,
+    center,
+    top left,
+    center;
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    720px 420px,
+    100% 100%;
 }
 /*---break---*/
 @layer base {

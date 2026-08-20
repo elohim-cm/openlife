@@ -1,43 +1,41 @@
-import type {IconType,} from "react-icons";
 import {
-  PiHandCoins,
-  PiHandshake,
-  PiHourglass,
-  PiMedal,
-} from "react-icons/pi";
-
-export type BenefitLine = {
-  text: string;
-  highlighted: boolean;
-};
+  CalendarClock,
+  CirclePercent,
+  Coins,
+  WalletCards,
+  type LucideIcon,
+} from "lucide-react";
 
 export type Benefit = {
   id: string;
-  icon: IconType;
-  lines: readonly BenefitLine[];
+  icon: LucideIcon;
+  label: string;
+  value: string;
+  description:
+    readonly string[];
 };
 
 export type BenefitDefinition = {
   id: string;
-  icon: IconType;
+  icon: LucideIcon;
 };
 
 export const BENEFIT_DEFINITIONS:
   readonly BenefitDefinition[] = [
     {
-      id:"daily-contribution",
-      icon:PiHandCoins,
+      id: "daily-contribution",
+      icon: Coins,
     },
     {
-      id:"interest-rate",
-      icon:PiMedal,
+      id: "interest-rate",
+      icon: CirclePercent,
     },
     {
-      id:"withdrawal-period",
-      icon:PiHourglass,
+      id: "withdrawal-period",
+      icon: CalendarClock,
     },
     {
-      id:"no-fees",
-      icon:PiHandshake,
+      id: "no-fees",
+      icon: WalletCards,
     },
   ] as const;

@@ -13,7 +13,7 @@ import {cn} from "@/utils/cn";
 const HEADER_LINKS = {
   android: "https://play.google.com/store/apps/details?id=com.acamvie.open_life",
   apple: "https://apps.apple.com/cm/app/open-life/id1628082679",
-  account: "#",
+  account: "https://openlife.acamvie.com/login",
 } as const;
 
 export function Header() {

@@ -1,56 +1,129 @@
 "use client";
 
-import {AnimatePresence,motion,} from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+} from "framer-motion";
 import Image from "next/image";
-import {useMemo,} from "react";
+import { useMemo } from "react";
+import {
+  Calculator,
+  FilePenLine,
+  HandCoins,
+  LayoutGrid,
+  WalletCards,
+  type LucideIcon,
+} from "lucide-react";
 
-import {useScrollStory,} from "@/hooks/useScrollStory";
-import {useSiteContent,} from "@/hooks/useSiteContent";
+import {
+  useScrollStory,
+} from "@/hooks/useScrollStory";
+import {
+  useSiteContent,
+} from "@/hooks/useSiteContent";
 
-import {EXPERIENCE_ASSETS,type ExperienceItem,} from "./experience.data";
+import {
+  EXPERIENCE_ASSETS,
+  type ExperienceItem,
+} from "./experience.data";
 
 export function ExperienceSection() {
-  const content =useSiteContent();
+  const content = useSiteContent();
 
-  const experienceItems =useMemo<readonly ExperienceItem[]>(() => {
-      return EXPERIENCE_ASSETS.map((asset,index,) => {
-          const translatedItem =content.experience.items[index];
-
+  const experienceItems =
+    useMemo<
+      readonly ExperienceItem[]
+    >(() => {
+      return EXPERIENCE_ASSETS.map(
+        (asset, index) => {const translatedItem =content.experience.items[index];
           return {
-            id:asset.id,
-            imageSrc:asset.imageSrc,
-            title:translatedItem?.title ?? "",
-            description:translatedItem?.description ?? "",
-            imageAlt:translatedItem?.imageAlt ?? "",
+            id: asset.id,
+            imageSrc:
+              asset.imageSrc,
+            title:
+              translatedItem
+                ?.title ?? "",
+            description:
+              translatedItem
+                ?.description ?? "",
+            imageAlt:
+              translatedItem
+                ?.imageAlt ?? "",
           };
         },
       );
-    }, [content.experience.items,]);
+    }, [content.experience.items]);
 
-  const {sectionRef,activeIndex,direction,progress} = useScrollStory({stepsCount:experienceItems.length,});
+  const {
+    sectionRef,
+    activeIndex,
+    direction,
+  } = useScrollStory({
+    stepsCount:
+      experienceItems.length,
+  });
 
-  const activeItem =experienceItems[activeIndex];
+  const activeItem =
+    experienceItems[activeIndex];
 
   if (!activeItem) {
     return null;
   }
 
   return (
-    <section ref={sectionRef} id="openlife-experience" aria-labelledby="openlife-experience-title" className=" relative bg-background "
-      style={{height: `${experienceItems.length * 100}svh`, }}
+    <section
+      ref={sectionRef}
+      id="openlife-experience"
+      aria-labelledby="openlife-experience-title"
+      className="
+        relative
+        bg-[var(--experience-background)]
+      "
+      style={{
+        height: `${experienceItems.length * 100}svh`,
+      }}
     >
-      <div className="
+      <div
+        className="
           sticky top-0
           flex h-[100svh]
           w-full flex-col
           overflow-hidden
-          bg-background
+          bg-[var(--experience-background)]
         "
       >
         <div
+          aria-hidden="true"
           className="
+            pointer-events-none
+            absolute
+            -bottom-[58%]
+            -right-[20%]
+            size-[1150px]
+            rounded-full
+            bg-[var(--experience-curve)]
+            sm:-bottom-[72%]
+            sm:-right-[30%]
+            sm:size-[1450px]
+            lg:-bottom-[86%]
+            lg:-right-[24%]
+          "
+        />
+
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute inset-0
+            bg-[radial-gradient(circle_at_28%_42%,var(--experience-glow),transparent_36%)]
+          "
+        />
+
+        <div
+          className="
+            relative z-10
             mx-auto flex h-full
-            w-full max-w-[1450px]
+            w-full max-w-[1540px]
             flex-col
             px-5 pb-8 pt-[28px]
             sm:px-8
@@ -58,8 +131,14 @@ export function ExperienceSection() {
             lg:pb-10
           "
         >
-          <header className="shrink-0 text-center">
-            <h2 id="openlife-experience-title" className="
+          <header
+            className="
+              shrink-0 text-center
+            "
+          >
+            <h2
+              id="openlife-experience-title"
+              className="
                 text-[25px] font-bold
                 leading-tight
                 tracking-[-0.025em]
@@ -67,48 +146,65 @@ export function ExperienceSection() {
                 sm:text-[28px]
                 lg:text-[31px]
               "
-            >{content.experience.title}</h2>
+            >
+              {content.experience.title}
+            </h2>
 
-            <div aria-hidden="true" className="
+            <div
+              aria-hidden="true"
+              className="
                 mt-[9px]
                 flex items-center
                 justify-center
                 gap-[8px]
               "
             >
-              <span className=" h-[6px] w-[35px] bg-brand"/>
-              <span className=" h-[6px] w-[100px] bg-brand "/>
+              <span
+                className="
+                  h-[6px] w-[35px]
+                  bg-brand
+                "
+              />
+
+              <span
+                className="
+                  h-[6px] w-[100px]
+                  bg-brand
+                "
+              />
             </div>
           </header>
 
-          <div className="
+          <div
+            className="
               grid min-h-0
               flex-1 items-center
-              gap-9 pt-10
-              lg:grid-cols-[0.75fr_1.5fr]
-              lg:gap-[92px]
-              lg:pt-[60px]
+              pt-7
+              lg:grid-cols-[180px_330px_minmax(0,1fr)]
+              lg:gap-8
+              lg:pt-10
+              xl:grid-cols-[190px_350px_minmax(0,1fr)]
+              xl:gap-12
             "
           >
-            <div className="order-2 w-full lg:order-1 lg:pl-[10px]">
-              <div
-                className="
-                  relative
-                  min-h-[260px]
-                  pl-[45px]
-                  sm:pl-[52px]
-                  lg:min-h-[310px]
-                "
-              >
-                <ExperienceProgress progress={progress} stepsCount={experienceItems.length}/>
+            <ExperienceProgress
+              items={experienceItems}
+              activeIndex={activeIndex}
+              label={
+                content.experience
+                  .progressLabel
+              }
+            />
 
-                <ExperienceText item={activeItem} direction={direction}/>
-              </div>
-            </div>
+            <ExperienceText
+              item={activeItem}
+              direction={direction}
+            />
 
-            <div className=" order-1 w-full lg:order-2">
-              <ExperienceImage item={activeItem} direction={direction}/>
-            </div>
+            <ExperienceImage
+              item={activeItem}
+              direction={direction}
+            />
           </div>
         </div>
       </div>
@@ -121,19 +217,230 @@ type AnimatedPartProps = {
   direction: 1 | -1;
 };
 
+type ExperienceProgressProps = {
+  items:
+    readonly ExperienceItem[];
+  activeIndex: number;
+  label: string;
+};
+
+function ExperienceProgress({
+  items,
+  activeIndex,
+  label,
+}: ExperienceProgressProps) {
+  return (
+    <nav
+      aria-label={label}
+      className="w-full"
+    >
+      <ol
+        className="
+          hidden flex-col
+          lg:flex
+        "
+      >
+        {items.map(
+          (item, index) => {
+            const isActive =
+              index === activeIndex;
+            const isPassed =
+              index < activeIndex;
+            const isLast =
+              index ===
+              items.length - 1;
+
+            return (
+              <li
+                key={item.id}
+                aria-current={
+                  isActive
+                    ? "step"
+                    : undefined
+                }
+                className="
+                  relative flex
+                  min-h-[82px]
+                  items-start gap-4
+                "
+              >
+                {!isLast && (
+                  <span
+                    aria-hidden="true"
+                    className={`
+                      absolute
+                      left-[9px] top-[20px]
+                      h-[62px]
+                      border-l border-dashed
+                      transition-colors
+                      duration-500
+                      ${
+                        isPassed
+                          ? "border-brand/70"
+                          : "border-[var(--experience-progress-line)]"
+                      }
+                    `}
+                  />
+                )}
+
+                <span
+                  aria-hidden="true"
+                  className={`
+                    relative z-10
+                    mt-[2px] block
+                    size-[19px]
+                    shrink-0
+                    rounded-full border
+                    transition-[background-color,border-color,box-shadow,transform]
+                    duration-500
+                    ease-[cubic-bezier(0.22,1,0.36,1)]
+                    ${
+                      isActive
+                        ? `
+                          scale-110
+                          border-brand
+                          bg-brand
+                          shadow-[0_0_0_7px_var(--experience-progress-ring)]
+                        `
+                        : isPassed
+                          ? `
+                            border-brand
+                            bg-brand/45
+                          `
+                          : `
+                            border-[var(--experience-progress-dot)]
+                            bg-[var(--experience-background)]
+                          `
+                    }
+                  `}
+                />
+
+                <span
+                  className={`
+                    block pt-0.5
+                    text-[14px]
+                    leading-[1.35]
+                    transition-[color,font-weight]
+                    duration-500
+                    ${
+                      isActive
+                        ? "font-bold text-brand"
+                        : "font-medium text-text-muted"
+                    }
+                  `}
+                >
+                  {item.title}
+                </span>
+              </li>
+            );
+          },
+        )}
+      </ol>
+
+      <ol
+        aria-hidden="true"
+        className="
+          mx-auto flex
+          max-w-[310px]
+          items-center
+          justify-between
+          lg:hidden
+        "
+      >
+        {items.map(
+          (item, index) => {
+            const isActive =
+              index === activeIndex;
+            const isPassed =
+              index < activeIndex;
+            const isLast =
+              index ===
+              items.length - 1;
+
+            return (
+              <li
+                key={item.id}
+                className="
+                  relative flex flex-1
+                  items-center
+                  last:flex-none
+                "
+              >
+                <span
+                  className={`
+                    relative z-10 block
+                    size-[14px]
+                    rounded-full border
+                    transition-all
+                    duration-500
+                    ${
+                      isActive
+                        ? "scale-125 border-brand bg-brand"
+                        : isPassed
+                          ? "border-brand bg-brand/50"
+                          : "border-[var(--experience-progress-dot)] bg-[var(--experience-background)]"
+                    }
+                  `}
+                />
+
+                {!isLast && (
+                  <span
+                    className={`
+                      h-px flex-1
+                      transition-colors
+                      duration-500
+                      ${
+                        isPassed
+                          ? "bg-brand/70"
+                          : "bg-[var(--experience-progress-line)]"
+                      }
+                    `}
+                  />
+                )}
+              </li>
+            );
+          },
+        )}
+      </ol>
+    </nav>
+  );
+}
+
 function ExperienceText({
   item,
   direction,
 }: AnimatedPartProps) {
-  const textDistance = 72;
+  const textDistance = 58;
+  const iconsByItemId:
+    Record<string, LucideIcon> = {
+      dashboard: LayoutGrid,
+      subscription: FilePenLine,
+      simulation: Calculator,
+      collection: WalletCards,
+      redemption: HandCoins,
+    };
+
+  const ItemIcon =
+    iconsByItemId[item.id] ??
+    LayoutGrid;
 
   return (
     <div
       className="
-        relative
-        min-h-[260px]
+        relative mx-auto
+        min-h-[210px]
+        w-full max-w-[350px]
         overflow-hidden
-        lg:min-h-[310px]
+        rounded-[18px]
+        border
+        border-[var(--experience-card-border)]
+        bg-[var(--experience-card)]
+        shadow-[var(--experience-card-shadow)]
+        backdrop-blur-[7px]
+        sm:min-h-[230px]
+        sm:max-w-[520px]
+        lg:min-h-[330px]
+        lg:max-w-none
       "
     >
       <AnimatePresence
@@ -163,7 +470,7 @@ function ExperienceText({
                 : textDistance,
           }}
           transition={{
-            duration: 0.72,
+            duration: 0.68,
             ease: [
               0.22,
               1,
@@ -175,129 +482,146 @@ function ExperienceText({
             absolute inset-0
             flex flex-col
             justify-center
+            px-5 py-5
+            sm:px-7
+            sm:py-6
+            lg:px-7
+            xl:px-8
           "
         >
-          <h3
+          <div
             className="
-              text-[27px]
-              font-bold
-              leading-[1.2]
-              tracking-[-0.025em]
-              text-heading-secondary
-              sm:text-[30px]
-              lg:text-[31px]
+              flex items-center
+              gap-3.5
+              sm:gap-4
             "
           >
-            {item.title}
-          </h3>
+            <span
+              aria-hidden="true"
+              className="
+                flex size-[44px]
+                shrink-0
+                items-center
+                justify-center
+                rounded-[11px]
+                border border-brand/15
+                bg-brand/[0.06]
+                text-brand
+                sm:size-[48px]
+                sm:rounded-[12px]
+                lg:size-[50px]
+              "
+            >
+              <ItemIcon
+                className="
+                  size-[23px]
+                  sm:size-[25px]
+                "
+                strokeWidth={2}
+              />
+            </span>
+
+            <h3
+              className="
+                text-[23px]
+                font-bold
+                leading-[1.2]
+                tracking-[-0.025em]
+                text-heading-secondary
+                sm:text-[26px]
+                lg:text-[28px]
+              "
+            >
+              {item.title}
+            </h3>
+          </div>
 
           <p
             className="
-              mt-[22px]
-              max-w-[470px]
-              text-[15px]
-              leading-[1.65]
+              mt-4
+              text-[14px]
+              leading-[1.7]
               text-text-muted
-              sm:text-[16px]
-              lg:text-[17px]
+              sm:text-[15px]
+              lg:text-[16px]
             "
-          >{item.description}</p>
+          >
+            {item.description}
+          </p>
         </motion.div>
       </AnimatePresence>
     </div>
   );
 }
 
-type ExperienceProgressProps = {progress: number;stepsCount: number;};
-function ExperienceProgress({progress,stepsCount,}: ExperienceProgressProps) {
-  const dotsCount =Math.max(stepsCount,1,);
-  const activeDotIndex = Math.min(
-      Math.round(
-        progress *
-          (dotsCount - 1),
-      ),
-      dotsCount - 1,
-    );
+function ExperienceImage({
+  item,
+  direction,
+}: AnimatedPartProps) {
+  const imageDistance = 80;
 
   return (
     <div
-      aria-hidden="true"
       className="
-        absolute left-0 top-1/2
-        z-20
-        flex -translate-y-1/2
-        flex-col items-center
-        gap-[10px]
-      "
-    >
-      {Array.from({
-        length: dotsCount,
-      }).map((_, index) => {
-        const isActive = index === activeDotIndex;
-        const isPassed = index < activeDotIndex;
-
-        return (
-          <span key={index} className={`
-              block rounded-full
-              transition-[width,height,background-color,box-shadow,opacity]
-              duration-500
-              ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${
-                isActive
-                  ? `
-                    size-[15px]
-                    bg-brand
-                    opacity-100
-                    shadow-[0_3px_10px_rgba(23,107,12,0.38)]
-                  `
-                  : isPassed
-                    ? `
-                      size-[8px]
-                      bg-brand/55
-                      opacity-90
-                    `
-                    : `
-                      size-[8px]
-                      bg-icon-muted
-                      opacity-100
-                    `
-              }
-            `}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-function ExperienceImage({item,direction,}: AnimatedPartProps) {
-  const imageDistance = 90;
-
-  return (
-    <div className="
         relative w-full
         overflow-hidden
-        rounded-[11px]
-        border border-border
-        bg-surface-muted
-        shadow-card
+        rounded-[18px]
+        border
+        border-[var(--experience-image-border)]
+        bg-[var(--experience-image-background)]
+        shadow-[var(--experience-image-shadow)]
       "
     >
-      <div className="
+      <div
+        className="
           relative
           aspect-[1.65/1]
           w-full
         "
       >
-        <AnimatePresence initial={false} mode="popLayout" custom={direction}>
-          <motion.div key={`${item.id}-${item.imageAlt}`} 
-            initial={{opacity: 0,y:direction === 1? imageDistance: -imageDistance,}}
-            animate={{opacity: 1,y: 0,}}
-            exit={{opacity: 0,y:direction === 1? -imageDistance: imageDistance,}}
-            transition={{duration: 0.65,ease: [0.22,1,0.36,1,],}}
+        <AnimatePresence
+          initial={false}
+          mode="popLayout"
+          custom={direction}
+        >
+          <motion.div
+            key={`${item.id}-${item.imageAlt}`}
+            initial={{
+              opacity: 0,
+              y:
+                direction === 1
+                  ? imageDistance
+                  : -imageDistance,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{
+              opacity: 0,
+              y:
+                direction === 1
+                  ? -imageDistance
+                  : imageDistance,
+            }}
+            transition={{
+              duration: 0.65,
+              ease: [
+                0.22,
+                1,
+                0.36,
+                1,
+              ],
+            }}
             className="absolute inset-0"
           >
-            <Image src={item.imageSrc} alt={item.imageAlt} fill sizes=" (max-width: 1023px) 92vw, 55vw "/>
+            <Image
+              src={item.imageSrc}
+              alt={item.imageAlt}
+              fill
+              sizes="(max-width: 1023px) 92vw, 52vw"
+              className="object-contain"
+            />
           </motion.div>
         </AnimatePresence>
       </div>

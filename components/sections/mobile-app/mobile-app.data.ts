@@ -1,11 +1,13 @@
 import type { IconType } from "react-icons";
 
 import {
-  FaAndroid,
   FaApple,
   FaArrowTrendUp,
-  FaShield,
+  FaGooglePlay,
 } from "react-icons/fa6";
+import {
+  PiShieldCheck,
+} from "react-icons/pi";
 
 export type MobileFeatureId =
   | "security"
@@ -27,7 +29,8 @@ export type MobileAppFeatureDefinition = {
 
 export type MobileAppScreenAsset = {
   id: MobileScreenId;
-  src: string;
+  lightSrc: string;
+  darkSrc: string;
 };
 
 export type MobileAppStoreDefinition = {
@@ -44,7 +47,7 @@ export const MOBILE_APP_FEATURES:
   readonly MobileAppFeatureDefinition[] = [
     {
       id: "security",
-      icon: FaShield,
+      icon: PiShieldCheck,
     },
     {
       id: "speed",
@@ -55,16 +58,25 @@ export const MOBILE_APP_FEATURES:
 export const MOBILE_APP_SCREENS:
   readonly MobileAppScreenAsset[] = [
     {
-      id: "screen-login",
-      src: "/images/mobile-app/app-screen-1.jpg",
+      id: "screen-dashboard",
+      lightSrc:
+        "/images/mobile-app/dashboard-light.jpg",
+      darkSrc:
+        "/images/mobile-app/dashboard-dark.jpeg",
     },
     {
-      id: "screen-dashboard",
-      src: "/images/mobile-app/app-screen-2.jpg",
+      id: "screen-login",
+      lightSrc:
+        "/images/mobile-app/login-light.jpg",
+      darkSrc:
+        "/images/mobile-app/login-dark.jpeg",
     },
     {
       id: "screen-simulator",
-      src: "/images/mobile-app/app-screen-3.jpg",
+      lightSrc:
+        "/images/mobile-app/simulation-light.jpg",
+      darkSrc:
+        "/images/mobile-app/simulation-dark.jpeg",
     },
   ];
 
@@ -73,7 +85,7 @@ export const MOBILE_APP_STORES:
     {
       id: "google-play",
       href: "#",
-      icon: FaAndroid,
+      icon: FaGooglePlay,
     },
     {
       id: "app-store",

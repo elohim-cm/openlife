@@ -57,105 +57,152 @@ export const fr = {
   hero: {
     accreditation:
       "ACAM VIE - AGRÉÉ PAR LA CIMA",
+
     welcome: "Bienvenue sur",
+
     title: "Open Life",
+
+    tagline:
+      "L'épargne journalière digitale, sécurisée et transparente. Cotisez à partir de 200 FCFA/jour et constituez votre capital pour l'avenir.",
+
+    phoneImageAlt:
+      "Tableau de bord de l’application mobile Open Life",
 
     descriptionStart:
       "L’épargne journalière digitale, sécurisée et transparente. Cotisez à partir de",
-    dailyAmount: "200 FCFA/jour",
+
+    dailyAmount:
+      "200 FCFA/jour",
+
     descriptionEnd:
       "et constituez votre capital pour l’avenir.",
 
     features: [
       {
         id: "minimum-deposit",
-        label: "À partir de 200 FCFA",
+        label:
+          "Dès 200 FCFA par jour",
       },
       {
         id: "interest-rate",
-        label: "2 % d’intérêt/an",
+        label:
+          "2 % d’intérêt annuel",
       },
       {
         id: "withdrawal",
-        label: "Retrait à 6 mois",
+        label:
+          "Disponible après 6 mois",
+      },
+    ],
+
+    floatingCards: [
+      {
+        id: "regularity",
+        title: "Régularité",
+        value: "92%",
+        description:
+          "de dépôts réalisés ce mois",
+      },
+      {
+        id: "security",
+        title: "Sécurisé",
+        value: "",
+        description:
+          "Vos fonds sont protégés et confidentiels",
+      },
+      {
+        id: "accessibility",
+        title: "Accessible",
+        value: "",
+        description:
+          "À tout moment, partout au Cameroun",
+      },
+    ],
+
+    trustItems: [
+      {
+        id: "approval",
+        title: "Approuvé par",
+        description:
+          "ACAM VIE - CIMA",
+      },
+      {
+        id: "security",
+        title: "Sécurité avancée",
+        description:
+          "Données protégées",
+      },
+      {
+        id: "savers",
+        title:
+          "Plus de 50 000+",
+        description:
+          "épargnants",
+      },
+      {
+        id: "rating",
+        title: "Noté 4,8/5",
+        description:
+          "par nos utilisateurs",
       },
     ],
 
     actions: {
       simulation:
-        "Faire une simulation",
+        "Simuler mon épargne",
+
       simulationLabel:
         "Effectuer une simulation d’épargne Open Life",
-      learnMore: "En savoir plus",
+
+      learnMore:
+        "Découvrir Open Life",
+
       learnMoreLabel:
         "En savoir plus sur Open Life",
     },
   },
 
   benefits: {
+    badge:
+      "Avantages conçus pour vous",
+
     introduction:
-      "Open Life est la nouvelle solution d’épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l’application sur Google Play et ouvrez votre compte pour sécuriser votre épargne de tous les jours !",
+      "Open Life est la nouvelle solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore, et ouvrez votre compte pour sécuriser votre épargne de tous les jours !",
 
     title: "Open Life, c’est :",
 
     items: [
       {
         id: "daily-contribution",
-        lines: [
-          {
-            text:
-              "Les primes journalières à partir de",
-            highlighted: false,
-          },
-          {
-            text: "200 FCFA",
-            highlighted: true,
-          },
+        label: "À partir de",
+        value: "200",
+        description: [
+          "FCFA par jour",
         ],
       },
       {
         id: "interest-rate",
-        lines: [
-          {
-            text:
-              "Un taux d’intérêt de",
-            highlighted: false,
-          },
-          {
-            text: "2 %",
-            highlighted: true,
-          },
+        label: "",
+        value: "2 %",
+        description: [
+          "d’intérêt annuel",
         ],
       },
       {
         id: "withdrawal-period",
-        lines: [
-          {
-            text: "Le retrait dès",
-            highlighted: false,
-          },
-          {
-            text: "6 mois de vie",
-            highlighted: true,
-          },
-          {
-            text: "du contrat",
-            highlighted: false,
-          },
+        label: "Retrait dès",
+        value: "6",
+        description: [
+          "mois",
         ],
       },
       {
         id: "no-fees",
-        lines: [
-          {
-            text: "Aucun frais",
-            highlighted: true,
-          },
-          {
-            text:
-              "sur les versements ou les retraits",
-            highlighted: false,
-          },
+        label: "",
+        value: "Aucun frais",
+        description: [
+          "sur les versements",
+          "ou les retraits",
         ],
       },
     ],
@@ -164,6 +211,8 @@ export const fr = {
   experience: {
     title:
       "Vivez l’expérience Open Life",
+    progressLabel:
+      "Étapes de l’expérience Open Life",
 
     items: [
       {
@@ -198,12 +247,26 @@ export const fr = {
         imageAlt:
           "Interface de collecte des primes Open Life",
       },
+      {
+        id: "redemption",
+        title: "Rachat",
+        description:
+          "Demandez un retrait partiel ou total de votre épargne à partir de 6 mois. Le montant est transféré directement sur votre compte Mobile Money sous 48h, sans aucun frais.",
+        imageAlt:
+          "Interface de rachat et de retrait de l’épargne Open Life",
+      },
     ],
   },
 
   mobileApp: {
     title:
       "Votre épargne au creux de la main",
+
+    titleStart:
+      "Votre épargne au",
+
+    titleHighlight:
+      "creux de la main",
 
     features: [
       {
@@ -242,14 +305,14 @@ export const fr = {
 
     screens: [
       {
-        id: "screen-login",
-        alt:
-          "Écran de connexion de l’application Open Life",
-      },
-      {
         id: "screen-dashboard",
         alt:
           "Tableau de bord mobile Open Life",
+      },
+      {
+        id: "screen-login",
+        alt:
+          "Écran de connexion de l’application Open Life",
       },
       {
         id: "screen-simulator",
@@ -263,10 +326,34 @@ export const fr = {
     accessibilityTitle:
       "Open Life, votre épargne au quotidien",
 
+    todayLabel: "Aujourd’hui",
+    tomorrowLabel: "Demain",
+
     phrases: [
       "Gérez votre épargne journalière en 5 minutes sur votre téléphone avec l’application Open Life !",
       "Avec Open Life, construisez votre avenir jour après jour.",
     ],
+
+    todayCard: {
+      title:
+        "Épargne du jour complétée",
+
+      value: "200 FCFA",
+
+      description:
+        "Bravo ! Vous avancez vers vos objectifs.",
+    },
+
+    tomorrowCard: {
+      title:
+        "Objectif atteint",
+
+      value:
+        "Votre projet prend vie",
+
+      description:
+        "Continuez à avancer avec Open Life.",
+    },
   },
 
   faq: {
@@ -427,8 +514,7 @@ export const fr = {
   },
 
   simulationPage: {
-    logoHomeLabel:
-      "Retourner à l’accueil Open Life",
+    logoHomeLabel: "Retourner à l’accueil Open Life",
 
     back: "Retour",
 
@@ -517,26 +603,20 @@ export const fr = {
       {
         id: "email",
         title: "Par e-mail",
-        description:
-          "Envoyez-nous vos documents ou vos demandes détaillées par courrier électronique.",
-        value:
-          "elohimwarren.cm@gmail.com",
-        status:
-          "Traitement prioritaire",
-        ariaLabel:
-          "Envoyer un e-mail à l’équipe Open Life",
+        description:"Envoyez-nous vos documents ou vos demandes détaillées par courrier électronique.",
+        value:"elohimwarren.cm@gmail.com",
+        status:"Traitement prioritaire",
+        ariaLabel:"Envoyer un e-mail à l’équipe Open Life",
       },
     ],
 
     business: {
-      title:
-        "Devenez apporteur d’affaires !",
-      description:
-        "Enregistrez des clients et gagnez 2 % de commission sur chaque encaissement. Pour plus d’informations, contactez notre équipe technique.",
-      buttonLabel:
-        "Contacter l’équipe",
-      buttonAriaLabel:
-        "Contacter l’équipe Open Life au sujet du programme d’apporteur d’affaires",
+      title:"Devenez apporteur d’affaires !",
+
+      description:"Enregistrez des clients et gagnez 2 % de commission sur chaque encaissement. Pour plus d’informations, contactez notre équipe technique.",
+      buttonLabel:"Contacter l’équipe",
+
+      buttonAriaLabel:"Contacter l’équipe Open Life au sujet du programme d’apporteur d’affaires",
     },
   },
 

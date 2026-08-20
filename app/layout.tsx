@@ -1,6 +1,6 @@
 import type {Metadata,} from "next";
 import Script from "next/script";
-import {Poppins, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import type {ReactNode,} from "react";
 import {I18nProvider,} from "@/components/i18n/i18nProvider";
 import {FloatingWhatsApp,} from "@/components/layout/FloatingWhatsApp";
@@ -11,13 +11,39 @@ import {getSiteContent,} from "@/i18n/content";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400","500","600","700",],
+const inter = localFont({
+  src: "../public/fonts/Inter-Variable.ttf",
+  variable: "--font-sans",
+  weight: "100 900",
+  style: "normal",
   display: "swap",
+});
+
+const poppins = localFont({
+  src: [
+    {
+      path: "../public/fonts/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Poppins-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Poppins-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 const defaultContent =getSiteContent(DEFAULT_LOCALE,);

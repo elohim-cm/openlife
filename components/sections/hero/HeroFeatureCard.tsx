@@ -1,7 +1,9 @@
-import type { IconType } from "react-icons";
+import type {
+  LucideIcon,
+} from "lucide-react";
 
 type HeroFeatureCardProps = {
-  icon: IconType;
+  icon: LucideIcon;
   label: string;
 };
 
@@ -12,20 +14,45 @@ export function HeroFeatureCard({
   return (
     <div
       className="
-        flex h-[49px] items-center gap-[13px]
-        rounded-[11px] border border-border-brand
-        bg-surface/30 px-5.5
-        backdrop-blur-[2px]
-        transition-[background-color,border-color,transform]
-        duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-        hover:-translate-y-1
-        hover:border-[#8cad81]
-        hover:bg-surface/50
+        group flex
+        items-center gap-4
       "
     >
-      <Icon aria-hidden="true" className="size-4.75 shrink-0 text-[#176809]"/>
+      <span
+        className="
+          flex size-[49px]
+          shrink-0
+          items-center
+          justify-center
+          rounded-[11px]
+          border
+          border-[var(--hero-feature-border)]
+          bg-[var(--hero-feature-background)]
+          text-brand
+          transition-[transform,border-color,background-color]
+          duration-500
+          ease-[cubic-bezier(0.16,1,0.3,1)]
+          group-hover:-translate-y-0.5
+          group-hover:border-brand/35
+          group-hover:bg-brand-soft
+        "
+      >
+        <Icon
+          aria-hidden="true"
+          className="size-[22px]"
+          strokeWidth={2}
+        />
+      </span>
 
-      <span className="whitespace-nowrap text-[14px] font-medium leading-none">
+      <span
+        className="
+          text-[16px]
+          font-medium
+          leading-[1.35]
+          text-heading-secondary
+          sm:text-[17px]
+        "
+      >
         {label}
       </span>
     </div>

@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import {
   motion,
   useReducedMotion,
 } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { FaShieldAlt } from "react-icons/fa";
 
 import { useSiteContent } from "@/hooks/useSiteContent";
 
@@ -17,24 +18,37 @@ import {
 
 export function Footer() {
   const content = useSiteContent();
-
   const reduceMotion = Boolean(
     useReducedMotion(),
   );
+  const currentYear =
+    new Date().getFullYear();
 
-  const currentYear =new Date().getFullYear();
-
-  const countries = FOOTER_COUNTRIES.map(
-      (country, index) => ({...country,name:content.footer.countries[index]?.name ?? "",}),
+  const countries =
+    FOOTER_COUNTRIES.map(
+      (country, index) => ({
+        ...country,
+        name:
+          content.footer
+            .countries[index]
+            ?.name ?? "",
+      }),
     );
 
   const socialLinks =
-  FOOTER_SOCIAL_LINKS.map(
-    (social, index) => ({
-      ...social,label:content.footer.socialNetworks[index]?.name ?? "",
-      ariaLabel:content.footer.socialNetworks[index]?.ariaLabel ?? "",
-    }),
-  );
+    FOOTER_SOCIAL_LINKS.map(
+      (social, index) => ({
+        ...social,
+        label:
+          content.footer
+            .socialNetworks[index]
+            ?.name ?? "",
+        ariaLabel:
+          content.footer
+            .socialNetworks[index]
+            ?.ariaLabel ?? "",
+      }),
+    );
 
   return (
     <footer
@@ -42,25 +56,17 @@ export function Footer() {
         openlife-footer-background
         relative isolate
         overflow-hidden
+        border-t border-[#e42b1c]/55
         text-white
       "
     >
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute inset-0 -z-10
-          bg-[radial-gradient(circle_at_14%_100%,rgba(75,172,47,0.17),transparent_38%),radial-gradient(circle_at_90%_0%,rgba(0,43,0,0.19),transparent_42%)]
-        "
-      />
-
       <motion.div
         initial={
           reduceMotion
             ? false
             : {
                 opacity: 0,
-                y: 22,
+                y: 24,
               }
         }
         whileInView={{
@@ -69,27 +75,42 @@ export function Footer() {
         }}
         viewport={{
           once: true,
-          amount: 0.15,
+          amount: 0.12,
         }}
         transition={{
-          duration: reduceMotion
-            ? 0
-            : 0.7,
-          ease: [0.22, 1, 0.36, 1],
+          duration:
+            reduceMotion ? 0 : 0.8,
+          ease: [
+            0.16,
+            1,
+            0.3,
+            1,
+          ],
         }}
-        className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-380 pb-7 pt-13.5 sm:w-[calc(100%-64px)] sm:pb-7.5 sm:pt-15 lg:w-[80%]">
+        className="
+          relative z-10
+          mx-auto
+          w-[calc(100%-40px)]
+          max-w-[1450px]
+          pb-8 pt-10
+          sm:w-[calc(100%-64px)]
+          sm:pb-9
+          lg:w-[88%]
+          lg:pb-10
+        "
+      >
         <div
           className="
             grid grid-cols-1
-            gap-10
+            gap-9
             sm:grid-cols-2
-            sm:gap-x-16
-            sm:gap-y-12
-            lg:grid-cols-[1.85fr_0.95fr_1fr_0.85fr]
-            lg:gap-18
+            sm:gap-x-14
+            sm:gap-y-14
+            lg:grid-cols-[1.55fr_0.9fr_1.2fr_0.95fr]
+            lg:gap-0
           "
         >
-          <div>
+          <div className="lg:pr-16">
             <Link
               href="/"
               aria-label={
@@ -97,31 +118,42 @@ export function Footer() {
               }
               className="
                 relative block
-                h-20.5 w-38.75
-                rounded-md
+                h-[104px] w-[210px]
+                rounded-lg
+                transition-opacity
+                hover:opacity-90
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-white
                 focus-visible:ring-offset-4
-                focus-visible:ring-offset-[#176b0c]
+                focus-visible:ring-offset-[#073f1f]
               "
             >
               <Image
                 src="/images/branding/openlife-logo.webp"
-                alt={content.footer.logoAlt} fill
-                priority={false} sizes="155px"
-                className="object-contain object-left brightness-0 invert"
+                alt={
+                  content.footer.logoAlt
+                }
+                fill
+                sizes="210px"
+                className="
+                  object-contain
+                  object-left
+                  brightness-0
+                  invert
+                "
               />
             </Link>
 
             <p
               className="
-                mt-4.5
-                text-[16px]
-                font-medium
-                leading-[1.45]
-                text-white/95
-                sm:text-[17px]
+                mt-5
+                max-w-[320px]
+                text-[17px]
+                font-normal
+                leading-[1.55]
+                text-white/72
+                sm:text-[18px]
               "
             >
               {content.footer.tagline}
@@ -130,94 +162,136 @@ export function Footer() {
 
           <nav
             aria-labelledby="footer-countries-title"
+            className="
+              lg:border-l
+              lg:border-white/18
+              lg:pl-5
+              lg:pr-5
+            "
           >
             <h2
               id="footer-countries-title"
               className="
-                text-[13px]
-                font-extrabold
-                uppercase
-                tracking-[0.075em]
+                text-[20px]
+                font-bold
+                leading-tight
                 text-white
               "
             >
-              {content.footer.countriesTitle}
+              {
+                content.footer
+                  .countriesTitle
+              }
             </h2>
 
-            <ul className="mt-6.75 space-y-1.75">
-              {countries.map((country) => (
-                <li
-                  key={country.id}
-                  className="
-                    flex items-center
-                    gap-2.25
-                    text-[15px]
-                    leading-none
-                    text-white/95
-                    sm:text-[16px]
-                  "
-                >
-                  <span
-                    aria-hidden="true"
+            <span
+              aria-hidden="true"
+              className="
+                mt-3 block
+                h-[3px] w-8
+                rounded-full
+                bg-[#65a848]
+              "
+            />
+
+            <ul className="mt-5 flex flex-row flex-nowrap items-center gap-6">
+              {countries.map(
+                (country) => (
+                  <li
+                    key={country.id}
                     className="
-                      flex h-5.25
-                      w-6.75
-                      items-center
-                      overflow-hidden
-                      text-[21px]
-                      leading-none
+                      flex items-center
+                      gap-4
+                      text-[16px]
+                      font-semibold
+                      text-white/94
                     "
                   >
-                    {country.flag}
-                  </span>
+                    <span
+                      aria-hidden="true"
+                      className="
+                        flex size-12
+                        shrink-0
+                        items-center
+                        justify-center
+                        overflow-hidden
+                        rounded-full
+                        border
+                        border-white/25
+                        bg-white/8
+                        text-[27px]
+                        shadow-[inset_0_0_0_2px_rgba(255,255,255,0.04)]
+                      "
+                    >
+                      {country.flag}
+                    </span>
 
-                  <span>
-                    {country.name}
-                  </span>
-                </li>
-              ))}
+                    <span>
+                      {country.name}
+                    </span>
+                  </li>
+                ),
+              )}
             </ul>
           </nav>
 
           <nav
             aria-labelledby="footer-legal-title"
+            className="
+              lg:border-l
+              lg:border-white/18
+              lg:pl-5
+            "
           >
             <h2
               id="footer-legal-title"
               className="
-                text-[13px]
-                font-extrabold
-                uppercase
-                tracking-[0.075em]
+                text-[20px]
+                font-bold
+                leading-tight
                 text-white
               "
             >
-              {content.footer.legalTitle}
+              {
+                content.footer
+                  .legalTitle
+              }
             </h2>
 
+            <span
+              aria-hidden="true"
+              className="
+                mt-3 block
+                h-[3px] w-8
+                rounded-full
+                bg-[#65a848]
+              "
+            />
+
             <a
-              href={FOOTER_LINKS.privacy}
+              href={
+                FOOTER_LINKS.privacy
+              }
               target="_blank"
               rel="noreferrer"
               aria-label={
-                content.footer.privacyAriaLabel
+                content.footer
+                  .privacyAriaLabel
               }
               className="
-                mt-6.75
-                inline-flex
+                mt-5 inline-flex
                 text-[15px]
-                leading-normal
-                text-white/90
+                leading-[1.55]
+                text-white/84
                 underline-offset-4
                 transition-colors
-                duration-500
                 hover:text-white
                 hover:underline
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-white
                 focus-visible:ring-offset-4
-                focus-visible:ring-offset-[#176b0c]
+                focus-visible:ring-offset-[#073f1f]
                 sm:text-[16px]
               "
             >
@@ -230,23 +304,35 @@ export function Footer() {
 
           <nav
             aria-labelledby="footer-social-title"
+            className="
+              lg:border-l
+              lg:border-white/18
+              lg:pl-5
+            "
           >
             <h2
               id="footer-social-title"
               className="
-                text-[13px]
-                font-extrabold
-                uppercase
-                tracking-[0.075em]
+                text-[20px]
+                font-bold
+                leading-tight
                 text-white
               "
             >
               {content.footer.socialTitle}
             </h2>
 
-            <ul
-              className="mt-6.5 flex items-center gap-3"
-            >
+            <span
+              aria-hidden="true"
+              className="
+                mt-3 block
+                h-[3px] w-8
+                rounded-full
+                bg-[#65a848]
+              "
+            />
+
+            <ul className="mt-5 flex flex-row flex-nowrap items-center gap-4">
               {socialLinks.map(
                 (social) => {
                   const Icon =
@@ -258,43 +344,43 @@ export function Footer() {
                         href={social.href}
                         target="_blank"
                         rel="noreferrer"
-                        aria-label={
-                          social.ariaLabel
-                        }
+                        aria-label={social.ariaLabel}
                         title={social.label}
                         className="
-                          group
-                          flex size-12
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-white/25
-                          bg-white/5.5
-                          text-white
-                          shadow-[inset_0_0_0_1px_rgba(255,255,255,0.025)]
-                          transition-[background-color,border-color,transform,box-shadow]
-                          duration-500
-                          hover:-translate-y-1
-                          hover:border-white/50
-                          hover:bg-white/15
-                          hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)]
+                          text-[16px]
+                          font-medium
+                          text-white/88
+                          transition-colors
+                          hover:text-white
                           focus-visible:outline-none
                           focus-visible:ring-2
                           focus-visible:ring-white
                           focus-visible:ring-offset-4
-                          focus-visible:ring-offset-[#176b0c]
+                          focus-visible:ring-offset-[#073f1f]
                         "
                       >
-                        <Icon
-                          aria-hidden="true"
+                        <span
                           className="
-                            size-4
-                            transition-transform
-                            duration-500
-                            group-hover:scale-110
+                            flex size-12
+                            items-center
+                            justify-center
+                            rounded-full
+                            border
+                            border-[#73aa51]/65
+                            bg-white/4
+                            text-white
+                            transition-[background-color,border-color,transform,box-shadow]
+                            group-hover:-translate-y-0.5
+                            group-hover:border-white/50
+                            group-hover:bg-white/12
+                            group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.18)]
                           "
-                        />
+                        >
+                          <Icon
+                            aria-hidden="true"
+                            className="size-4.5"
+                          />
+                        </span>
                       </a>
                     </li>
                   );
@@ -304,24 +390,14 @@ export function Footer() {
           </nav>
         </div>
 
-        <div
-          aria-hidden="true"
-          className="
-            mb-8.25
-            mt-10.5
-            h-px w-full
-            bg-white/9
-          "
-        />
-
         <p
           className="
-            mx-auto
-            max-w-367.5
+            mx-auto mt-5
+            max-w-[920px]
             text-center
             text-[12px]
             leading-[1.75]
-            text-white/78
+            text-white/62
             sm:text-[13px]
           "
         >
@@ -330,46 +406,39 @@ export function Footer() {
 
         <div
           className="
-            mt-6.25
+            mt-4
             flex flex-col
             items-center
             justify-between
             gap-4
             text-center
             text-[13px]
-            text-white/90
+            text-white/72
             sm:flex-row
             sm:text-left
             sm:text-[14px]
           "
         >
-          <p>
-            © {currentYear}{" "}
-            {content.footer.copyright}
-          </p>
+          <p>© {currentYear}{" "}{content.footer.copyright}</p>
 
-          <p>
-            {content.footer.developedBy}
-            {" "}
-
-            <a
-              href={FOOTER_LINKS.developer}
+          <p>{content.footer.developedBy}{" "}
+            <a href={FOOTER_LINKS.developer}
               target="_blank"
               rel="noreferrer"
               aria-label={content.footer.developerAriaLabel}
               className="
                 font-extrabold
-                text-[#ff5a20]
+                text-[#ff6a4f]
                 transition-colors
-                duration-500
-                hover:text-[#ff8a59]
+                hover:text-[#ff6a4f]
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-white
                 focus-visible:ring-offset-4
-                focus-visible:ring-offset-[#176b0c]
-              "
-            >ELOHIM WARREN</a>
+                focus-visible:ring-offset-[#073f1f]
+              ">
+              ELOHIM WARREN
+            </a>
           </p>
         </div>
       </motion.div>

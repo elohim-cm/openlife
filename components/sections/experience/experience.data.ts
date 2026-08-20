@@ -28,4 +28,9 @@ export const EXPERIENCE_ASSETS: readonly ExperienceAsset[] = [
       id: "collection",
       imageSrc:"/images/experience/collection.png",
     },
+    {
+      id: "redemption",
+      imageSrc:
+        "/images/experience/redemption.png",
+    },
   ] as const;

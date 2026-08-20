@@ -1,15 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {FaArrowRight,FaBriefcase,} from "react-icons/fa";
-import type {BusinessPartner,} from "./assistance.data";
+import {
+  FaArrowRight,
+  FaPercent,
+} from "react-icons/fa";
+
+import type {
+  BusinessPartner,
+} from "./assistance.data";
 
 type BusinessCardProps = {
   partner: BusinessPartner;
   reduceMotion: boolean;
 };
 
-export function BusinessCard({partner,reduceMotion,}: BusinessCardProps) {
+export function BusinessCard({
+  partner,
+  reduceMotion,
+}: BusinessCardProps) {
   return (
     <motion.aside
       aria-labelledby="business-partner-title"
@@ -27,90 +36,123 @@ export function BusinessCard({partner,reduceMotion,}: BusinessCardProps) {
       }}
       viewport={{
         once: true,
-        amount: 0.35,
+        amount: 0.3,
       }}
       transition={{
-        duration: reduceMotion
-          ? 0
-          : 0.6,
-        ease: [0.22, 1, 0.36, 1],
+        duration:
+          reduceMotion ? 0 : 0.7,
+        ease: [
+          0.16,
+          1,
+          0.3,
+          1,
+        ],
       }}
       className="
-        relative overflow-hidden
-        rounded-[18px]
-        border border-border
-        bg-[linear-gradient(135deg,var(--surface-muted)_0%,var(--surface-soft)_100%)]
-        px-5 py-7
-        shadow-card
-        sm:px-8 sm:py-8
-        lg:px-10
+        openlife-business-card-background
+        relative isolate
+        overflow-hidden
+        rounded-[22px]
+        border border-(--business-card-border)
+        px-6 py-8
+        text-(--business-card-text)
+        shadow-[0_20px_55px_rgba(5,75,25,0.22)]
+        sm:px-8
+        sm:py-9
+        lg:px-12
+        lg:py-10
       "
     >
       <div
         aria-hidden="true"
         className="
           pointer-events-none
-          absolute -right-20 -top-24
-          size-[250px]
-          rounded-full
-          bg-brand-muted/35
-          blur-[55px]
+          absolute inset-0 -z-10
+          bg-[radial-gradient(circle_at_0%_0%,rgba(78,190,65,0.24),transparent_35%),radial-gradient(circle_at_100%_100%,rgba(13,68,24,0.45),transparent_42%)]
         "
       />
 
-      <div className="relative z-10 flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-6">
-        <div className="flex size-[48px] shrink-0 items-center justify-center rounded-[13px] bg-cta-soft text-accent">
-          <FaBriefcase
-            aria-hidden="true"
-            className="size-[23px]"
-          />
-        </div>
-
-        <div className="min-w-0 flex-1">
+      <div
+        className="
+          relative z-10
+          grid items-center
+          gap-4
+          lg:grid-cols-[1.45fr_0.9fr]
+        "
+      >
+        <div
+          className="
+            min-w-0
+            lg:border-r
+            lg:border-(--business-card-divider)
+            lg:pr-10
+          "
+        >
           <h3
             id="business-partner-title"
             className="
-              text-[22px] font-bold
-              leading-tight
-              tracking-[-0.02em]
-              text-heading-secondary
-              sm:text-[24px]
+              text-[27px]
+              font-bold
+              leading-[1.18]
+              tracking-[-0.025em]
+              text-white
+              sm:text-[31px]
+              lg:text-[34px]
             "
           >
             {partner.title}
           </h3>
 
-          <p className="mt-[9px] max-w-[950px] text-[14px] leading-[1.65] text-text-muted sm:text-[15px]">
+          <p
+            className="
+              mt-4
+              max-w-[620px]
+              text-[15px]
+              leading-[1.65]
+              text-(--business-card-text-muted)
+              sm:text-[17px]
+            "
+          >
             {partner.description}
           </p>
+        </div>
 
+        <div className="flex lg:justify-end">
           <a
             href={partner.href}
-            aria-label={partner.buttonAriaLabel}
+            aria-label={
+              partner.buttonAriaLabel
+            }
             target="_blank"
             rel="noreferrer"
             className="
               group/button
-              mt-[20px]
-              inline-flex min-h-[46px]
-              items-center justify-center
-              gap-[9px]
-              rounded-[8px]
-              bg-brand
-              px-[24px]
-              text-[13px] font-bold
-              text-brand-contrast
-              shadow-[0_5px_12px_rgba(23,107,12,0.23)]
-              transition-[background-color,transform,box-shadow]
-              duration-500
+              inline-flex
+              min-h-[60px]
+              w-full
+              items-center
+              justify-center
+              gap-4
+              rounded-[14px]
+              bg-white
+              px-7
+              text-[15px]
+              font-bold
+              text-[#163719]
+              shadow-[0_12px_30px_rgba(0,0,0,0.16)]
+              transition-[background-color,color,transform,box-shadow]
               hover:-translate-y-1
-              hover:bg-brand-hover
-              hover:shadow-[0_8px_18px_rgba(23,107,12,0.30)]
+              hover:bg-[#f4fff1]
+              hover:text-brand
+              hover:shadow-[0_18px_38px_rgba(0,0,0,0.20)]
               focus-visible:outline-none
               focus-visible:ring-2
-              focus-visible:ring-focus
-              focus-visible:ring-offset-2
-              sm:text-[14px]
+              focus-visible:ring-white
+              focus-visible:ring-offset-4
+              focus-visible:ring-offset-[#08751e]
+              sm:w-auto
+              sm:min-w-[245px]
+              sm:text-[16px]
             "
           >
             <span>
@@ -120,10 +162,10 @@ export function BusinessCard({partner,reduceMotion,}: BusinessCardProps) {
             <FaArrowRight
               aria-hidden="true"
               className="
-                size-[12px]
+                size-[14px]
+                text-[#e63824]
                 transition-transform
-                duration-500
-                group-hover/button:translate-x-1
+                group-hover/button:translate-x-1.5
               "
             />
           </a>

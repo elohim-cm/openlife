@@ -39,11 +39,23 @@ export function AssistanceSection() {
       );
 
   const businessPartner: BusinessPartner = {
-    title: content.assistance.business.title,
-    description:content.assistance.business.description,
-    buttonLabel:content.assistance.business.buttonLabel,
-    buttonAriaLabel:content.assistance.business.buttonAriaLabel,
-    href: `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(content.whatsapp.businessMessage,)}`,
+    title:
+      content.assistance.business.title,
+
+    description:
+      content.assistance.business.description,
+
+    buttonLabel:
+      content.assistance.business
+        .buttonLabel,
+
+    buttonAriaLabel:
+      content.assistance.business
+        .buttonAriaLabel,
+
+    href: `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(
+      content.whatsapp.businessMessage,
+    )}`,
   };
 
   return (

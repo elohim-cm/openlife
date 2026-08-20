@@ -57,108 +57,151 @@ export const en = {
   hero: {
     accreditation:
       "ACAM VIE - CIMA APPROVED",
+
     welcome: "Welcome to",
+
     title: "Open Life",
+
+    tagline:
+      "Secure, transparent digital daily savings. Start saving from 200 FCFA/day and build capital for your future.",
+
+    phoneImageAlt:
+      "Open Life mobile application dashboard",
 
     descriptionStart:
       "Secure, transparent digital daily savings. Start saving from",
-    dailyAmount: "200 FCFA/day",
+
+    dailyAmount:
+      "200 FCFA/day",
+
     descriptionEnd:
       "and build capital for your future.",
 
     features: [
       {
         id: "minimum-deposit",
-        label: "From 200 FCFA",
+        label:
+          "From 200 FCFA per day",
       },
       {
         id: "interest-rate",
-        label: "2% annual interest",
+        label:
+          "2% annual interest rate",
       },
       {
         id: "withdrawal",
         label:
-          "Withdraw after 6 months",
+          "Available after 6 months",
+      },
+    ],
+
+    floatingCards: [
+      {
+        id: "regularity",
+        title: "Consistency",
+        value: "92%",
+        description:
+          "of deposits completed this month",
+      },
+      {
+        id: "security",
+        title: "Secure",
+        value: "",
+        description:
+          "Your funds are protected and confidential",
+      },
+      {
+        id: "accessibility",
+        title: "Accessible",
+        value: "",
+        description:
+          "Anytime, anywhere in Cameroon",
+      },
+    ],
+
+    trustItems: [
+      {
+        id: "approval",
+        title: "Approved by",
+        description:
+          "ACAM VIE - CIMA",
+      },
+      {
+        id: "security",
+        title:
+          "Advanced security",
+        description:
+          "Protected data",
+      },
+      {
+        id: "savers",
+        title: "Over 50,000+",
+        description: "savers",
+      },
+      {
+        id: "rating",
+        title: "Rated 4.8/5",
+        description:
+          "by our users",
       },
     ],
 
     actions: {
       simulation:
-        "Run a simulation",
+        "Simulate my savings",
+
       simulationLabel:
         "Run an Open Life savings simulation",
-      learnMore: "Learn more",
+
+      learnMore:
+        "Discover Open Life",
+
       learnMoreLabel:
         "Learn more about Open Life",
     },
   },
 
   benefits: {
+    badge:
+      "Benefits designed for you",
+
     introduction:
       "Open Life is the new secure and transparent digital daily savings solution developed by ACAM Vie. Download the application from Google Play now and open your account to secure your everyday savings!",
 
-    title: "Open Life gives you:",
+    title: "Open Life means:",
 
     items: [
       {
         id: "daily-contribution",
-        lines: [
-          {
-            text:
-              "Daily premiums starting from",
-            highlighted: false,
-          },
-          {
-            text: "200 FCFA",
-            highlighted: true,
-          },
+        label: "Starting from",
+        value: "200",
+        description: [
+          "FCFA per day",
         ],
       },
       {
         id: "interest-rate",
-        lines: [
-          {
-            text:
-              "An annual interest rate of",
-            highlighted: false,
-          },
-          {
-            text: "2%",
-            highlighted: true,
-          },
+        label: "",
+        value: "2%",
+        description: [
+          "annual interest",
         ],
       },
       {
         id: "withdrawal-period",
-        lines: [
-          {
-            text:
-              "Withdraw your savings after",
-            highlighted: false,
-          },
-          {
-            text: "6 months",
-            highlighted: true,
-          },
-          {
-            text:
-              "from the start of the contract",
-            highlighted: false,
-          },
+        label: "Withdraw after",
+        value: "6",
+        description: [
+          "months",
         ],
       },
       {
         id: "no-fees",
-        lines: [
-          {
-            text: "No fees",
-            highlighted: true,
-          },
-          {
-            text:
-              "on deposits or withdrawals",
-            highlighted: false,
-          },
+        label: "",
+        value: "No fees",
+        description: [
+          "on deposits",
+          "or withdrawals",
         ],
       },
     ],
@@ -167,7 +210,8 @@ export const en = {
   experience: {
     title:
       "Experience Open Life",
-
+    progressLabel:
+      "Open Life experience steps",
     items: [
       {
         id: "dashboard",
@@ -201,12 +245,26 @@ export const en = {
         imageAlt:
           "Open Life premium payment interface",
       },
+      {
+        id: "redemption",
+        title: "Redemption",
+        description:
+          "Request a partial or full withdrawal of your savings after 6 months. The amount is transferred directly to your Mobile Money account within 48 hours, with no fees.",
+        imageAlt:
+          "Open Life savings redemption and withdrawal interface",
+      },
     ],
   },
 
   mobileApp: {
     title:
       "Your savings in the palm of your hand",
+
+    titleStart:
+      "Your savings in the",
+
+    titleHighlight:
+      "palm of your hand",
 
     features: [
       {
@@ -246,14 +304,14 @@ export const en = {
 
     screens: [
       {
-        id: "screen-login",
-        alt:
-          "Open Life application login screen",
-      },
-      {
         id: "screen-dashboard",
         alt:
           "Open Life mobile dashboard",
+      },
+      {
+        id: "screen-login",
+        alt:
+          "Open Life application login screen",
       },
       {
         id: "screen-simulator",
@@ -267,10 +325,34 @@ export const en = {
     accessibilityTitle:
       "Open Life, your everyday savings solution",
 
+    todayLabel: "Today",
+    tomorrowLabel: "Tomorrow",
+
     phrases: [
       "Manage your daily savings in 5 minutes from your phone with the Open Life application!",
       "Build your future day after day with Open Life.",
     ],
+
+    todayCard: {
+      title:
+        "Today’s savings completed",
+
+      value: "200 FCFA",
+
+      description:
+        "Well done! You are moving closer to your goals.",
+    },
+
+    tomorrowCard: {
+      title:
+        "Goal achieved",
+
+      value:
+        "Your project comes to life",
+
+      description:
+        "Keep moving forward with Open Life.",
+    },
   },
 
   faq: {
@@ -464,7 +546,7 @@ export const en = {
 
     table: {
       id: "Id",
-      year: "Year",
+      year: "Year (DD/MM/YYY)",
 
       contribution:
         "Amount (FCFA)",
@@ -535,10 +617,13 @@ export const en = {
     business: {
       title:
         "Become a business introducer!",
+
       description:
         "Register customers and earn a 2% commission on every payment. Contact our technical team for more information.",
+
       buttonLabel:
         "Contact the team",
+
       buttonAriaLabel:
         "Contact the Open Life team about the business introducer programme",
     },

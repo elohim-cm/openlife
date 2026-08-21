@@ -84,12 +84,12 @@ export const MOBILE_APP_STORES:
   readonly MobileAppStoreDefinition[] = [
     {
       id: "google-play",
-      href: "#",
+      href: "https://play.google.com/store/apps/details?id=com.acamvie.open_life",
       icon: FaGooglePlay,
     },
     {
       id: "app-store",
-      href: "#",
+      href: "https://apps.apple.com/cm/app/open-life/id1628082679",
       icon: FaApple,
     },
   ];

@@ -105,7 +105,7 @@ export function ExperienceSection() {
             bg-cta
             sm:size-[520px]
             lg:-left-[520px]
-            lg:-top-[820px]
+            lg:-top-[980px]
             lg:size-[1150px]
           "
         />
@@ -333,14 +333,13 @@ function ExperienceProgress({
                 <span
                   className={`
                     block pt-0.5
-                    text-[14px]
                     leading-[1.35]
                     transition-[color,font-weight]
                     duration-500
                     ${
                       isActive
                         ? "font-bold text-icon"
-                        : "font-medium text-text-muted"
+                        : "text-text-muted"
                     }
                   `}
                 >
@@ -554,7 +553,7 @@ function ExperienceText({
           <p
             className="
               mt-4
-              text-[14px]
+              text-[12px]
               leading-[1.7]
               text-text-muted
               sm:text-[15px]
@@ -635,7 +634,6 @@ function ExperienceImage({
               alt={item.imageAlt}
               fill
               sizes="(max-width: 1023px) 92vw, 52vw"
-              className="object-contain"
             />
           </motion.div>
         </AnimatePresence>

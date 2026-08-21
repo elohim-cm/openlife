@@ -48,6 +48,8 @@ import {
   MINIMUM_DAILY_PREMIUM,
   type SimulationResult,
 } from "./simulation-calculator";
+import {LanguageToggle} from "@/components/layout/LanguageToggle";
+import {ThemeToggle} from "@/components/theme/ThemeToggle";
 
 type FormErrors = {
   premium?: string;
@@ -173,6 +175,7 @@ export function SimulationPageContent() {
   return (
     <main
       className="
+        relative isolate overflow-hidden
         min-h-screen
         border-t-2 border-heading-secondary
         bg-surface-muted
@@ -182,6 +185,20 @@ export function SimulationPageContent() {
         lg:px-10
       "
     >
+
+      <div aria-hidden="true" className="
+          pointer-events-none z-0
+          absolute top-[80px]
+          size-[480px]
+          -translate-x-1/2
+          rounded-full
+          bg-cta-soft
+          blur-[120px]
+          sm:size-[800px]
+          lg:size-[720px]
+        "
+      />
+      
       <motion.div
         initial={
           reduceMotion
@@ -207,6 +224,7 @@ export function SimulationPageContent() {
           ],
         }}
         className="
+          relative z-10
           mx-auto flex
           min-h-[90px]
           w-full max-w-[1450px]
@@ -251,41 +269,63 @@ export function SimulationPageContent() {
             "
           />
         </Link>
+        
 
-        <Button
-          asChild
+        <div
           className="
-            h-[45px]
-            rounded-[4px]
-            bg-heading-secondary
-            px-[22px]
-            text-[14px] font-bold
-            uppercase text-white
-            shadow-card
-            transition-[background-color,box-shadow,transform]
-            duration-500
-            ease-[cubic-bezier(0.22,1,0.36,1)]
-            hover:-translate-y-0.5
-            hover:bg-brand
-            hover:shadow-card-hover
+            ml-auto
+            flex items-center
+            justify-end
+            gap-2
+            sm:gap-3
           "
         >
-          <Link
-            href="/"
-            aria-label={
-              content.simulationPage.backLabel
-            }
-          >
-            <FaArrowLeft
-              aria-hidden="true"
-              className="size-[17px]"
-            />
+          <LanguageToggle />
 
-            <span>
-              {content.simulationPage.back}
-            </span>
-          </Link>
-        </Button>
+          <ThemeToggle />
+
+          <Button
+            asChild
+            className="
+              h-[45px]
+              rounded-[4px]
+              bg-heading-secondary
+              px-[16px]
+              text-[14px] font-bold
+              uppercase text-text-inverse
+              shadow-card
+              transition-[background-color,box-shadow,transform]
+              duration-500
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              hover:-translate-y-0.5
+              hover:bg-brand
+              hover:shadow-card-hover
+              sm:px-[22px]
+            "
+          >
+            <Link
+              href="/"
+              aria-label={
+                content.simulationPage
+                  .backLabel
+              }
+              className="
+                inline-flex
+                items-center
+                gap-2
+              "
+            >
+              <FaArrowLeft
+                aria-hidden="true"
+                className="size-[17px]"
+              />
+
+              <span>
+                {content.simulationPage.back}
+              </span>
+            </Link>
+          </Button>
+        </div>
       </motion.div>
 
       <motion.h1
@@ -316,6 +356,7 @@ export function SimulationPageContent() {
           ],
         }}
         className="
+          relative z-10
           mx-auto mt-[34px]
           text-center
           text-[35px] font-normal
@@ -329,9 +370,11 @@ export function SimulationPageContent() {
       >
         {content.simulationPage.title}
       </motion.h1>
+      
 
       <div
         className="
+          relative z-10
           mx-auto mt-[46px]
           grid w-full
           max-w-[1450px]
@@ -598,7 +641,10 @@ export function SimulationPageContent() {
           >
             <CardHeader
               className="
-                px-6 py-[35px]
+                flex flex-row
+                items-center justify-between
+                gap-4
+                px-6 py-[24px]
                 sm:px-7
               "
             >
@@ -611,6 +657,32 @@ export function SimulationPageContent() {
               >
                 {content.simulationPage.resultTitle}
               </CardTitle>
+
+              {result && (
+                <Button
+                  asChild
+                  className="
+                    h-[48px] shrink-0
+                    rounded-[4px]
+                    bg-brand
+                    px-[24px]
+                    text-[14px] font-bold
+                    uppercase
+                    text-brand-contrast
+                    shadow-card
+                    transition-[background-color,box-shadow,transform]
+                    duration-500
+                    ease-[cubic-bezier(0.22,1,0.36,1)]
+                    hover:-translate-y-0.5
+                    hover:bg-brand-hover
+                    hover:shadow-card-hover
+                  "
+                >
+                  <Link href="/#assistance">
+                    {content.simulationPage.subscribe}
+                  </Link>
+                </Button>
+              )}
             </CardHeader>
 
             <AnimatePresence initial={false}>

@@ -167,9 +167,9 @@ export const fr = {
       "Avantages conçus pour vous",
 
     introduction:
-      "Open Life est la nouvelle solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore, et ouvrez votre compte pour sécuriser votre épargne de tous les jours !",
+      "La nouvelle solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore, et ouvrez votre compte pour sécuriser votre épargne de tous les jours !",
 
-    title: "Open Life, c’est :",
+    title: "Open Life c’est :",
 
     items: [
       {
@@ -534,6 +534,7 @@ export const fr = {
       "Durée du contrat (an(s))*",
 
     simulate: "Simuler",
+    subscribe: "Souscrire",
 
     resultTitle:
       "Évolution des valeurs de rachat",

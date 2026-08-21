@@ -108,7 +108,7 @@ export function NarrativeSection() {
     useTransform(
       storyProgress,
       [0, 0.42, 0.65],
-      [1, 1, 0],
+      [1, 1, 1],
     );
 
   const tomorrowActiveOpacity =
@@ -410,7 +410,7 @@ export function NarrativeSection() {
                   whitespace-nowrap
                   text-[12px]
                   font-semibold
-                  text-cta-contrast/72
+                  text-cta-contrast
                   sm:block
                   sm:text-[15px]
                 "
@@ -528,6 +528,8 @@ export function NarrativeSection() {
                 sm:left-1/2
                 sm:w-[calc(100%_-_32px)]
                 sm:max-w-[510px]
+                xl:left-[calc(100%_+_80px)]
+                2xl:left-[calc(100%_+_240px)]
               "
             >
               <motion.div
@@ -554,7 +556,7 @@ export function NarrativeSection() {
                     border-4
                     border-success
                     bg-cta-contrast
-                    text-success
+                    text-brand
                     sm:size-[72px]
                   "
                 >
@@ -575,10 +577,7 @@ export function NarrativeSection() {
                       sm:text-[14px]
                     "
                   >
-                    {
-                      content.narrative
-                        .todayCard.title
-                    }
+                    {content.narrative.todayCard.title}
                   </p>
 
                   <p
@@ -587,14 +586,11 @@ export function NarrativeSection() {
                       text-[26px]
                       font-bold
                       leading-none
-                      text-cta-contrast
+                      text-cta-hover
                       sm:text-[31px]
                     "
                   >
-                    {
-                      content.narrative
-                        .todayCard.value
-                    }
+                    {content.narrative.todayCard.value}
                   </p>
 
                   <p
@@ -606,10 +602,7 @@ export function NarrativeSection() {
                       sm:text-[12px]
                     "
                   >
-                    {
-                      content.narrative
-                        .todayCard.description
-                    }
+                    {content.narrative.todayCard.description}
                   </p>
                 </div>
 
@@ -681,14 +674,11 @@ export function NarrativeSection() {
                       text-[19px]
                       font-bold
                       leading-tight
-                      text-cta-contrast
+                      text-cta-hover
                       sm:text-[25px]
                     "
                   >
-                    {
-                      content.narrative
-                        .tomorrowCard.value
-                    }
+                    {content.narrative.tomorrowCard.value}
                   </p>
 
                   <p

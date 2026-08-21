@@ -41,15 +41,13 @@ export function FaqPageSection() {
         lg:pt-[150px]
       "
     >
-      <div
-        aria-hidden="true"
-        className="
+      <div aria-hidden="true" className="
           pointer-events-none
-          absolute left-1/2 top-[86px]
-          size-[440px]
+          absolute left-1/2 top-[80px]
+          size-[480px]
           -translate-x-1/2
           rounded-full
-          bg-brand-soft/35
+          bg-cta-soft
           blur-[120px]
         "
       />

@@ -2,6 +2,7 @@ import type {
   Metadata,
 } from "next";
 
+
 import {
   SimulationPageContent,
 } from "@/components/pages/simulation/SimulationPageContent";

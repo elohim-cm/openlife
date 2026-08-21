@@ -37,7 +37,7 @@ export function FaqSection() {
           size-[480px]
           -translate-x-1/2
           rounded-full
-          bg-brand-soft/45
+          bg-cta-soft
           blur-[120px]
         "
       />
@@ -47,13 +47,11 @@ export function FaqSection() {
           relative z-10
           mx-auto w-full
           max-w-[1500px]
-          px-5 pb-[80px]
+          px-5
           pt-[70px]
           sm:px-8
-          sm:pb-[100px]
           sm:pt-[85px]
           lg:px-10
-          lg:pb-[115px]
           lg:pt-[95px]
         "
       >

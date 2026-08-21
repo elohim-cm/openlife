@@ -28,14 +28,9 @@ const FLOATING_CARD_ICONS:
   };
 
 const FLOATING_CARD_POSITIONS = {
-  regularity:
-    "left-0 top-[38%] sm:left-[1%] sm:top-[39%] xl:-left-[2%]",
-
-  security:
-    "right-0 top-[12%] sm:right-[1%] sm:top-[14%] xl:-right-[2%]",
-
-  accessibility:
-    "bottom-[13%] right-0 sm:bottom-[18%] sm:right-[3%] xl:-right-[1%]",
+  regularity: "left-0 top-[38%] sm:left-[1%] sm:top-[39%] xl:-left-[2%]",
+  security: "right-0 top-[12%] sm:right-[1%] sm:top-[14%] xl:-right-[2%]",
+  accessibility: "bottom-[13%] right-0 sm:bottom-[18%] sm:right-[3%] xl:-right-[1%]",
 } as const;
 
 export function HeroPhoneVisual() {
@@ -94,10 +89,6 @@ export function HeroPhoneVisual() {
           h-[540px] w-[497px]
           -translate-x-1/2
           -translate-y-1/2
-          sm:h-[680px]
-          sm:w-[625px]
-          lg:h-[760px]
-          lg:w-[700px]
         "
       >
         <motion.div
@@ -109,15 +100,16 @@ export function HeroPhoneVisual() {
                   opacity: 0.2,
                 }
           }
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration:
-              reduceMotion
-                ? 0
-                : 0.45,
-          }}
+          animate={reduceMotion? {opacity: 1,y: 0,}: {opacity: 1,y: [0,-12,0],}}
+          transition={
+            reduceMotion? { duration: 0 }: {opacity: {duration: .45,},
+                  y: {
+                    duration: 2.6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
+                }
+          }
           className="
             relative
             h-full w-full

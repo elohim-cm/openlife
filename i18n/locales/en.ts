@@ -166,7 +166,7 @@ export const en = {
       "Benefits designed for you",
 
     introduction:
-      "Open Life is the new secure and transparent digital daily savings solution developed by ACAM Vie. Download the application from Google Play now and open your account to secure your everyday savings!",
+      "The new secure and transparent digital daily savings solution developed by ACAM Vie. Download the application from Google Play now and open your account to secure your everyday savings!",
 
     title: "Open Life means:",
 
@@ -534,6 +534,7 @@ export const en = {
       "Contract duration (year(s))*",
 
     simulate: "Simulate",
+    subscribe: "Subscribe",
 
     resultTitle:
       "Evolution of surrender values",

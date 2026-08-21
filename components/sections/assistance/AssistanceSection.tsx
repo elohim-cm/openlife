@@ -73,8 +73,8 @@ export function AssistanceSection() {
           size-[620px]
           -translate-x-1/2
           rounded-full
-          bg-brand-soft/30
-          blur-[140px]
+          bg-cta-soft
+          blur-[90px]
         "
       />
 
@@ -87,10 +87,8 @@ export function AssistanceSection() {
           pt-[72px]
           sm:px-8
           sm:pb-[90px]
-          sm:pt-[85px]
           lg:px-10
           lg:pb-[75px]
-          lg:pt-[95px]
         "
       >
         <motion.header

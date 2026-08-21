@@ -83,12 +83,14 @@ export function HeroPhoneVisual() {
           ],
         }}
         className="
-          absolute
-          left-1/2 top-1/2
+          absolute inset-0
           z-20
-          h-[540px] w-[497px]
-          -translate-x-1/2
-          -translate-y-1/2
+          h-full w-full
+          sm:inset-auto
+          sm:left-1/2 sm:top-1/2
+          sm:h-[540px] sm:w-[497px]
+          sm:-translate-x-1/2
+          sm:-translate-y-1/2
         "
       >
         <motion.div

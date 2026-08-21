@@ -31,9 +31,10 @@ export function HeroTrustBar() {
         border
         border-[var(--hero-trust-border)]
         bg-[var(--hero-trust-background)]
-        px-5 py-5
+        px-3 py-4
         shadow-[var(--hero-trust-shadow)]
         backdrop-blur-[10px]
+        sm:px-5 sm:py-5
         lg:grid-cols-4
         lg:px-8
       "
@@ -52,8 +53,9 @@ export function HeroTrustBar() {
               key={item.id}
               className={`
                 flex min-h-[58px]
-                items-center gap-4
-                px-2 py-2
+                items-center gap-2.5
+                px-1.5 py-2
+                sm:gap-4
                 sm:px-5
                 lg:justify-center
                 ${

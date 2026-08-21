@@ -513,8 +513,8 @@ export function NarrativeSection() {
                 absolute
                 bottom-[18px]
                 left-[calc(50%_-_42px)]
-                h-[146px]
-                w-[calc(100vw_-_32px)]
+                h-[120px]
+                w-[calc(100vw_-_40px)]
                 max-w-[360px]
                 -translate-x-1/2
                 overflow-hidden
@@ -526,9 +526,9 @@ export function NarrativeSection() {
                 dark:bg-surface/78
                 sm:bottom-[42px]
                 sm:left-1/2
-                sm:w-[calc(100%_-_32px)]
+                sm:w-[calc(100%_-_40px)]
                 sm:max-w-[510px]
-                xl:left-[calc(100%_+_80px)]
+                xl:left-[calc(100%_+_50px)]
                 2xl:left-[calc(100%_+_240px)]
               "
             >

@@ -105,7 +105,7 @@ export function ExperienceSection() {
             bg-cta
             sm:size-[520px]
             lg:-left-[520px]
-            lg:-top-[980px]
+            lg:-top-[1000px]
             lg:size-[1150px]
           "
         />
@@ -115,12 +115,11 @@ export function ExperienceSection() {
           className="
             pointer-events-none
             absolute
-            -bottom-[58%]
-            size-[1150px]
+            size-[1200px]
             rounded-full
             bg-[var(--experience-curve)]
             sm:-bottom-[72%]
-            lg:-bottom-[86%]
+            lg:-bottom-[100%]
             lg:-right-[24%]
           "
         />

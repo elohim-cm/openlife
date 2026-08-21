@@ -78,7 +78,7 @@ export function MobileAppSection() {
       <div
         className="
           mx-auto grid
-          min-h-[780px]
+          min-h-[650px]
           w-full max-w-[1500px]
           grid-cols-1
           lg:grid-cols-[42%_58%]
@@ -132,7 +132,7 @@ export function MobileAppSection() {
             }}
             className="
               max-w-[610px]
-              text-[38px]
+              text-[25px]
               font-extrabold
               leading-[1.02]
               tracking-[-0.045em]
@@ -342,7 +342,7 @@ export function MobileAppSection() {
                     >
                       <span
                         className="
-                          text-[8px]
+                          text-[12px]
                           font-medium
                           leading-none
                           opacity-70
@@ -379,7 +379,7 @@ export function MobileAppSection() {
             items-center
             justify-center
             overflow-hidden
-            lg:min-h-[780px]
+            lg:min-h-[650px]
           "
         >
           <div

@@ -67,7 +67,7 @@ export function BenefitCard({
       <Card
         className="
           group h-full
-          min-h-[250px]
+          min-h-[150px]
           rounded-[14px]
           border
           border-[var(--benefits-card-border)]
@@ -80,7 +80,6 @@ export function BenefitCard({
           hover:-translate-y-1.5
           hover:border-brand/30
           hover:shadow-[var(--benefits-card-shadow-hover)]
-          sm:min-h-[330px]
           sm:rounded-[18px]
         "
       >
@@ -88,7 +87,7 @@ export function BenefitCard({
           className="
             flex h-full
             flex-col items-center
-            px-3 pb-5 pt-5
+            px-2.5 pb-3.5 pt-3.5
             text-center
             sm:px-6
             sm:pb-7
@@ -98,7 +97,7 @@ export function BenefitCard({
           <div
             className="
               relative flex
-              size-[72px]
+              size-[56px]
               shrink-0
               items-center
               justify-center
@@ -114,7 +113,7 @@ export function BenefitCard({
           >
             <Icon
               aria-hidden="true"
-              className="size-[34px] sm:size-[46px]"
+              className="size-[26px] sm:size-[46px]"
               strokeWidth={1.7}
             />
 
@@ -123,22 +122,23 @@ export function BenefitCard({
                 aria-hidden="true"
                 className="
                   absolute
-                  bottom-[9px]
-                  right-[6px]
-                  flex size-[24px]
+                  bottom-[6px]
+                  right-[4px]
+                  flex size-[18px]
                   items-center
                   justify-center
                   rounded-full
-                  border-[3px]
+                  border-[2px]
                   border-[var(--benefits-icon-background-solid)]
                   bg-[var(--benefits-icon-background-solid)]
-                  text-[6px]
+                  text-[5px]
                   font-extrabold
                   tracking-[-0.04em]
                   text-cta
                   sm:bottom-[15px]
                   sm:right-[10px]
                   sm:size-[31px]
+                  sm:border-[3px]
                   sm:text-[8px]
                 "
               >
@@ -151,24 +151,25 @@ export function BenefitCard({
                 aria-hidden="true"
                 className="
                   absolute
-                  bottom-[7px]
-                  right-[5px]
-                  flex size-[24px]
+                  bottom-[5px]
+                  right-[3px]
+                  flex size-[18px]
                   items-center
                   justify-center
                   rounded-full
-                  border-[3px]
+                  border-[2px]
                   border-[var(--benefits-icon-background-solid)]
                   bg-[var(--benefits-icon-background-solid)]
                   text-cta
                   sm:bottom-[11px]
                   sm:right-[8px]
                   sm:size-[31px]
+                  sm:border-[3px]
                 "
               >
                 <Check
                   className="
-                    size-[14px]
+                    size-[11px]
                     sm:size-[18px]
                   "
                   strokeWidth={2.6}
@@ -179,21 +180,23 @@ export function BenefitCard({
 
           <div
             className="
-              mt-3 flex flex-1
+              mt-2 flex flex-1
               flex-col items-center
               justify-center
+              sm:mt-3
             "
           >
             {benefit.label && (
               <p
                 className="
-                  text-[14px]
+                  text-[12px]
                   font-semibold
-                  leading-[1.25]
+                  leading-[1.15]
                   tracking-[-0.025em]
                   text-heading-secondary
                   sm:mt-1
                   sm:text-[20px]
+                  sm:leading-[1.25]
                 "
               >
                 {benefit.label}
@@ -209,13 +212,15 @@ export function BenefitCard({
                 ${
                   isNoFees
                     ? `
-                      mt-3
-                      text-[22px]
+                      mt-1.5
+                      text-[18px]
+                      sm:mt-3
                       sm:text-[33px]
                     `
                     : `
-                      mt-2
-                      text-[42px]
+                      mt-1
+                      text-[32px]
+                      sm:mt-2
                       sm:text-[62px]
                     `
                 }
@@ -227,8 +232,8 @@ export function BenefitCard({
             <div
               className={
                 isNoFees
-                  ? "mt-3 sm:mt-4"
-                  : "mt-1.5 sm:mt-2"
+                  ? "mt-1.5 sm:mt-4"
+                  : "mt-1 sm:mt-2"
               }
             >
               {benefit.description.map(
@@ -241,16 +246,18 @@ export function BenefitCard({
                       ${
                         isNoFees
                           ? `
-                            text-[13px]
+                            text-[11.5px]
                             font-normal
-                            leading-[1.55]
+                            leading-[1.3]
                             sm:text-[17px]
+                            sm:leading-[1.55]
                           `
                           : `
-                            text-[13px]
+                            text-[11.5px]
                             font-semibold
-                            leading-[1.35]
+                            leading-[1.2]
                             sm:text-[18px]
+                            sm:leading-[1.35]
                           `
                       }
                     `}

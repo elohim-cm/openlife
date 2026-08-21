@@ -19,7 +19,7 @@ export function LanguageToggle({className,}: LanguageToggleProps) {
       title={content.language.switchTo}
       whileHover={shouldReduceMotion? undefined: {scale: 1.04,}}
       whileTap={shouldReduceMotion? undefined: {scale: 0.95,}}
-      className={cn(`group relative flex h-9 min-w-14.5 shrink-0 items-center justify-center gap-1.25 overflow-hidden rounded-full border border-border bg-surface/80 px-2 text-icon transition-[background-color,border-color,color] duration-300 hover:border-border-brand hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-surface `,className,)}
+      className={cn(`group relative flex h-9 min-w-12 shrink-0 items-center justify-center gap-1.25 overflow-hidden rounded-full border border-border bg-surface/80 px-1.5 text-icon transition-[background-color,border-color,color,min-width,padding] duration-300 hover:border-border-brand hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-surface sm:min-w-14.5 sm:px-2 `,className,)}
       transition={{
               type: "spring",
               stiffness: 150,

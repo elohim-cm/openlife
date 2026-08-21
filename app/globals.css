@@ -864,8 +864,8 @@ button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
   .hero-contour-pattern {
     clip-path:
       ellipse(
-        94% 46%
-        at 100% 100%
+        94% 320px
+        at 100% calc(100% - 370px)
       );
 
     opacity: 1;

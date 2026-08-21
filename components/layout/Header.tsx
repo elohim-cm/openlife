@@ -22,14 +22,14 @@ export function Header() {
 
   return (
     <header
-      className={cn(`fixed inset-x-0 top-0 z-50 h-26.5 transition-[background-color,box-shadow,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]`,
-        isScrolled? "h-22 bg-background shadow-header" : "h-26.5 bg-transparent shadow-none",
+      className={cn(`fixed inset-x-0 top-0 z-50 h-20 transition-[background-color,box-shadow,border-color,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]`,
+        isScrolled? "h-22 bg-surface/75 backdrop-blur-xl border-border/40 shadow-header" : "h-20 border-transparent shadow-none",
       )}
     >
-      <div className=" mx-auto flex h-full w-full max-w-350 items-center justify-between px-4 transition-[padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-6 lg:px-8 xl:px-10 ">
+      <div className=" mx-auto flex h-full w-full max-w-350 items-center justify-between px-3 transition-[padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-6 lg:px-8 xl:px-10">
         <Link href="/" aria-label={ content.header.homeLabel }
-          className={cn(` relative block shrink-0 transition-[width,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] `,
-            isScrolled? "h-14.5 w-33": "h-17 w-36.25",
+          className={cn(` relative block h-auto shrink-0 transition-[width,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] `,
+            isScrolled? "aspect-140/68 w-[clamp(5rem,20vw,8.75rem)] sm:aspect-auto sm:h-15 sm:w-33": "aspect-145/68 w-[clamp(6rem,21vw,9.0625rem)] sm:aspect-auto sm:h-17 sm:w-36.25",
           )}
         >
           <Image src="/images/branding/openlife-logo.webp" alt={content.header.logoAlt} fill priority sizes="145px"
@@ -38,8 +38,8 @@ export function Header() {
         </Link>
 
         <nav aria-label={ content.header.navigationLabel }
-          className={cn(` flex items-center rounded-[11px] border border-transparent bg-surface/95 transition-[height,padding,box-shadow,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] `,
-            isScrolled? "h-14 px-3 shadow-sm sm:px-5 lg:px-6.5" : "h-14 px-3 shadow-none sm:px-5 lg:px-7",
+          className={cn(` flex items-center rounded-[11px] border border-border/25 bg-surface/60 backdrop-blur-lg transition-[height,padding,box-shadow,background-color,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] `,
+            isScrolled? "h-14 px-1.5 shadow-sm sm:px-5 lg:px-6.5" : "h-14 px-1.5 shadow-none sm:px-5 lg:px-7",
           )}
         >
           <a href={ HEADER_LINKS.android } target="_blank" rel="noreferrer" aria-label={ content.header.androidLabel }
@@ -49,12 +49,12 @@ export function Header() {
           </a>
 
           <a href={ HEADER_LINKS.apple } target="_blank" rel="noreferrer" aria-label={ content.header.appleLabel }
-            className="ml-1 flex size-9 items-center justify-center rounded-full text-icon transition-colors duration-500 hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 "
+            className="ml-0.5 flex size-9 items-center justify-center rounded-full text-icon transition-colors duration-500 hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 sm:ml-1 "
           >
             <FaApple aria-hidden="true" className="size-4.5"/>
           </a>
 
-          <span aria-hidden="true" className="mx-2 h-4.5 w-px bg-border-strong sm:mx-2.5 "/>
+          <span aria-hidden="true" className="mx-1 h-4.5 w-px bg-border-strong sm:mx-2.5 "/>
           <Link href={ HEADER_LINKS.account } aria-label={ content.header.accountLabel }
             className="flex h-9 items-center gap-1.25 rounded-md px-1 text-icon transition-colors duration-500 hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
           >
@@ -62,8 +62,8 @@ export function Header() {
             <FaUser aria-hidden="true" className="size-4" />
           </Link>
 
-          <LanguageToggle className="ml-2"/>
-          <ThemeToggle className="ml-1"/>
+          <LanguageToggle className="ml-1 sm:ml-2"/>
+          <ThemeToggle className="ml-0.5 sm:ml-1"/>
         </nav>
       </div>
     </header>

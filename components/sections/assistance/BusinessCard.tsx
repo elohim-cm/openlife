@@ -73,21 +73,9 @@ export function BusinessCard({
       />
 
       <div
-        className="
-          relative z-10
-          grid items-center
-          gap-4
-          lg:grid-cols-[1.45fr_0.9fr]
-        "
+        className="relative z-10 grid items-center gap-4 lg:grid-cols-[1.45fr_0.9fr]"
       >
-        <div
-          className="
-            min-w-0
-            lg:border-r
-            lg:border-(--business-card-divider)
-            lg:pr-10
-          "
-        >
+        <div className="min-w-0 lg:border-r lg:border-(--business-card-divider)" >
           <h3
             id="business-partner-title"
             className="

@@ -41,10 +41,8 @@ export function HeroSection() {
       aria-labelledby="hero-title"
       className="
         relative isolate
-        min-h-[790px]
         w-full
         bg-[var(--hero-stage-background)]
-        lg:min-h-[825px]
       "
     >
       <div
@@ -95,20 +93,17 @@ export function HeroSection() {
         className="
           relative z-10
           mx-auto grid
-          min-h-[790px]
           w-full max-w-[1450px]
           grid-cols-1
           items-center
           gap-8
           px-5 pb-4
-          pt-[100px]
+          pt-[22px]
           sm:px-8
-          lg:min-h-[825px]
           lg:grid-cols-[47%_53%]
           lg:gap-0
           lg:px-10
-          lg:pb-[130px]
-          lg:pt-[105px]
+          lg:pb-[50px]
         "
       >
         <div
@@ -122,7 +117,6 @@ export function HeroSection() {
               hero-reveal
               hero-reveal-delay-1
               inline-flex
-              min-h-[36px]
               items-center gap-2
               rounded-full
               border
@@ -157,14 +151,13 @@ export function HeroSection() {
             className="
               hero-reveal
               hero-reveal-delay-2
-              mt-6
+              mt-3
               text-[62px]
               font-extrabold
               leading-[0.98]
               tracking-[-0.055em]
               text-heading
               sm:text-[76px]
-              lg:text-[88px]
             "
           >
             {content.hero.title}
@@ -177,12 +170,10 @@ export function HeroSection() {
               mt-5
               max-w-[520px]
               whitespace-pre-line
-              text-[27px]
-              font-semibold
+              text-[20px]
               leading-[1.28]
               tracking-[-0.035em]
               text-heading-secondary
-              sm:text-[31px]
             "
           >
             {content.hero.tagline}
@@ -192,7 +183,7 @@ export function HeroSection() {
             className="
               hero-reveal
               hero-reveal-delay-4
-              mt-7 space-y-3.5
+              mt-4 space-y-3.5
             "
           >
             {content.hero.features.map(

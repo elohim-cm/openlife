@@ -54,13 +54,7 @@ export function BenefitCard({
         delay:
           reduceMotion
             ? 0
-            : index * 0.08,
-        ease: [
-          0.16,
-          1,
-          0.3,
-          1,
-        ],
+            : index * 0.08,ease: [0.16,1,0.3,1,],
       }}
       className="h-full"
     >
@@ -87,11 +81,8 @@ export function BenefitCard({
           className="
             flex h-full
             flex-col items-center
-            px-2.5 pb-3.5 pt-3.5
+            px-2.5 pb-3.5
             text-center
-            sm:px-6
-            sm:pb-7
-            sm:pt-7
           "
         >
           <div
@@ -179,11 +170,9 @@ export function BenefitCard({
           </div>
 
           <div
-            className="
-              mt-2 flex flex-1
+            className="flex flex-1
               flex-col items-center
               justify-center
-              sm:mt-3
             "
           >
             {benefit.label && (
@@ -212,16 +201,14 @@ export function BenefitCard({
                 ${
                   isNoFees
                     ? `
-                      mt-1.5
                       text-[18px]
-                      sm:mt-3
                       sm:text-[33px]
                     `
                     : `
                       mt-1
                       text-[32px]
                       sm:mt-2
-                      sm:text-[62px]
+                      sm:text-[50px]
                     `
                 }
               `}

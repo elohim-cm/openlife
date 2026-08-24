@@ -56,7 +56,7 @@ export const en = {
 
   hero: {
     accreditation:
-      "ACAM VIE - CIMA APPROVED",
+      "ACAM Vie - CIMA APPROVED",
 
     welcome: "Welcome to",
 
@@ -124,7 +124,7 @@ export const en = {
         id: "approval",
         title: "Approved by",
         description:
-          "ACAM VIE - CIMA",
+          "ACAM Vie - CIMA",
       },
       {
         id: "security",
@@ -166,7 +166,7 @@ export const en = {
       "Benefits designed for you",
 
     introduction:
-      "The new secure and transparent digital daily savings solution developed by ACAM Vie. Download the application from Google Play now and open your account to secure your everyday savings!",
+      "Your secure, transparent, and digital daily savings solution developed by ACAM Vie. Download the app now from the Play Store or App Store and start saving!",
 
     title: "Open Life means:",
 
@@ -635,7 +635,7 @@ export const en = {
     logoAlt: "Open Life",
     tagline:"Your insurance, simplified.",
 
-    countriesTitle: "Countries",
+    countriesTitle: "Our offices",
     countries: [
       {
         id: "cameroon",

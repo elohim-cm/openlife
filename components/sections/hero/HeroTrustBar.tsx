@@ -1,3 +1,6 @@
+"use client";
+
+import { useInView, useReducedMotion } from "framer-motion";
 import {
   LockKeyhole,
   ShieldCheck,
@@ -5,6 +8,7 @@ import {
   UsersRound,
   type LucideIcon,
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   useSiteContent,
@@ -18,11 +22,79 @@ const TRUST_ICONS:
     rating: Star,
   };
 
+const COUNT_DURATION = 1600;
+
+function getAnimatedTitle(
+  id: string,
+  title: string,
+  progress: number,
+) {
+  if (id === "savers") {
+    const value = Math.round(50_000 * progress);
+    const separator = title.includes(",") ? "," : " ";
+    const formattedValue = String(value).replace(
+      /\B(?=(\d{3})+(?!\d))/g,
+      separator,
+    );
+
+    return title.replace(/50[\s,]000/, formattedValue);
+  }
+
+  if (id === "rating") {
+    const decimalSeparator = title.includes("4,8") ? "," : ".";
+    const value = (4.8 * progress)
+      .toFixed(1)
+      .replace(".", decimalSeparator);
+
+    return title.replace(/4[.,]8/, value);
+  }
+
+  return title;
+}
+
 export function HeroTrustBar() {
   const content = useSiteContent();
+  const reduceMotion = Boolean(useReducedMotion());
+  const trustBarRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(trustBarRef, {
+    once: true,
+    amount: 0.45,
+  });
+  const [countProgress, setCountProgress] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) {
+      return;
+    }
+
+    if (reduceMotion) {
+      setCountProgress(1);
+      return;
+    }
+
+    let animationFrame = 0;
+    const startTime = performance.now();
+
+    const updateCount = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / COUNT_DURATION, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      setCountProgress(easedProgress);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(updateCount);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(updateCount);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isInView, reduceMotion]);
 
   return (
     <div
+      ref={trustBarRef}
       className="
         mx-auto grid w-full
         max-w-[1295px]
@@ -94,7 +166,11 @@ export function HeroTrustBar() {
                     text-heading-secondary
                   "
                 >
-                  {item.title}
+                  {getAnimatedTitle(
+                    item.id,
+                    item.title,
+                    countProgress,
+                  )}
                 </span>
 
                 <span className="block">

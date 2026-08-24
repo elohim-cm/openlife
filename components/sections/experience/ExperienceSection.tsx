@@ -105,7 +105,7 @@ export function ExperienceSection() {
             bg-cta
             sm:size-[520px]
             lg:-left-[520px]
-            lg:-top-[1000px]
+            lg:-top-[1050px]
             lg:size-[1150px]
           "
         />
@@ -115,11 +115,11 @@ export function ExperienceSection() {
           className="
             pointer-events-none
             absolute
-            size-[1200px]
+            size-[1100px]
             rounded-full
             bg-[var(--experience-curve)]
-            sm:-bottom-[72%]
-            lg:-bottom-[100%]
+            lg:-bottom-[120%]
+            sm:-bottom-[100%]
             lg:-right-[24%]
           "
         />
@@ -139,10 +139,9 @@ export function ExperienceSection() {
             mx-auto flex h-full
             w-full max-w-[1540px]
             flex-col
-            px-5 pb-8 pt-[28px]
+            px-5 pt-[28px]
             sm:px-8
             lg:px-10
-            lg:pb-10
           "
         >
           <header

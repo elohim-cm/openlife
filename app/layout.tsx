@@ -11,14 +11,6 @@ import {getSiteContent,} from "@/i18n/content";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const inter = localFont({
-  src: "../public/fonts/Inter-Variable.ttf",
-  variable: "--font-sans",
-  weight: "100 900",
-  style: "normal",
-  display: "swap",
-});
-
 const poppins = localFont({
   src: [
     {
@@ -44,6 +36,7 @@ const poppins = localFont({
   ],
   variable: "--font-poppins",
   display: "swap",
+  fallback: ["Arial", "sans-serif"],
 });
 
 const defaultContent =getSiteContent(DEFAULT_LOCALE,);
@@ -72,22 +65,14 @@ export default function RootLayout({
       data-locale={DEFAULT_LOCALE}
       data-theme="light"
       suppressHydrationWarning
-      className={cn("scheme-light", "font-sans", inter.variable)}
+      className={cn("scheme-light", "font-sans", poppins.variable)}
       style={{colorScheme: "light",}}
     >
       <head>
         <Script id="openlife-local-storage" strategy="beforeInteractive" />
       </head>
 
-      <body
-        className={`
-          ${poppins.variable}
-          bg-background
-          font-(--font-poppins)
-          text-foreground
-          antialiased
-        `}
-      >
+      <body className="bg-background font-sans text-foreground antialiased">
         <I18nProvider>
           <ThemeProvider>
             {children}

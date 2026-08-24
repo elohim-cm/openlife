@@ -12,10 +12,7 @@ import {
 } from "@/hooks/useSiteContent";
 
 import { BenefitCard } from "./BenefitCard";
-import {
-  BENEFIT_DEFINITIONS,
-  type Benefit,
-} from "./Benefits.data";
+import {BENEFIT_DEFINITIONS,type Benefit,} from "./Benefits.data";
 
 export function BenefitsSection() {
   const content = useSiteContent();
@@ -70,8 +67,6 @@ export function BenefitsSection() {
           pt-[60px]
           sm:px-8
           lg:px-10
-          lg:pb-[132px]
-          lg:pt-[126px]
         "
       >
         <motion.header
@@ -145,7 +140,6 @@ export function BenefitsSection() {
               tracking-[-0.045em]
               text-heading
               sm:text-[55px]
-              lg:text-[68px]
             "
           >
             {content.benefits.title}
@@ -160,7 +154,6 @@ export function BenefitsSection() {
               leading-[1.65]
               text-text
               sm:text-[18px]
-              lg:text-[19px]
             "
           >
             {
@@ -172,7 +165,7 @@ export function BenefitsSection() {
 
         <div
           className="
-            mt-[52px]
+            mt-[25px]
             grid grid-cols-2
             gap-3
             sm:gap-5

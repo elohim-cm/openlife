@@ -1,9 +1,7 @@
 export const fr = {
   metadata: {
-    title:
-      "Open Life - Épargne journalière digitale",
-    description:
-      "Épargnez quotidiennement à partir de 200 FCFA avec Open Life, la solution digitale, sécurisée et transparente développée par ACAM Vie.",
+    title:"Open Life - Épargne journalière digitale",
+    description:"Épargnez quotidiennement à partir de 200 FCFA avec Open Life, la solution digitale, sécurisée et transparente développée par ACAM Vie.",
   },
 
   common: {
@@ -56,7 +54,7 @@ export const fr = {
 
   hero: {
     accreditation:
-      "ACAM VIE - AGRÉÉE PAR LA CIMA",
+      "ACAM Vie - AGRÉÉE PAR LA CIMA",
 
     welcome: "Bienvenue sur",
 
@@ -124,7 +122,7 @@ export const fr = {
         id: "approval",
         title: "Approuvé par",
         description:
-          "ACAM VIE - CIMA",
+          "ACAM Vie - CIMA",
       },
       {
         id: "security",
@@ -167,7 +165,7 @@ export const fr = {
       "Avantages conçus pour vous",
 
     introduction:
-      "La nouvelle solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore, et ouvrez votre compte pour sécuriser votre épargne de tous les jours !",
+      "Votre solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore ou Appstore, et commencez votre epargne !",
 
     title: "Open Life c’est :",
 
@@ -626,7 +624,7 @@ export const fr = {
     logoAlt: "Open Life",
     tagline:"Votre assurance, simplifiée.",
 
-    countriesTitle: "Pays",
+    countriesTitle: "Nos Représentations",
     countries: [
       {
         id: "cameroon",

@@ -27,15 +27,15 @@ export const BENEFIT_DEFINITIONS:
       icon: Coins,
     },
     {
-      id: "interest-rate",
-      icon: CirclePercent,
+      id: "no-fees",
+      icon: WalletCards,
     },
     {
       id: "withdrawal-period",
       icon: CalendarClock,
     },
     {
-      id: "no-fees",
-      icon: WalletCards,
+      id: "interest-rate",
+      icon: CirclePercent,
     },
   ] as const;

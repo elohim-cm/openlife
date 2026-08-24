@@ -56,7 +56,7 @@ export const fr = {
 
   hero: {
     accreditation:
-      "ACAM VIE - AGRÉÉ PAR LA CIMA",
+      "ACAM VIE - AGRÉÉE PAR LA CIMA",
 
     welcome: "Bienvenue sur",
 

@@ -25,13 +25,7 @@ import {
 } from "./HeroTrustBar";
 
 const HERO_FEATURE_ICONS:
-  Record<string, LucideIcon> = {
-    "minimum-deposit":
-      WalletCards,
-    "interest-rate":
-      ChartNoAxesCombined,
-    withdrawal: Clock3,
-  };
+  Record<string, LucideIcon> = { "minimum-deposit":WalletCards, "interest-rate":ChartNoAxesCombined,withdrawal: Clock3,};
 
 const HERO_LINKS = {
   simulation: "/simuler",

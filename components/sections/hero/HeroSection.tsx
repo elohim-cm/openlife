@@ -100,10 +100,11 @@ export function HeroSection() {
           px-5 pb-4
           pt-[22px]
           sm:px-8
+          lg:min-h-[825px]
           lg:grid-cols-[47%_53%]
           lg:gap-0
           lg:px-10
-          lg:pb-[50px]
+          lg:pb-[130px]
         "
       >
         <div
@@ -137,7 +138,6 @@ export function HeroSection() {
               className="
                 text-[11px]
                 font-semibold
-                uppercase
                 tracking-[0.11em]
                 sm:text-[12px]
               "

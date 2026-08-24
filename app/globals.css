@@ -344,6 +344,10 @@
     0 22px 48px
     rgb(32 78 25 / 14%);
 
+  --benefits-flow-arrow: #e83a22;
+  --benefits-flow-arrow-halo:
+    rgb(251 252 249 / 92%);
+
   --benefits-icon-background:
     radial-gradient(
       circle at 50% 45%,
@@ -654,6 +658,10 @@
   --benefits-card-shadow-hover:
     0 24px 54px
     rgb(0 0 0 / 42%);
+
+  --benefits-flow-arrow: #ff634a;
+  --benefits-flow-arrow-halo:
+    rgb(11 18 13 / 92%);
 
   --benefits-icon-background:
     radial-gradient(

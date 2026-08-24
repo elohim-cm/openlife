@@ -61,17 +61,16 @@ export function BenefitCard({
       <Card
         className="
           group h-full
-          min-h-[150px]
+          min-h-[142px]
           rounded-[14px]
           border
           border-[var(--benefits-card-border)]
           bg-[var(--benefits-card)]
           py-0
           shadow-[var(--benefits-card-shadow)]
-          transition-[transform,border-color,box-shadow]
-          duration-500
-          ease-[cubic-bezier(0.16,1,0.3,1)]
-          hover:-translate-y-1.5
+          transition-[border-color,box-shadow]
+          duration-700
+          ease-in-out
           hover:border-brand/30
           hover:shadow-[var(--benefits-card-shadow-hover)]
           sm:rounded-[18px]
@@ -95,16 +94,12 @@ export function BenefitCard({
               rounded-full
               bg-[var(--benefits-icon-background)]
               text-brand
-              transition-transform
-              duration-500
-              ease-[cubic-bezier(0.16,1,0.3,1)]
-              group-hover:scale-[1.035]
-              sm:size-[96px]
+              sm:size-[76px]
             "
           >
             <Icon
               aria-hidden="true"
-              className="size-[26px] sm:size-[46px]"
+              className="size-[26px] sm:size-[36px]"
               strokeWidth={1.7}
             />
 
@@ -126,9 +121,9 @@ export function BenefitCard({
                   font-extrabold
                   tracking-[-0.04em]
                   text-cta
-                  sm:bottom-[15px]
-                  sm:right-[10px]
-                  sm:size-[31px]
+                  sm:bottom-[10px]
+                  sm:right-[7px]
+                  sm:size-[26px]
                   sm:border-[3px]
                   sm:text-[8px]
                 "
@@ -152,9 +147,9 @@ export function BenefitCard({
                   border-[var(--benefits-icon-background-solid)]
                   bg-[var(--benefits-icon-background-solid)]
                   text-cta
-                  sm:bottom-[11px]
-                  sm:right-[8px]
-                  sm:size-[31px]
+                  sm:bottom-[8px]
+                  sm:right-[6px]
+                  sm:size-[26px]
                   sm:border-[3px]
                 "
               >
@@ -184,7 +179,7 @@ export function BenefitCard({
                   tracking-[-0.025em]
                   text-heading-secondary
                   sm:mt-1
-                  sm:text-[20px]
+                  sm:text-[17px]
                   sm:leading-[1.25]
                 "
               >
@@ -202,13 +197,13 @@ export function BenefitCard({
                   isNoFees
                     ? `
                       text-[18px]
-                      sm:text-[33px]
+                      sm:text-[27px]
                     `
                     : `
                       mt-1
                       text-[32px]
                       sm:mt-2
-                      sm:text-[50px]
+                      sm:text-[42px]
                     `
                 }
               `}
@@ -236,14 +231,14 @@ export function BenefitCard({
                             text-[11.5px]
                             font-normal
                             leading-[1.3]
-                            sm:text-[17px]
+                            sm:text-[15px]
                             sm:leading-[1.55]
                           `
                           : `
                             text-[11.5px]
                             font-semibold
                             leading-[1.2]
-                            sm:text-[18px]
+                            sm:text-[16px]
                             sm:leading-[1.35]
                           `
                       }

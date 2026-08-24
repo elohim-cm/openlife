@@ -14,37 +14,113 @@ import {
 import { BenefitCard } from "./BenefitCard";
 import {BENEFIT_DEFINITIONS,type Benefit,} from "./Benefits.data";
 
+function BenefitFlowArrows() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 1000 330"
+      preserveAspectRatio="none"
+      className="
+        pointer-events-none
+        absolute inset-0 z-20
+        hidden size-full
+        overflow-visible
+        xl:block
+      "
+      fill="none"
+    >
+      <path
+        d="M120 62C205 -10 326 -10 380 62"
+        stroke="var(--benefits-flow-arrow-halo)"
+        strokeWidth="9"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        d="M120 62C205 -10 326 -10 380 62"
+        stroke="var(--benefits-flow-arrow)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        d="M363 53L381 64L378 43"
+        stroke="var(--benefits-flow-arrow)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+
+      <path
+        d="M625 268C610 345 454 345 380 268"
+        stroke="var(--benefits-flow-arrow-halo)"
+        strokeWidth="9"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        d="M625 268C610 345 454 345 380 268"
+        stroke="var(--benefits-flow-arrow)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        d="M399 274L378 266L385 286"
+        stroke="var(--benefits-flow-arrow)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
+  );
+}
+
 export function BenefitsSection() {
   const content = useSiteContent();
   const reduceMotion = Boolean(
     useReducedMotion(),
   );
 
+  const emphasizedIntroductionParts =
+    content.benefits.introduction.split(
+      /(ACAM Vie|commencez à épargner|start saving)/g,
+    );
+
   const benefits =
     useMemo<
       readonly Benefit[]
     >(() => {
-      return BENEFIT_DEFINITIONS.map(
-        (definition, index) => {
-          const translatedItem =
-            content.benefits
-              .items[index];
+      const translatedBenefits =
+        BENEFIT_DEFINITIONS.map(
+          (definition) => {
+            const translatedItem =
+              content.benefits
+                .items.find(
+                  (item) =>
+                    item.id ===
+                    definition.id,
+                );
 
-          return {
-            id: definition.id,
-            icon: definition.icon,
-            label:
-              translatedItem
-                ?.label ?? "",
-            value:
-              translatedItem
-                ?.value ?? "",
-            description:
-              translatedItem
-                ?.description ?? [],
-          };
-        },
-      );
+            return {
+              id: definition.id,
+              icon: definition.icon,
+              label:
+                translatedItem
+                  ?.label ?? "",
+              value:
+                translatedItem
+                  ?.value ?? "",
+              description:
+                translatedItem
+                  ?.description ?? [],
+            };
+          },
+        );
+
+      return translatedBenefits;
     }, [content.benefits.items]);
 
   return (
@@ -62,7 +138,7 @@ export function BenefitsSection() {
         className="
           relative z-10
           mx-auto w-full
-          max-w-[1300px]
+          max-w-[1120px]
           px-5 pb-[60px]
           pt-[60px]
           sm:px-8
@@ -156,35 +232,55 @@ export function BenefitsSection() {
               sm:text-[18px]
             "
           >
-            {
-              content.benefits
-                .introduction
-            }
+            {emphasizedIntroductionParts.map(
+              (part, index) =>
+                part === "ACAM Vie" ||
+                part === "commencez à épargner" ||
+                part === "start saving" ? (
+                  <strong
+                    key={`${part}-${index}`}
+                    className="font-semibold"
+                  >
+                    {part}
+                  </strong>
+                ) : (
+                  part
+                ),
+            )}
           </p>
         </motion.header>
 
         <div
           className="
-            mt-[25px]
-            grid grid-cols-2
-            gap-3
-            sm:gap-5
-            xl:grid-cols-4
-            xl:gap-[18px]
+            relative mt-[25px]
+            xl:py-[58px]
           "
         >
-          {benefits.map(
-            (benefit, index) => (
-              <BenefitCard
-                key={benefit.id}
-                benefit={benefit}
-                index={index}
-                reduceMotion={
-                  reduceMotion
-                }
-              />
-            ),
-          )}
+          <div
+            className="
+              relative z-10
+              grid grid-cols-2
+              gap-3
+              sm:gap-5
+              xl:grid-cols-4
+              xl:gap-7
+            "
+          >
+            {benefits.map(
+              (benefit, index) => (
+                <BenefitCard
+                  key={benefit.id}
+                  benefit={benefit}
+                  index={index}
+                  reduceMotion={
+                    reduceMotion
+                  }
+                />
+              ),
+            )}
+          </div>
+
+          <BenefitFlowArrows />
         </div>
       </div>
     </section>

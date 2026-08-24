@@ -241,7 +241,7 @@ export const en = {
         id: "collection",
         title: "Payment",
         description:
-          "Pay your daily premiums easily through Orange Money or MTN Mobile Money. Every payment is recorded and displayed in your personal account in real time.",
+          "Pay your daily premiums easily through Orange Money or MTN Mobile Money without fees. Every payment is recorded and displayed in your personal account in real time.",
         imageAlt:
           "Open Life premium payment interface",
       },
@@ -329,7 +329,7 @@ export const en = {
     tomorrowLabel: "Tomorrow",
 
     phrases: [
-      "Manage your daily savings in 5 minutes from your phone with the Open Life application!",
+      "Manage your daily savings in 5 minutes from your phone.",
       "Build your future day after day with Open Life.",
     ],
 

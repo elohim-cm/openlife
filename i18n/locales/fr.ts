@@ -165,7 +165,7 @@ export const fr = {
       "Avantages conçus pour vous",
 
     introduction:
-      "Votre solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore ou Appstore, et commencez votre epargne !",
+      "Votre solution d'épargne journalière digitale, sécurisée et transparente, développée par ACAM Vie. Téléchargez dès maintenant l'application sur Playstore ou Appstore, et commencez à épargner !",
 
     title: "Open Life c’est :",
 
@@ -241,7 +241,7 @@ export const fr = {
         id: "collection",
         title: "Collecte",
         description:
-          "Payez vos primes journalières facilement via Orange Money ou MTN Mobile Money. Chaque versement est enregistré et visible en temps réel dans votre espace personnel.",
+          "Payez vos primes journalières facilement via Orange Money ou MTN Mobile Money sans frais. Chaque versement est enregistré et visible en temps réel dans votre espace personnel.",
         imageAlt:
           "Interface de collecte des primes Open Life",
       },
@@ -328,7 +328,7 @@ export const fr = {
     tomorrowLabel: "Demain",
 
     phrases: [
-      "Gérez votre épargne journalière en 5 minutes sur votre téléphone avec l’application Open Life !",
+      "Gérez votre épargne journalière en 5 minutes sur votre mobile.",
       "Avec Open Life, construisez votre avenir jour après jour.",
     ],
 

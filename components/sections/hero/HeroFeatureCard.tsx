@@ -29,17 +29,24 @@ export function HeroFeatureCard({
           border-[var(--hero-feature-border)]
           bg-[var(--hero-feature-background)]
           text-brand
-          transition-[transform,border-color,background-color]
-          duration-500
-          ease-[cubic-bezier(0.16,1,0.3,1)]
+          transition-[transform,border-color,background-color,color,box-shadow]
+          duration-600
+          ease-in-out
           group-hover:-translate-y-0.5
           group-hover:border-brand/35
           group-hover:bg-brand-soft
+          group-hover:shadow-card
         "
       >
         <Icon
           aria-hidden="true"
-          className="size-[22px]"
+          className="
+            size-[22px]
+            transition-colors
+            duration-600
+            ease-in-out
+            group-hover:text-brand-hover
+          "
           strokeWidth={2}
         />
       </span>
@@ -50,6 +57,10 @@ export function HeroFeatureCard({
           font-medium
           leading-[1.35]
           text-heading-secondary
+          transition-colors
+          duration-600
+          ease-in-out
+          group-hover:text-brand
           sm:text-[17px]
         "
       >

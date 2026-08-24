@@ -43,6 +43,8 @@ export const en = {
       "Enable light theme",
     scrollToNextSection:
       "Scroll to the next section",
+    backToTop:
+      "Back to the top of the page",
   },
 
   whatsapp: {

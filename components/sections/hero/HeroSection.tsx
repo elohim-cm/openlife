@@ -98,13 +98,16 @@ export function HeroSection() {
           items-center
           gap-8
           px-5 pb-4
-          pt-[22px]
+          pt-[100px]
           sm:px-8
+          sm:pt-[100px]
+          md:pt-[100px]
           lg:min-h-[825px]
           lg:grid-cols-[47%_53%]
           lg:gap-0
           lg:px-10
           lg:pb-[130px]
+          lg:pt-[22px]
         "
       >
         <div

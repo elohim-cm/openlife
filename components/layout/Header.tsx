@@ -29,7 +29,7 @@ export function Header() {
       <div className=" mx-auto flex h-full w-full max-w-350 items-center justify-between px-3 transition-[padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-6 lg:px-8 xl:px-10">
         <Link href="/" aria-label={ content.header.homeLabel }
           className={cn(` relative block h-auto shrink-0 transition-[width,height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] `,
-            isScrolled? "aspect-140/68 w-[clamp(5rem,20vw,8.75rem)] sm:aspect-auto sm:h-15 sm:w-33": "aspect-145/68 w-[clamp(6rem,21vw,9.0625rem)] sm:aspect-auto sm:h-17 sm:w-36.25",
+            isScrolled? "aspect-140/68 w-[clamp(5rem,20vw,8.75rem)] max-[359px]:w-[72px] sm:aspect-auto sm:h-15 sm:w-33": "aspect-145/68 w-[clamp(6rem,21vw,9.0625rem)] max-[359px]:w-[72px] sm:aspect-auto sm:h-17 sm:w-36.25",
           )}
         >
           <Image src="/images/branding/openlife-logo.webp" alt={content.header.logoAlt} fill priority sizes="145px"

@@ -71,6 +71,8 @@ type PhoneCardProps = {
   position: PhonePosition;
   reduceMotion: boolean;
   isDark: boolean;
+  onHoverStart: () => void;
+  onHoverEnd: () => void;
 };
 
 function PhoneCard({
@@ -78,6 +80,8 @@ function PhoneCard({
   position,
   reduceMotion,
   isDark,
+  onHoverStart,
+  onHoverEnd,
 }: PhoneCardProps) {
   const imageSrc = isDark
     ? screen.darkSrc
@@ -145,22 +149,38 @@ function PhoneCard({
           xl:rounded-[30px]
         "
       >
-        <Image
-          src={imageSrc}
-          alt={screen.alt}
-          fill
-          sizes="
-            (max-width: 639px) 218px,
-            (max-width: 1279px) 250px,
-            282px
-          "
-          className="
-            rounded-[24px]
-            object-cover
-            sm:rounded-[27px]
-            xl:rounded-[30px]
-          "
-        />
+        <motion.div
+          className="absolute inset-0"
+          onMouseEnter={onHoverStart}
+          onMouseLeave={onHoverEnd}
+          whileHover={
+            reduceMotion
+              ? undefined
+              : { scale: 1.035 }
+          }
+          transition={{
+            duration:
+              reduceMotion ? 0 : 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <Image
+            src={imageSrc}
+            alt={screen.alt}
+            fill
+            sizes="
+              (max-width: 639px) 218px,
+              (max-width: 1279px) 250px,
+              282px
+            "
+            className="
+              rounded-[24px]
+              object-cover
+              sm:rounded-[27px]
+              xl:rounded-[30px]
+            "
+          />
+        </motion.div>
       </motion.div>
     </motion.div>
   );
@@ -204,8 +224,6 @@ export function RotatingPhones() {
         content.mobileApp
           .carouselLabel
       }
-      onMouseEnter={pause}
-      onMouseLeave={resume}
       onFocusCapture={pause}
       onBlurCapture={resume}
       className="
@@ -238,6 +256,8 @@ export function RotatingPhones() {
                 reduceMotion
               }
               isDark={isDark}
+              onHoverStart={pause}
+              onHoverEnd={resume}
             />
           );
         },

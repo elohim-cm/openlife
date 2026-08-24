@@ -58,6 +58,7 @@ export function ExperienceSection() {
     sectionRef,
     activeIndex,
     direction,
+    scrollToStep,
   } = useScrollStory({
     stepsCount:
       experienceItems.length,
@@ -115,9 +116,11 @@ export function ExperienceSection() {
           className="
             pointer-events-none
             absolute
+            top-[104px]
             size-[1100px]
             rounded-full
             bg-[var(--experience-curve)]
+            sm:top-auto
             lg:-bottom-[120%]
             sm:-bottom-[100%]
             lg:-right-[24%]
@@ -207,6 +210,7 @@ export function ExperienceSection() {
                 content.experience
                   .progressLabel
               }
+              onStepSelect={scrollToStep}
             />
 
             <ExperienceText
@@ -235,12 +239,14 @@ type ExperienceProgressProps = {
     readonly ExperienceItem[];
   activeIndex: number;
   label: string;
+  onStepSelect: (index: number) => void;
 };
 
 function ExperienceProgress({
   items,
   activeIndex,
   label,
+  onStepSelect,
 }: ExperienceProgressProps) {
   return (
     <nav
@@ -266,11 +272,6 @@ function ExperienceProgress({
             return (
               <li
                 key={item.id}
-                aria-current={
-                  isActive
-                    ? "step"
-                    : undefined
-                }
                 className="
                   relative flex
                   min-h-[82px]
@@ -296,53 +297,74 @@ function ExperienceProgress({
                   />
                 )}
 
-                <span
-                  aria-hidden="true"
-                  className={`
-                    relative z-10
-                    mt-[2px] block
-                    size-[19px]
-                    shrink-0
-                    rounded-full border
-                    transition-[background-color,border-color,box-shadow,transform]
-                    duration-500
-                    ease-[cubic-bezier(0.22,1,0.36,1)]
-                    ${
-                      isActive
-                        ? `
-                          scale-110
-                          border-brand
-                          bg-brand
-                          shadow-[0_0_0_7px_var(--experience-progress-ring)]
-                        `
-                        : isPassed
-                          ? `
-                            border-brand
-                            bg-brand/45
-                          `
-                          : `
-                            border-[var(--experience-progress-dot)]
-                            bg-[var(--experience-background)]
-                          `
-                    }
-                  `}
-                />
-
-                <span
-                  className={`
-                    block pt-0.5
-                    leading-[1.35]
-                    transition-[color,font-weight]
-                    duration-500
-                    ${
-                      isActive
-                        ? "font-bold text-icon"
-                        : "text-text-muted"
-                    }
-                  `}
+                <button
+                  type="button"
+                  aria-current={
+                    isActive
+                      ? "step"
+                      : undefined
+                  }
+                  onClick={() =>
+                    onStepSelect(index)
+                  }
+                  className="
+                    relative z-10 flex
+                    min-h-11 items-start
+                    gap-4 text-left
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-focus
+                    focus-visible:ring-offset-4
+                  "
                 >
-                  {item.title}
-                </span>
+                  <span
+                    aria-hidden="true"
+                    className={`
+                      mt-[2px] block
+                      size-[19px]
+                      shrink-0 rounded-full
+                      border
+                      transition-[background-color,border-color,box-shadow,transform]
+                      duration-700
+                      ease-in-out
+                      ${
+                        isActive
+                          ? `
+                            scale-110
+                            border-brand
+                            bg-brand
+                            shadow-[0_0_0_7px_var(--experience-progress-ring)]
+                          `
+                          : isPassed
+                            ? `
+                              border-brand
+                              bg-brand/45
+                            `
+                            : `
+                              border-[var(--experience-progress-dot)]
+                              bg-[var(--experience-background)]
+                            `
+                      }
+                    `}
+                  />
+
+                  <span
+                    className={`
+                      block pt-0.5
+                      leading-[1.35]
+                      transition-colors
+                      duration-700
+                      ease-in-out
+                      ${
+                        isActive
+                          ? "font-bold text-icon"
+                          : "text-text-muted"
+                      }
+                    `}
+                  >
+                    {item.title}
+                  </span>
+                </button>
               </li>
             );
           },
@@ -350,7 +372,6 @@ function ExperienceProgress({
       </ol>
 
       <ol
-        aria-hidden="true"
         className="
           mx-auto flex
           max-w-[310px]
@@ -378,29 +399,54 @@ function ExperienceProgress({
                   last:flex-none
                 "
               >
-                <span
-                  className={`
-                    relative z-10 block
-                    size-[14px]
-                    rounded-full border
-                    transition-all
-                    duration-500
-                    ${
-                      isActive
-                        ? "scale-125 border-brand bg-brand"
-                        : isPassed
-                          ? "border-brand bg-brand/50"
-                          : "border-[var(--experience-progress-dot)] bg-[var(--experience-background)]"
-                    }
-                  `}
-                />
+                <button
+                  type="button"
+                  aria-label={item.title}
+                  aria-current={
+                    isActive
+                      ? "step"
+                      : undefined
+                  }
+                  onClick={() =>
+                    onStepSelect(index)
+                  }
+                  className="
+                    relative z-10 flex
+                    size-11 shrink-0
+                    items-center
+                    justify-center
+                    rounded-full
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-focus
+                  "
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`
+                      block size-[14px]
+                      rounded-full border
+                      transition-[background-color,border-color,box-shadow,transform]
+                      duration-700
+                      ease-in-out
+                      ${
+                        isActive
+                          ? "scale-125 border-brand bg-brand shadow-[0_0_0_6px_var(--experience-progress-ring)]"
+                          : isPassed
+                            ? "border-brand bg-brand/50"
+                            : "border-[var(--experience-progress-dot)] bg-[var(--experience-background)]"
+                      }
+                    `}
+                  />
+                </button>
 
                 {!isLast && (
                   <span
                     className={`
                       h-px flex-1
                       transition-colors
-                      duration-500
+                      duration-700
+                      ease-in-out
                       ${
                         isPassed
                           ? "bg-brand/70"

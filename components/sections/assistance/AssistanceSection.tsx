@@ -123,9 +123,11 @@ export function AssistanceSection() {
 
         <div
           className="
-            mt-[52px]
+            mt-[38px]
             grid grid-cols-1
-            gap-[24px]
+            gap-[16px]
+            sm:mt-[52px]
+            sm:gap-[24px]
             sm:grid-cols-2
             lg:mt-[60px]
             lg:grid-cols-3
@@ -135,7 +137,7 @@ export function AssistanceSection() {
           {contacts.map((contact, index) => (<AssistanceCard key={contact.id} contact={contact} index={index} reduceMotion={reduceMotion}/>),)}
         </div>
 
-        <div className="mt-[64px]">
+        <div className="mt-[20px]">
           <BusinessCard reduceMotion={reduceMotion} partner={businessPartner} />
         </div>
       </div>

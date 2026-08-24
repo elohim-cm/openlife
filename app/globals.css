@@ -907,6 +907,13 @@ button,a,input,textarea,select {-webkit-tap-highlight-color: transparent;}
   }
 }
 
+@media (max-width: 639px) {
+  .hero-phone-composite-layer {
+    transform: none !important;
+    will-change: auto !important;
+  }
+}
+
 .mobile-app-theme-background {background: var(--mobile-app-background);}
 
 .benefits-theme-background {

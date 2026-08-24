@@ -41,6 +41,8 @@ export const fr = {
       "Activer le thème clair",
     scrollToNextSection:
       "Faire défiler vers la section suivante",
+    backToTop:
+      "Retourner en haut de la page",
   },
 
   whatsapp: {

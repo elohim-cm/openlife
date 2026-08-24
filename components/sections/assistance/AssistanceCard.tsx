@@ -20,56 +20,60 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
       viewport={{once: true,amount: 0.3,}}
       transition={{duration: reduceMotion? 0: 0.55,delay: reduceMotion? 0: index * 0.1,ease: [0.22, 1, 0.36, 1],}}
       whileHover={reduceMotion? undefined: {y: -7,}}
-      className="group relative flex w-full flex-col items-center overflow-hidden rounded-[20px] border border-border bg-white/65 dark:bg-black/65 px-6 pb-8 pt-9.25 text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:min-h-95 lg:min-h-101.25 "
+      className="group relative mx-auto flex w-full max-w-[330px] flex-col items-center overflow-hidden rounded-[16px] border border-border bg-white/65 dark:bg-black/65 px-4 pb-5 pt-6 text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:min-h-95 sm:max-w-none sm:rounded-[20px] sm:px-6 sm:pb-8 sm:pt-9.25 lg:min-h-101.25 "
     >
       <div aria-hidden="true" className=" pointer-events-none absolute left-1/2 top-0 size-47.5 -translate-x-1/2 -translate-y-65% rounded-full bg-brand-soft/65 blur-[45px] transition-transform duration-500 group-hover:scale-125"/>
 
       <div
         className="
           relative z-10
-          flex size-17
+          flex size-14
           items-center justify-center
-          rounded-[17px]
+          rounded-[14px]
           bg-surface-muted
           shadow-[inset_0_0_0_1px_var(--border)]
           transition-[transform,background-color]
           duration-300
           group-hover:-translate-y-1
           group-hover:bg-brand-soft
+          sm:size-17
+          sm:rounded-[17px]
         "
       >
-        <Icon aria-hidden="true" className={` size-8 ${contact.accentClassName} `}/>
+        <Icon aria-hidden="true" className={` size-7 sm:size-8 ${contact.accentClassName} `}/>
       </div>
 
       <h3
         className="
-          mt-5
-          text-[20px] font-bold
+          mt-4
+          text-[18px] font-bold
           leading-tight
           text-heading
+          sm:mt-5
           sm:text-[22px]
         "
       >{contact.title} </h3>
 
       <p
         className="
-          mt-5
+          mt-3
           max-w-67.5
-          text-[14px]
-          leading-[1.55]
+          text-[13px]
+          leading-[1.5]
           text-text-muted
+          sm:mt-5
           sm:text-[15px]
         "
       >{contact.description}</p>
 
       <a href={contact.href} aria-label={contact.ariaLabel} target={ isExternalLink ? "_blank" : undefined } rel={ isExternalLink? "noreferrer" : undefined }
         className="
-          mt-5
+          mt-4
           inline-flex
           max-w-full items-center
           justify-center rounded-lg
           px-2
-          text-[15px] font-bold
+          text-[14px] font-bold
           leading-[1.35]
           text-heading-secondary
           transition-colors
@@ -79,6 +83,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
           focus-visible:ring-2
           focus-visible:ring-focus
           focus-visible:ring-offset-2
+          sm:mt-5
           sm:text-[16px]
         "
       >
@@ -87,11 +92,12 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
 
       <p
         className="
-          mt-3.25
-          text-[11px] font-bold
+          mt-2.5
+          text-[10px] font-bold
           uppercase
           tracking-[0.065em]
           text-success
+          sm:mt-3.25
           sm:text-[12px]
         "
       >{contact.status} </p>

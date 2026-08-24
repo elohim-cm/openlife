@@ -83,6 +83,7 @@ export function HeroPhoneVisual() {
           ],
         }}
         className="
+          hero-phone-composite-layer
           absolute inset-0
           z-20
           h-full w-full
@@ -113,6 +114,7 @@ export function HeroPhoneVisual() {
                 }
           }
           className="
+            hero-phone-composite-layer
             relative
             h-full w-full
           "

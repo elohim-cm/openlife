@@ -1,12 +1,15 @@
 "use client";
 
-import {type RefObject,useEffect,useRef,useState,} from "react";
+import {type RefObject,useCallback,useEffect,useRef,useState,} from "react";
 
 import type { ScrollStoryState } from "@/types/scroll-story";
 
 type UseScrollStoryOptions = { stepsCount: number;};
 
-type UseScrollStoryReturn = ScrollStoryState & {sectionRef: RefObject<HTMLElement | null>;};
+type UseScrollStoryReturn = ScrollStoryState & {
+  sectionRef: RefObject<HTMLElement | null>;
+  scrollToStep: (index: number) => void;
+};
 
 const clamp = ( 
   value: number,
@@ -95,9 +98,59 @@ export function useScrollStory({
     };
   }, [stepsCount]);
 
+  const scrollToStep = useCallback(
+    (index: number): void => {
+      const section = sectionRef.current;
+
+      if (!section || stepsCount <= 0) {
+        return;
+      }
+
+      const targetIndex = clamp(
+        index,
+        0,
+        stepsCount - 1,
+      );
+      const sectionTop =
+        window.scrollY +
+        section.getBoundingClientRect().top;
+      const scrollableDistance = Math.max(
+        section.offsetHeight -
+          window.innerHeight,
+        1,
+      );
+      const targetProgress =
+        (targetIndex + 0.5) /
+        stepsCount;
+      const direction: 1 | -1 =
+        targetIndex >=
+        previousIndexRef.current
+          ? 1
+          : -1;
+
+      previousIndexRef.current =
+        targetIndex;
+      setState({
+        activeIndex: targetIndex,
+        direction,
+        progress: targetProgress,
+      });
+
+      window.scrollTo({
+        top:
+          sectionTop +
+          scrollableDistance *
+            targetProgress,
+        behavior: "auto",
+      });
+    },
+    [stepsCount],
+  );
+
   return { sectionRef,
     activeIndex: state.activeIndex,
     direction: state.direction,
     progress: state.progress,
+    scrollToStep,
   };
 }

@@ -34,7 +34,7 @@ export function FaqPageSection() {
       className="
         relative overflow-hidden
         bg-background
-        pb-[82px] pt-[132px]
+        pb-[50px] pt-[100px]
         sm:pb-[100px]
         sm:pt-[144px]
         lg:pb-[118px]
@@ -143,7 +143,7 @@ export function FaqPageSection() {
           type="single"
           collapsible
           className="
-            mx-auto mt-[45px]
+            mx-auto mt-[30px]
             space-y-[12px]
             sm:mt-[52px]
             lg:mt-[56px]

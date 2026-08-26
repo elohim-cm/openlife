@@ -14,70 +14,32 @@ export function AssistanceSection() {
     readonly AssistanceContact[] =
       ASSISTANCE_CONTACTS.map(
         (definition, index) => {
-          const translation =
-            content.assistance.contacts[index];
-
-          const href =
-            definition.id === "whatsapp"
-              ? `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(
-                  content.whatsapp.generalMessage,
-                )}`
-              : definition.href;
+          const translation = content.assistance.contacts[index];
+          const href = definition.id === "whatsapp" ? `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(content.whatsapp.generalMessage,)}` : definition.href;
 
           return {
             ...definition,
             href,
             title: translation?.title ?? "",
-            description:
-              translation?.description ?? "",
+            description: translation?.description ?? "",
             value: translation?.value ?? "",
             status: translation?.status ?? "",
-            ariaLabel:
-              translation?.ariaLabel ?? "",
+            ariaLabel: translation?.ariaLabel ?? "",
           };
         },
       );
 
   const businessPartner: BusinessPartner = {
-    title:
-      content.assistance.business.title,
-
-    description:
-      content.assistance.business.description,
-
-    buttonLabel:
-      content.assistance.business
-        .buttonLabel,
-
-    buttonAriaLabel:
-      content.assistance.business
-        .buttonAriaLabel,
-
-    href: `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(
-      content.whatsapp.businessMessage,
-    )}`,
+    title: content.assistance.business.title,
+    description: content.assistance.business.description,
+    buttonLabel: content.assistance.business.buttonLabel,
+    buttonAriaLabel: content.assistance.business.buttonAriaLabel,
+    href: `https://wa.me/${ASSISTANCE_PHONE}?text=${encodeURIComponent(content.whatsapp.businessMessage,)}`,
   };
 
   return (
-    <section id="assistance" aria-labelledby="assistance-title"
-      className="
-        relative overflow-hidden
-        border-b border-brand
-        bg-background
-      "
-    >
-      <div aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute left-1/2 top-[180px]
-          size-[620px]
-          -translate-x-1/2
-          rounded-full
-          bg-cta-soft
-          blur-[90px]
-        "
-      />
-
+    <section id="assistance" aria-labelledby="assistance-title" className="relative overflow-hidden border-b border-brand bg-background">
+      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[180px] size-[620px] -translate-x-1/2 rounded-full bg-cta-soft blur-[90px]"/>
       <div
         className="
           relative z-10

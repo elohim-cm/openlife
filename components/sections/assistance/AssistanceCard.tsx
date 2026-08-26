@@ -20,7 +20,7 @@ export function AssistanceCard({contact,index,reduceMotion,}: AssistanceCardProp
       viewport={{once: true,amount: 0.3,}}
       transition={{duration: reduceMotion? 0: 0.55,delay: reduceMotion? 0: index * 0.1,ease: [0.22, 1, 0.36, 1],}}
       whileHover={reduceMotion? undefined: {y: -7,}}
-      className="group relative mx-auto flex w-full max-w-[330px] flex-col items-center overflow-hidden rounded-[16px] border border-border bg-white/65 dark:bg-black/65 px-4 pb-5 pt-6 text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:min-h-95 sm:max-w-none sm:rounded-[20px] sm:px-6 sm:pb-8 sm:pt-9.25 lg:min-h-101.25 "
+      className="group relative mx-auto flex w-full max-w-[330px] flex-col items-center overflow-hidden rounded-[16px] border border-border bg-white/65 dark:bg-black/65 px-4 pb-5 pt-6 text-center shadow-card transition-[border-color,box-shadow] duration-300 hover:border-border-brand hover:shadow-card-hover sm:max-w-none sm:rounded-[20px] sm:px-6 sm:pb-8 sm:pt-9.25 "
     >
       <div aria-hidden="true" className=" pointer-events-none absolute left-1/2 top-0 size-47.5 -translate-x-1/2 -translate-y-65% rounded-full bg-brand-soft/65 blur-[45px] transition-transform duration-500 group-hover:scale-125"/>
 

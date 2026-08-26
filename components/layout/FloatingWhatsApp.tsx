@@ -5,7 +5,6 @@ import {ArrowUp} from "lucide-react";
 import {useMemo} from "react";
 import {FaWhatsapp} from "react-icons/fa";
 import { usePathname } from "next/navigation";
-
 import {useSiteContent} from "@/hooks/useSiteContent";
 import {useScrolled} from "@/hooks/useScrolled";
 
@@ -17,24 +16,14 @@ export function FloatingWhatsApp() {
   const shouldReduceMotion = useReducedMotion();
   const showBackToTop = useScrolled(480);
   const whatsappUrl = useMemo(() => {
-      const message = encodeURIComponent(
-          content.whatsapp.generalMessage,
-        );
-
+      const message = encodeURIComponent(content.whatsapp.generalMessage,);
       return `https://wa.me/${WHATSAPP_PHONE}?text=${message}`;
-    }, [
-      content.whatsapp.generalMessage,
-    ]);
+    }, [content.whatsapp.generalMessage,]);
 
   const label =content.whatsapp.buttonLabel;
   const backToTopLabel =content.accessibility.backToTop;
 
-  const scrollToTop = (): void => {
-    window.scrollTo({
-      top: 0,
-      behavior: shouldReduceMotion ? "auto" : "smooth",
-    });
-  };
+  const scrollToTop = (): void => {window.scrollTo({top: 0, behavior: shouldReduceMotion ? "auto" : "smooth",});};
 
   if (
     pathname === "/simuler"
@@ -43,7 +32,7 @@ export function FloatingWhatsApp() {
   }
 
   return (
-    <div className="fixed bottom-5.5 right-5.5 z-100 flex flex-col items-center gap-3 sm:bottom-7 sm:right-8.5">
+    <div className="fixed bottom-5.5 right-5.5 z-100 flex flex-col items-center gap-3">
       <AnimatePresence initial={false}>
         {showBackToTop && (
           <motion.button
@@ -59,9 +48,7 @@ export function FloatingWhatsApp() {
             whileTap={shouldReduceMotion ? undefined : {scale: 0.94,}}
             transition={{duration: shouldReduceMotion ? 0 : 0.28,ease: [0.22, 1, 0.36, 1],}}
             className="flex size-12 items-center justify-center rounded-full border border-brand/25 bg-surface/90 text-brand shadow-floating backdrop-blur-md transition-colors duration-300 hover:border-brand/45 hover:bg-brand hover:text-brand-contrast focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-3 sm:size-13"
-          >
-            <ArrowUp aria-hidden="true" className="size-5" strokeWidth={2.2}/>
-          </motion.button>
+          ><ArrowUp aria-hidden="true" className="size-5" strokeWidth={2.2}/></motion.button>
         )}
       </AnimatePresence>
 

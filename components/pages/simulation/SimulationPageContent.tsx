@@ -178,10 +178,10 @@ export function SimulationPageContent() {
         relative isolate overflow-hidden
         min-h-screen
         border-t-2 border-heading-secondary
-        bg-surface-muted
-        px-4 pb-[80px]
-        pt-[46px]
-        sm:px-6
+        bg-[var(--hero-stage-background)]
+        px-7 pb-[80px]
+        pt-20
+        sm:px-6 sm:pt-[128px]
         lg:px-10
       "
     >
@@ -205,12 +205,10 @@ export function SimulationPageContent() {
             ? false
             : {
                 opacity: 0,
-                y: -18,
               }
         }
         animate={{
           opacity: 1,
-          y: 0,
         }}
         transition={{
           duration: reduceMotion
@@ -224,19 +222,25 @@ export function SimulationPageContent() {
           ],
         }}
         className="
-          relative z-10
-          mx-auto flex
-          min-h-[90px]
-          w-full max-w-[1450px]
-          items-center justify-between
-          rounded-[5px]
-          bg-surface-elevated
-          px-5 py-3
-          shadow-sm
-          sm:px-7
-          lg:px-5
+          fixed inset-x-0 top-0 z-50
+          h-20 w-full
+          border-b border-border/40
+          bg-surface/75
+          shadow-header
+          backdrop-blur-xl
+          sm:h-[90px]
         "
       >
+        <div
+          className="
+            mx-auto flex h-full
+            w-full max-w-[1450px]
+            items-center justify-between
+            px-3
+            sm:px-6
+            lg:px-8
+          "
+        >
         <Link
           href="/"
           aria-label={
@@ -244,14 +248,17 @@ export function SimulationPageContent() {
           }
           className="
             relative block
-            h-[72px] w-[165px]
+            h-auto
             shrink-0
-            transition-transform
-            duration-500
+            aspect-145/68
+            w-[clamp(6rem,21vw,9.0625rem)]
+            max-[359px]:w-[72px]
+            transition-[width,height,transform]
+            duration-300
             ease-[cubic-bezier(0.22,1,0.36,1)]
             hover:scale-[1.02]
-            sm:h-[78px]
-            sm:w-[180px]
+            sm:aspect-auto
+            sm:h-17 sm:w-36.25
           "
         >
           <Image
@@ -261,7 +268,7 @@ export function SimulationPageContent() {
             }
             fill
             priority
-            sizes="180px"
+            sizes="145px"
             className="
               object-contain object-left
               dark:brightness-0
@@ -276,7 +283,7 @@ export function SimulationPageContent() {
             ml-auto
             flex items-center
             justify-end
-            gap-2
+            gap-1
             sm:gap-3
           "
         >
@@ -287,10 +294,10 @@ export function SimulationPageContent() {
           <Button
             asChild
             className="
-              h-[45px]
+              size-11
               rounded-[4px]
               bg-heading-secondary
-              px-[16px]
+              px-0
               text-[14px] font-bold
               uppercase text-text-inverse
               shadow-card
@@ -300,6 +307,8 @@ export function SimulationPageContent() {
               hover:-translate-y-0.5
               hover:bg-brand
               hover:shadow-card-hover
+              sm:h-[45px]
+              sm:w-auto
               sm:px-[22px]
             "
           >
@@ -320,11 +329,12 @@ export function SimulationPageContent() {
                 className="size-[17px]"
               />
 
-              <span>
+              <span className="hidden sm:inline">
                 {content.simulationPage.back}
               </span>
             </Link>
           </Button>
+        </div>
         </div>
       </motion.div>
 
@@ -375,10 +385,10 @@ export function SimulationPageContent() {
       <div
         className="
           relative z-10
-          mx-auto mt-[46px]
+          mx-auto mt-[40px]
           grid w-full
           max-w-[1450px]
-          items-start gap-[30px]
+          items-start gap-[20px]
           lg:grid-cols-[350px_minmax(0,1fr)]
         "
       >
@@ -409,18 +419,18 @@ export function SimulationPageContent() {
               1,
             ],
           }}
+          className="min-w-0"
         >
           <Card
             className="
-              gap-0 rounded-[10px]
+              min-w-0 gap-0 rounded-[10px]
               bg-surface-elevated
               py-0 shadow-card
             "
           >
             <CardHeader
               className="
-                px-6 pb-[22px]
-                pt-[38px]
+                pt-[30px]
                 text-center
                 sm:px-7
               "
@@ -438,7 +448,7 @@ export function SimulationPageContent() {
 
             <CardContent
               className="
-                px-6 pb-[36px]
+                px-6 pb-[30px]
                 sm:px-7
               "
             >
@@ -631,20 +641,22 @@ export function SimulationPageContent() {
               1,
             ],
           }}
+          className="min-w-0"
         >
           <Card
             className="
-              gap-0 rounded-[10px]
+              min-w-0 gap-0 rounded-[10px]
               bg-surface-elevated
               py-0 shadow-card
             "
           >
             <CardHeader
               className="
-                flex flex-row
-                items-center justify-between
+                flex flex-col
+                items-start justify-between
                 gap-4
                 px-6 py-[24px]
+                sm:flex-row sm:items-center
                 sm:px-7
               "
             >
@@ -662,7 +674,7 @@ export function SimulationPageContent() {
                 <Button
                   asChild
                   className="
-                    h-[48px] shrink-0
+                    h-[48px] w-full shrink-0
                     rounded-[4px]
                     bg-brand
                     px-[24px]
@@ -676,6 +688,7 @@ export function SimulationPageContent() {
                     hover:-translate-y-0.5
                     hover:bg-brand-hover
                     hover:shadow-card-hover
+                    sm:w-auto
                   "
                 >
                   <Link href="/#assistance">
@@ -719,6 +732,7 @@ export function SimulationPageContent() {
                 >
                   <CardContent
                     className="
+                      min-w-0
                       border-t border-border
                       px-5 pb-6 pt-6
                       sm:px-7
@@ -793,12 +807,12 @@ export function SimulationPageContent() {
 
                     <div
                       className="
-                        mt-6 overflow-hidden
+                        mt-6 min-w-0 overflow-hidden
                         rounded-[12px]
                         border border-border
                       "
                     >
-                      <Table>
+                      <Table className="min-w-[680px]">
                         <TableHeader
                           className="bg-brand"
                         >

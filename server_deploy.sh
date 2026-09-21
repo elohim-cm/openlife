@@ -7,7 +7,7 @@ echo "Deploying application ..."
 
     # Update codebase
     git config --global --add safe.directory /var/www/openlife-web-containerized
-    git pull https://stevedane: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@github.com/karbura-team/acamvie-openlife-platform-web.git production
+    git pull https://stevedane:${OPENLIFE_DEPLOY}@github.com/karbura-team/acamvie-openlife-platform-web.git production
 
     # Building image
     docker-compose down

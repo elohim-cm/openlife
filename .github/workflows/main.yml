@@ -18,7 +18,7 @@ jobs:
         script: |
           cd /var/www/openlife-web
           ls
-          git pull https://zeroloader30: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@github.com/karbura-team/acamvie-openlife-platform-web.git
+          git pull https://zeroloader30:${{ secrets.OPENLIFE_DEPLOY }}@github.com/karbura-team/acamvie-openlife-platform-web.git
           npm install
           npm run build
           pm2 restart openlife

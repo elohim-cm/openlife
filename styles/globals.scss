@@ -1,0 +1,326 @@
+@import "styleProvider";
+
+body {
+  background-color: $bodyBg !important;
+}
+
+.last-row {
+  background-color: #f0f0f0;
+}
+
+.createLink {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: $primary;
+  color: $white;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $primary35;
+    color: $white;
+  }
+}
+
+.wrapper-faq{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  .text-faq{
+    opacity: 1;
+    padding: 12px 40px 12px 12px;
+    background-color: $primary35;
+    color: $white;
+    border-radius: 8px;
+    transition:all ease-in .5s;
+    transform: translateX(300px);
+    z-index: 10;
+    cursor: pointer;
+    &.active{
+      transform: translateX(35px);
+      transition:all ease-in .5s;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .wrapper-quiz{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary35;
+    cursor: pointer;
+    z-index: 20;
+    .quiz{
+      color: $white;
+    }
+  }
+  .wrapper-quiz:hover{
+    transform: scale(1.025);
+    transition: transform ease 2s;
+  }
+}
+
+.slider-container:not(.home-slider-container){
+  width: 96.5%!important;
+  margin: 0 auto!important;
+  .slick-track{
+    width: 14004px!important;
+    transform: translate3d(-1230px, 0px, 0px);
+    .slick-slide{
+      margin: 0 12px!important;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-container{
+    .slick-track{
+      .slick-slide{
+        margin: 0 10px!important;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .slider-container{
+    .slick-track{
+      .slick-slide{
+        margin: 0!important;
+      }
+
+    }
+  }
+}
+
+.privacy {
+  .MuiAccordion-gutters.css-1c35hjw-MuiPaper-root-MuiAccordion-root{
+    margin: 12px 0!important;
+    border-radius: 12px;
+  }
+}
+.faq {
+  .MuiAccordion-gutters.css-1c35hjw-MuiPaper-root-MuiAccordion-root{
+    margin: 12px 0!important;
+  }
+  h6{
+    font-size: 16px!important;
+  }
+  .MuiAccordionSummary-expandIconWrapper{
+    background-color: red;
+    padding: 2px;
+    color: white;
+    border-radius: 6px;
+  }
+}
+
+.__parent-menu {
+  padding-left: 13px !important;
+  .MuiListItemIcon-root.css-rfb5cc-MuiListItemIcon-root, .MuiTypography-root.MuiTypography-body1{
+    font-size: 12px!important;
+  }
+}
+
+.__action-action{
+  .MuiStack-root.css-niqf4j-MuiStack-root{
+    display: flex;
+    justify-content: center
+  }
+}
+
+.wrapper-sidebar{
+   > .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0 {
+     min-width: 250px!important;
+    width: fit-content!important;
+  }
+}
+
+// action buttons container
+.action-buttons-container {
+  // dashboard status filter button group
+  .status-filter-button-group {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    // status filter button
+    .status-filter-button {
+      border-radius: 0;
+      border: none;
+      border-left: 1px solid rgba(0, 0, 0, .2);
+      border-right: 1px solid rgba(0, 0, 0, .2);
+      background-color: $white;
+      color: $secondary;
+      text-transform: unset !important;
+      padding: 12px 24px;
+
+      &:hover {
+        border: none;
+        border-left: 1px solid rgba(0, 0, 0, .2);
+        border-right: 1px solid rgba(0, 0, 0, .2);
+        background-color: $primary99;
+        color: $primary;
+      }
+
+      // active button
+      &.active {
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+          background-color: $primary35;
+        }
+      }
+
+      &:first-child {
+        border-radius: 8px 0 0 8px;
+        border: none;
+      }
+
+      &:last-child {
+        border-radius: 0 8px 8px 0;
+        border: none;
+      }
+    }
+  }
+
+  // secondary action button
+  .secondary-action-button {
+    border-radius: 8px;
+    text-transform: unset !important;
+    background-color: $neutral60 !important;
+
+    &:hover {
+      background-color: $secondary !important;
+    }
+  }
+}
+
+// neutral and hover action on neutral color
+.neutral60 {
+  background-color: $neutral60 !important;
+  color: $white !important;
+
+  &:hover {
+    background-color: $secondary !important;
+  }
+}
+
+// capitalize mui button text
+.no-text-transform {
+  text-transform: unset !important;
+}
+
+.css-1we75en-MuiPaper-root-MuiPopover-paper, .tss-13nwdp4-MUIDataTableFilter-root {
+  background-color: #fff!important;
+}
+
+div[role="presentation"] {
+  & > div.MuiPaper-root.MuiPaper-rounded {
+    background-color: #fff!important;
+  }
+}
+
+td.MuiBox-root {
+  & > div {
+    width: 100% !important;
+  }
+  span.MuiLinearProgress-root, span.MuiLinearProgress-bar {
+    height: 10px;
+  }
+  .css-1bhivts {
+    overflow: hidden !important;
+  }
+  span.MuiLinearProgress-bar {
+    transition: all 0.6s ease!important;
+  }
+  span.MuiLinearProgress-root {
+    border-radius: 5px;
+  }
+}
+
+.__table-expandable {
+  z-index: 9999 !important;
+  border-radius: 8px !important;
+}
+.__table-container {
+  max-height: calc(100vh - 240px) !important;
+}
+
+.__details-tabs {
+  display: flex;
+  min-height: 224px;
+  width: 100%;
+  flex-direction: column;
+  @media only screen and (min-width: 921px) {
+    flex-direction: row-reverse;
+    div[role="tabpanel"] {
+      width: calc(100% - 140px) !important;
+    }
+  }
+  .MuiTabs-root {
+    position: relative;
+    background-color: transparent !important;
+    border-radius: unset !important;
+    @media only screen and (max-width: 920px) {
+      .MuiTabs-flexContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        & > * {
+          display: flex;
+          flex: unset!important;
+        }
+      }
+    }
+    @media only screen and (min-width: 921px) {
+      width: 140px !important;
+      max-width: 140px !important;
+      border-left: 1px solid rgba(0,0,0, .12);
+      .MuiTabs-scroller {
+        position: fixed !important;
+        width: 140px !important;
+      }
+      button.MuiButtonBase-root {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+  .MuiTabs-scroller {
+    flex: none !important;
+  }
+}
+
+.custom-slick-buttons {
+  .slick-prev, .slick-next {
+    width: 32px;
+    height: 32px;
+
+    &:before {
+      font-size: 32px !important;
+      color: $primary;
+    }
+  }
+}
+
+.MuiOtpInput-Box {
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+.MuiOtpInput-TextField {
+  & > div {
+    border-radius: 16px !important;
+    max-width: 48px !important;
+  }
+}

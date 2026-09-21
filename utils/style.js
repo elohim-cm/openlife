@@ -1,0 +1,1 @@
+export const h7 = {fontWeight: "600", color: "#343432", fontSize: 18};

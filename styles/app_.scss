@@ -1,0 +1,847 @@
+@import "variables";
+
+:root {
+  --color-background-soft: #f3f5f3;
+  --color-surface-hero: #dde1de;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f7f8f7;
+  --color-text: #242624;
+  --color-text-subtle: #626862;
+  --color-heading-secondary: #151715;
+  --color-brand: #0d6732;
+  --color-brand-light: #279852;
+  --color-brand-soft: #dbfbe8;
+  --color-contrast: #ffffff;
+  --color-border: #c9cfca;
+  --color-border-muted: #aeb7b0;
+  --color-border-brand: #0d6732;
+  --shadow-card: rgba(24, 42, 29, 0.14);
+}
+
+[data-theme="dark"] {
+  --color-background-soft: #0d120f;
+  --color-surface-hero: #121b15;
+  --color-surface: #172019;
+  --color-surface-muted: #202b23;
+  --color-text: #edf4ee;
+  --color-text-subtle: #b9c7bb;
+  --color-heading-secondary: #ffffff;
+  --color-brand: #69c157;
+  --color-brand-light: #8bdd79;
+  --color-brand-soft: #203b26;
+  --color-contrast: #081008;
+  --color-border: #3b4b3e;
+  --color-border-muted: #536358;
+  --color-border-brand: #69c157;
+  --shadow-card: rgba(0, 0, 0, 0.42);
+}
+
+// Login design tokens: the palette stays sourced from variables.scss.
+$login-space-1: 4px;
+$login-space-2: 8px;
+$login-space-3: 12px;
+$login-space-4: 16px;
+$login-space-5: 20px;
+$login-space-6: 24px;
+$login-space-7: 32px;
+$login-gap-compact: 6px;
+$login-gap-fields: 14px;
+$login-space-tight: 5px;
+$login-radius-control: 8px;
+$login-radius-card: 14px;
+$login-radius-pill: 999px;
+$login-border-width: 1px;
+$login-control-height: 44px;
+$login-header-control-size: 36px;
+$login-language-icon-size: 14px;
+$login-theme-moon-size: 17px;
+$login-theme-sun-size: 18px;
+$login-visually-hidden-size: 1px;
+$login-focus-ring-width: 2px;
+$login-card-width: 400px;
+$login-story-copy-width: 420px;
+$login-glow-size: 720px;
+$login-brand-width: 104px;
+$login-font-control: 0.82rem;
+$login-font-body: 0.9rem;
+$login-font-weight-semibold: 650;
+$login-font-weight-bold: 700;
+$login-font-weight-title: 750;
+$login-line-height-tight: 1.2;
+$login-motion-duration: 280ms;
+$login-control-transition-duration: 300ms;
+$login-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+$login-border: $login-border-width solid $inputBorder;
+$login-fast-transition: 180ms ease;
+$login-slide-transition: 360ms ease;
+$login-mode-transition: $login-motion-duration $login-motion-ease;
+$login-card-shadow: 0 14px 38px rgba($black, 0.09);
+$login-story-control-muted: rgba($white, 0.35);
+
+@mixin login-inline-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-shell {
+  --simulation-glow: #ffa996;
+  --login-red-action: #db2a18;
+  --login-red-action-hover: #c72413;
+  --login-red-action-contrast: #f4efef;
+  --login-red-action-shadow: rgba(219, 42, 24, 0.25);
+  display: grid;
+  grid-template-columns: minmax(360px, 0.8fr) minmax(420px, 1.2fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: $bodyBg;
+}
+
+.login-mobile-header {
+  display: none;
+}
+
+.login-story {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transform: scale(1.025);
+    transition: opacity $login-slide-transition, transform 6.5s ease;
+  }
+
+  &__image.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba($black, 0.08) 15%, rgba($black, 0.84) 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: clamp($login-space-6, 3vw, 40px);
+    color: $white;
+  }
+
+  &__brand,
+  &__brand img {
+    display: block;
+    width: 112px;
+    height: auto;
+  }
+
+  &__bottom {
+    display: grid;
+    gap: $login-space-6;
+  }
+
+  &__copy {
+    max-width: 430px;
+    animation: login-copy-in $login-motion-duration ease both;
+  }
+
+  &__eyebrow.MuiTypography-root {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: $login-space-3;
+    padding: $login-space-tight $login-space-3;
+    border: $login-border-width solid rgba($white, 0.5);
+    border-radius: $login-radius-pill;
+    background: rgba($white, 0.14);
+    color: $white;
+    font-size: 0.7rem;
+    font-weight: $login-font-weight-bold;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  &__title.MuiTypography-root {
+    max-width: $login-story-copy-width;
+    color: $white;
+    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    font-weight: $login-font-weight-title;
+    line-height: 1.08;
+  }
+
+  &__description.MuiTypography-root {
+    max-width: $login-story-copy-width;
+    margin-top: $login-space-3;
+    color: rgba($white, 0.9);
+    font-size: $login-font-body;
+    line-height: 1.55;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $login-space-4;
+  }
+
+  &__dots,
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $login-space-2;
+  }
+
+  &__dots button {
+    position: relative;
+    width: $login-control-height;
+    height: $login-control-height;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__dots button::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: $login-space-2;
+    border-radius: $login-radius-pill;
+    background: $login-story-control-muted;
+    content: "";
+    transform: translate(-50%, -50%);
+    transition: width $login-fast-transition, background-color $login-fast-transition;
+  }
+
+  &__dots button.is-active::before {
+    width: 40px;
+    background: $primary;
+  }
+
+  &__actions .MuiIconButton-root {
+    width: $login-control-height;
+    height: $login-control-height;
+    border: $login-border-width solid $login-story-control-muted;
+    background: rgba($white, 0.12);
+    color: $white;
+  }
+
+  &__actions .MuiIconButton-root:hover {
+    background: rgba($white, 0.22);
+  }
+
+  &__dots button:focus-visible,
+  &__actions .MuiIconButton-root:focus-visible {
+    outline: $login-focus-ring-width solid $white;
+    outline-offset: 3px;
+  }
+}
+
+.login-access {
+  @include login-inline-center;
+  position: relative;
+  isolation: isolate;
+}
+
+.login-access::before {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  right: 0;
+  width: $login-glow-size;
+  height: $login-glow-size;
+  background: var(--simulation-glow);
+  filter: blur(120px);
+  transform: translateX(50%);
+  pointer-events: none;
+}
+
+.login-card.MuiPaper-root {
+  position: relative;
+  z-index: 1;
+  width: min(100%, $login-card-width);
+  padding: clamp($login-space-6, 2.6vw, $login-space-7);
+  border: $login-border;
+  border-top: $login-space-1 solid $primary;
+  border-radius: $login-radius-card;
+  background: $white;
+  box-shadow: $login-card-shadow;
+}
+
+.login-card__route {
+  width: 100%;
+}
+
+.login-card__topbar {
+  margin-bottom: $login-space-3;
+
+  .sous-header {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .sous-header-inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .sous-logo-button {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .sous-logo-button img {
+    display: block;
+    width: $login-brand-width;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sous-header-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $login-space-1;
+  }
+
+  .sous-language-toggle,
+  .sous-theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: var(--color-brand);
+    cursor: pointer;
+  }
+
+  .sous-language-toggle {
+    position: relative;
+    min-width: 58px;
+    height: $login-header-control-size;
+    gap: $login-space-tight;
+    padding: 0 8px;
+    overflow: hidden;
+    border: $login-border-width solid var(--color-border);
+    border-radius: $login-radius-pill;
+    background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    transition:
+      color $login-control-transition-duration,
+      background-color $login-control-transition-duration,
+      border-color $login-control-transition-duration;
+  }
+
+  .sous-language-toggle:hover {
+    border-color: var(--color-border-brand);
+    background: color-mix(in srgb, var(--color-brand) 12%, var(--color-surface));
+  }
+
+  .sous-language-icon {
+    width: $login-language-icon-size;
+    height: $login-language-icon-size;
+    transition: transform .5s;
+  }
+
+  .sous-language-toggle:hover .sous-language-icon { transform: rotate(18deg); }
+
+  .sous-language-code {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 17px;
+    overflow: hidden;
+  }
+
+  .sous-language-code > span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: $login-font-weight-bold;
+    line-height: 1;
+  }
+
+  .sous-theme-toggle {
+    position: relative;
+    width: $login-header-control-size;
+    height: $login-header-control-size;
+    overflow: hidden;
+    border-radius: 50%;
+    background: transparent;
+    transition: background-color $login-control-transition-duration;
+  }
+
+  .sous-theme-toggle:hover { background: color-mix(in srgb, var(--color-brand) 12%, transparent); }
+
+  .sous-theme-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      opacity $login-control-transition-duration,
+      transform $login-control-transition-duration $login-motion-ease;
+  }
+
+  .sous-theme-moon svg { width: $login-theme-moon-size; height: $login-theme-moon-size; }
+  .sous-theme-sun svg { width: $login-theme-sun-size; height: $login-theme-sun-size; }
+  .sous-theme-moon.is-visible,
+  .sous-theme-sun.is-visible { opacity: 1; transform: rotate(0) scale(1); }
+  .sous-theme-moon.is-hidden { opacity: 0; transform: rotate(90deg) scale(0); }
+  .sous-theme-sun.is-hidden { opacity: 0; transform: rotate(-90deg) scale(0); }
+  .sous-back-button { display: none; }
+}
+
+.login-card {
+  &__brand {
+    @include login-inline-center;
+    width: fit-content;
+    margin: 0 auto $login-space-3;
+  }
+
+  &__brand img {
+    width: $login-brand-width;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__title.MuiTypography-root {
+    color: $secondary;
+    font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+    font-weight: $login-font-weight-title;
+    line-height: $login-line-height-tight;
+    text-align: center;
+  }
+
+  &__subtitle.MuiTypography-root {
+    margin: $login-gap-compact auto $login-space-5;
+    color: $neutral60;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  &__alert.MuiAlert-root {
+    margin-bottom: $login-space-4;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $login-gap-compact;
+    margin-top: $login-space-5;
+    padding-top: $login-space-4;
+    border-top: $login-border;
+  }
+
+  &__simulation.MuiLink-root,
+  &__faq.MuiLink-root {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    line-height: $login-line-height-tight;
+    white-space: nowrap;
+  }
+
+  &__simulation.MuiLink-root {
+    color: $primary;
+    font-weight: $login-font-weight-semibold;
+    text-align: right;
+  }
+
+  &__faq.MuiLink-root {
+    @include login-inline-center;
+    gap: $login-gap-compact;
+    width: fit-content;
+    margin: 0;
+    color: $neutral60;
+  }
+}
+
+.login-form {
+  .MuiOutlinedInput-root {
+    min-height: 46px;
+    border-radius: $login-radius-control;
+  }
+
+  .MuiInputBase-input {
+    padding-top: $login-space-3;
+    padding-bottom: $login-space-3;
+    font-size: $login-font-body;
+  }
+
+  &__forgot {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $login-space-2;
+  }
+
+  &__forgot .MuiLink-root {
+    color: $neutral60;
+    font-size: 0.8rem;
+  }
+
+  &__submit.MuiButton-root {
+    min-height: $login-control-height;
+    margin-top: $login-space-4;
+    border-radius: $login-radius-control;
+    background: $primary;
+    font-size: $login-font-control;
+    font-weight: $login-font-weight-bold;
+  }
+
+  &__submit.MuiButton-root:hover {
+    background: $primary35;
+  }
+}
+
+.login-mode {
+  display: grid !important;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $login-space-1;
+  padding: $login-space-1;
+  border-radius: 10px;
+  background: $neutral99;
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    inset: $login-space-1 auto $login-space-1 $login-space-1;
+    z-index: 0;
+    width: calc((100% - #{$login-space-3}) / 2);
+    border: $login-border-width solid $inputBorder;
+    border-radius: $login-radius-control;
+    background: $white;
+    box-shadow: 0 2px $login-space-2 rgba($black, 0.06);
+    content: "";
+    transform: translateX(0);
+    transition: transform $login-mode-transition;
+    will-change: transform;
+  }
+
+  &.is-phone::before {
+    transform: translateX(calc(100% + #{$login-space-1}));
+  }
+
+  &__label.MuiFormLabel-root {
+    margin-bottom: $login-gap-compact;
+    color: $secondary;
+    font-size: 0.76rem;
+    font-weight: $login-font-weight-semibold;
+  }
+
+  .MuiFormControlLabel-root {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    min-height: 38px;
+    margin: 0;
+    border: $login-border-width solid transparent;
+    border-radius: $login-radius-control;
+    color: $neutral60;
+    transition: color $login-mode-transition;
+  }
+
+  .MuiFormControlLabel-root.is-active {
+    color: $primary;
+  }
+
+  .MuiFormControlLabel-root:focus-within {
+    outline: $login-focus-ring-width solid color-mix(in srgb, $primary 55%, transparent);
+    outline-offset: -$login-focus-ring-width;
+  }
+
+  .MuiRadio-root {
+    position: absolute;
+    width: $login-visually-hidden-size;
+    height: $login-visually-hidden-size;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .MuiFormControlLabel-label {
+    @include login-inline-center;
+    gap: $login-space-2;
+    font-size: $login-font-control;
+    font-weight: $login-font-weight-semibold;
+  }
+}
+
+.login-fields {
+  gap: $login-gap-fields;
+  margin-top: $login-space-4;
+
+  &__identity {
+    width: 100%;
+    animation: login-field-switch $login-mode-transition both;
+  }
+}
+
+.login-forgot-form {
+  display: grid;
+  gap: $login-space-4;
+  margin-top: $login-space-7;
+
+  .login-form__submit.MuiButton-root {
+    margin-top: $login-space-2;
+  }
+
+  &__back.MuiLink-root {
+    width: fit-content;
+    margin: $login-space-1 auto 0;
+    color: $primary;
+    font-size: $login-font-control;
+    font-weight: $login-font-weight-semibold;
+  }
+}
+
+.login-reset-form {
+  display: grid;
+  gap: $login-gap-fields;
+  margin-top: $login-space-5;
+
+  .login-form__submit.MuiButton-root {
+    margin-top: $login-space-2;
+  }
+
+  &__resend.MuiButton-root {
+    min-height: $login-control-height;
+    margin-top: $login-space-1;
+    border-radius: $login-radius-control;
+    color: var(--login-red-action-contrast);
+    background: var(--login-red-action);
+    box-shadow: 0 10px 22px var(--login-red-action-shadow);
+    font-size: $login-font-control;
+    font-weight: $login-font-weight-bold;
+    transition: transform $login-fast-transition,
+      background-color $login-fast-transition,
+      box-shadow $login-fast-transition;
+  }
+
+  &__resend.MuiButton-root:hover {
+    transform: translateY(-2px);
+    background: var(--login-red-action-hover);
+    box-shadow: 0 14px 28px var(--login-red-action-shadow);
+  }
+
+  &__resend.MuiButton-root .MuiSvgIcon-root {
+    color: inherit;
+  }
+
+  &__back.MuiLink-root {
+    width: fit-content;
+    margin: $login-space-1 auto 0;
+    color: $primary;
+    font-size: $login-font-control;
+    font-weight: $login-font-weight-semibold;
+  }
+}
+
+.login-card.is-reset .login-card__alert.MuiAlert-root {
+  margin: $login-space-5 0 0;
+}
+
+.login-language.MuiFormControl-root {
+  min-width: 145px;
+}
+
+@keyframes login-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY($login-space-2);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes login-field-switch {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .login-shell {
+    display: block;
+  }
+
+  .login-story {
+    display: none;
+  }
+
+  .login-access {min-height: 100dvh;}
+}
+
+@media only screen and (max-width: 600px) {
+  .login-mobile-header {
+    display: block;
+  }
+
+  .login-access {
+    align-items: center;
+    padding: 96px $login-space-4 $login-space-4;
+    background: var(--color-background);
+  }
+
+  .login-card__topbar {
+    display: none;
+  }
+
+  .login-card.MuiPaper-root {
+    width: min(100%, $login-card-width);
+    min-height: auto;
+    padding: $login-space-5 $login-space-4 $login-space-6;
+    border: $login-border-width solid var(--color-border);
+    border-top: $login-space-1 solid $primary;
+    border-radius: $login-radius-card;
+    box-shadow: $login-card-shadow;
+  }
+
+  .login-card__footer {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $login-gap-compact;
+  }
+
+  .login-card__simulation.MuiLink-root,
+  .login-card__faq.MuiLink-root {
+    font-size: clamp(0.56rem, 2.4vw, 0.7rem);
+  }
+
+  .login-card__simulation.MuiLink-root {
+    text-align: left;
+  }
+
+  .login-card__faq.MuiLink-root {
+    gap: $login-space-1;
+  }
+
+  .login-card__faq .MuiSvgIcon-root {
+    flex: 0 0 auto;
+    font-size: 1.05rem;
+  }
+
+  .login-language.MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+[data-theme="dark"] .login-shell {
+  --simulation-glow: #3f1d17;
+  background: var(--color-surface-hero);
+}
+
+[data-theme="dark"] .login-card.MuiPaper-root {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  border-top-color: var(--color-brand);
+  background: var(--color-surface);
+  box-shadow: 0 14px 38px var(--shadow-card);
+}
+
+[data-theme="dark"] .login-card {
+  &__title.MuiTypography-root { color: var(--color-heading-secondary); }
+  &__subtitle.MuiTypography-root,
+  &__faq.MuiLink-root { color: var(--color-text-subtle); }
+  &__footer { border-color: var(--color-border); }
+  &__simulation.MuiLink-root { color: var(--color-brand-light); }
+}
+
+[data-theme="dark"] .login-mode {
+  background: var(--color-surface-muted);
+
+  &::before {
+    border-color: var(--color-border-muted);
+    background: var(--color-surface);
+  }
+
+  &__label.MuiFormLabel-root { color: var(--color-text); }
+  .MuiFormControlLabel-root { color: var(--color-text-subtle); }
+  .MuiFormControlLabel-root.is-active {
+    color: var(--color-brand-light);
+  }
+}
+
+[data-theme="dark"] .login-form {
+  .MuiInputBase-root,
+  .MuiOutlinedInput-root { color: var(--color-text); background: var(--color-surface-muted); }
+  .MuiInputLabel-root,
+  &__forgot .MuiLink-root { color: var(--color-text-subtle); }
+  .MuiOutlinedInput-notchedOutline { border-color: var(--color-border-muted); }
+  .MuiSvgIcon-root { color: var(--color-brand-light); }
+  &__submit.MuiButton-root { color: var(--color-contrast); background: var(--color-brand); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-story__image,
+  .login-story__copy,
+  .login-fields__identity {
+    animation: none;
+    transition: none;
+  }
+
+  .login-mode::before {
+    transition: none;
+  }
+
+  .login-reset-form__resend.MuiButton-root {
+    transition: none;
+  }
+
+  .login-reset-form__resend.MuiButton-root:hover {
+    transform: none;
+  }
+}
+
+[data-theme="dark"] .login-forgot-form__back.MuiLink-root {
+  color: var(--color-brand-light);
+}
+
+[data-theme="dark"] .login-shell {
+  --login-red-action: #ff4325;
+  --login-red-action-hover: #ff4d2e;
+  --login-red-action-contrast: #ffffff;
+  --login-red-action-shadow: rgba(255, 67, 37, 0.24);
+}
+
+[data-theme="dark"] .login-reset-form__back.MuiLink-root {
+  color: var(--color-brand-light);
+}
+
+.__text-transform-none {
+  text-transform: none !important;
+}

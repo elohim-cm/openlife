@@ -1,0 +1,72 @@
+const Constants = {
+  AUTHOR: {
+    name: "Karbura S.A",
+    link: "https://karbura.com",
+  },
+  APP_NAME: "Open Life",
+  minAgeSubscription: 16,
+  LANG: "i18nextLng",
+  CURRENCY: "XAF",
+  IMAGE_QUALITY: 0.6,
+  defaultStoredValue: JSON.stringify({
+    token: null,
+    authorizations: [],
+    access: [],
+  }),
+  STATUS_SUBSCRIPTION: {
+    confirmation: "confirmation",
+    draft: "draft",
+    creation: "creation",
+    processing: "processing",
+    payment: "payment",
+    rejected: "rejected",
+    validated: "validated",
+  },
+  STATUS_REDEMPTION: {
+    creation: "creation",
+    confirmation: "confirmation",
+    acceptance: "acceptance",
+    approval: "approval",
+    validation: "validation",
+    payment: "payment",
+    rejected: "rejected",
+    validated: "validated",
+    cancelled: "cancelled",
+  },
+  STATUS_COLLECTION: {
+    creation: "creation",
+    processing: "processing",
+    rejected: "rejected",
+    validated: "validated",
+  },
+  STATUS_CONTRACT: {
+    processing: "processing",
+    fence: "fence",
+    expired: "expired",
+    suspended: "suspended",
+  },
+  PAYMENT_METHOD: {
+    virement: "VIREMENT",
+    cheque: "CHEQUE",
+    mobile: "MOBILE",
+  },
+  ROLES: {
+    admin: "ADMIN",
+    sous: "SOUS",
+    app: "APP",
+    dcom: "DCOM",
+    scl: "SCL",
+    tech: "TECH",
+    pdg: "PDG",
+    tre: "TRE",
+    inp: "INP",
+    mng: "MNG",
+    anm: "ANM",
+  },
+  PAYMENT_SYSTEM: {
+    om: "OM",
+    momo: "MOMO",
+  },
+};
+
+export default Constants;

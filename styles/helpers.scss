@@ -1,0 +1,51 @@
+// border radius extra small
+.brXs {
+  border-radius: 4px;
+}
+
+// border radius small
+.brSm {
+  border-radius: 8px;
+}
+
+// border radius medium
+.brMd {
+  border-radius: 16px;
+}
+
+// border radius large
+.brLg {
+  border-radius: 24px;
+}
+
+// border radius extra large
+.brXl {
+  border-radius: 32px;
+}
+
+// border radius double extra large
+.brXXl {
+  border-radius: 64px;
+}
+
+// font weight normal
+.fw400 {
+  font-weight: 400;
+}
+
+// font weight semi-bold
+.fw600 {
+  font-weight: 600;
+}
+
+// font weight bold
+.fw700 {
+  font-weight: 700;
+}
+
+// listing action icons
+.clickableIcon {
+  &:hover {
+    cursor: pointer;
+  }
+}

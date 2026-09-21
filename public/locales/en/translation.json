@@ -1,0 +1,1988 @@
+{
+  "hello": "Hello, everyone!",
+  "dashboard_title": "Dashboard indicators here",
+  "french": "French",
+  "english": "English",
+  "language": "Language",
+  "publicHeader": {
+    "homeLabel": "Back to home",
+    "logoAlt": "Open Life logo",
+    "navigationLabel": "Main navigation",
+    "androidLabel": "Download Open Life for Android",
+    "androidTitle": "Android",
+    "appleLabel": "Download Open Life for iPhone",
+    "appleTitle": "iPhone",
+    "account": "My account",
+    "switchToEnglish": "Switch to English",
+    "switchToFrench": "Switch to French",
+    "darkTheme": "Enable dark mode",
+    "lightTheme": "Enable light mode",
+    "sectionsLabel": "On-page navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "simulate": "Simulate",
+    "sections": {
+      "benefits": "Benefits",
+      "experience": "Experience",
+      "mobileApp": "Mobile app",
+      "faq": "FAQ",
+      "assistance": "Assistance"
+    }
+  },
+  "accessibility": {
+    "backToTop": "Back to the top of the page"
+  },
+  "whatsapp": {
+    "buttonLabel": "Chat with us on WhatsApp",
+    "generalMessage": "Hello, I would like to receive more information about Open Life.",
+    "businessMessage": "Hello, I would like to receive more information about the Open Life business introducer programme."
+  },
+  "hero": {
+    "accreditation": "ACAM Vie - CIMA APPROVED",
+    "title": "Open Life",
+    "tagline": "Secure, transparent digital daily savings. Start saving from 200 FCFA/day and build capital for your future.",
+    "phoneImageAlt": "Open Life mobile application dashboard",
+    "features": [
+      {
+        "id": "minimum-deposit",
+        "label": "From 200 FCFA per day"
+      },
+      {
+        "id": "interest-rate",
+        "label": "2% annual interest rate"
+      },
+      {
+        "id": "withdrawal",
+        "label": "Available after 6 months"
+      }
+    ],
+    "floatingCards": [
+      {
+        "id": "regularity",
+        "title": "Consistency",
+        "value": "92%",
+        "description": "Stay consistent and grow the capital for your plans, day after day."
+      },
+      {
+        "id": "security",
+        "title": "Secure",
+        "value": "",
+        "description": "Your deposits are protected by ACAM Vie and handled confidentially."
+      },
+      {
+        "id": "accessibility",
+        "title": "Accessible",
+        "value": "",
+        "description": "Manage your savings in minutes from your phone."
+      }
+    ],
+    "trustItems": [
+      {
+        "id": "approval",
+        "title": "Approved by",
+        "description": "ACAM Vie - CIMA"
+      },
+      {
+        "id": "security",
+        "title": "Advanced security",
+        "description": "Protected data"
+      },
+      {
+        "id": "savers",
+        "title": "Over 50,000+",
+        "description": "savers"
+      },
+      {
+        "id": "rating",
+        "title": "Rated 4.8/5",
+        "description": "by our users"
+      }
+    ],
+    "actions": {
+      "simulation": "Simulate my savings",
+      "simulationLabel": "Run an Open Life savings simulation",
+      "learnMore": "Discover Open Life",
+      "learnMoreLabel": "Learn more about Open Life"
+    }
+  },
+  "assistance": {
+    "title": "Need assistance?",
+    "contacts": [
+      {
+        "id": "phone",
+        "title": "By phone",
+        "description": "Our team is available to answer urgent questions directly.",
+        "value": "(+237) 681 704 497",
+        "status": "Available 24/7",
+        "ariaLabel": "Call the Open Life team"
+      },
+      {
+        "id": "whatsapp",
+        "title": "Via WhatsApp",
+        "description": "Contact us instantly for fast and personalised assistance.",
+        "value": "(+237) 681 704 497",
+        "status": "Fast response",
+        "ariaLabel": "Contact the Open Life team on WhatsApp"
+      },
+      {
+        "id": "email",
+        "title": "By email",
+        "description": "Send us your documents or detailed enquiries by email.",
+        "value": "support.openlife@acamvie.com",
+        "status": "Priority processing",
+        "ariaLabel": "Email the Open Life team"
+      }
+    ],
+    "business": {
+      "title": "Become a business introducer!",
+      "description": "Register customers and earn a 2% commission on every payment. Contact our technical team for more information.",
+      "buttonLabel": "Contact the team",
+      "buttonAriaLabel": "Contact the Open Life team about the business introducer programme"
+    }
+  },
+  "benefits": {
+    "badge": "Benefits designed for you",
+    "introduction": "Your secure, transparent, and digital daily savings solution developed by ACAM Vie. Download the app now from the Play Store or App Store and start saving!",
+    "title": "Open Life means:",
+    "items": [
+      {
+        "id": "daily-contribution",
+        "label": "Starting from",
+        "value": "200",
+        "description": [
+          "FCFA per day"
+        ]
+      },
+      {
+        "id": "interest-rate",
+        "label": "",
+        "value": "2%",
+        "description": [
+          "annual interest"
+        ]
+      },
+      {
+        "id": "withdrawal-period",
+        "label": "Withdraw after",
+        "value": "6",
+        "description": [
+          "months"
+        ]
+      },
+      {
+        "id": "no-fees",
+        "label": "",
+        "value": "No fees",
+        "description": [
+          "on deposits",
+          "or withdrawals"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience Open Life",
+    "progressLabel": "Open Life experience steps",
+    "items": [
+      {
+        "id": "simulation",
+        "title": "Simulation",
+        "description": "Estimate the capital you can build with our simulator. Adjust the duration and amount of your contributions to plan your projects with confidence.",
+        "imageAlt": "Open Life savings simulator"
+      },
+      {
+        "id": "subscription",
+        "title": "Subscription",
+        "description": "Open a new savings contract in just a few clicks. Enter your information, choose the duration and amount of your daily premiums, and start saving immediately.",
+        "imageAlt": "Open Life application subscription interface"
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "description": "See all your contracts, accumulated savings and transaction history at a glance. The Open Life dashboard gives you a complete and intuitive overview of your activity.",
+        "imageAlt": "Open Life application dashboard"
+      },
+      {
+        "id": "collection",
+        "title": "Payment",
+        "description": "Pay your daily premiums easily through Orange Money or MTN Mobile Money without fees. Every payment is recorded and displayed in your personal account in real time.",
+        "imageAlt": "Open Life premium payment interface"
+      },
+      {
+        "id": "redemption",
+        "title": "Redemption",
+        "description": "Request a partial or full withdrawal of your savings after 6 months. The amount is transferred directly to your Mobile Money account within 48 hours, with no fees.",
+        "imageAlt": "Open Life savings redemption and withdrawal interface"
+      }
+    ]
+  },
+  "mobileApp": {
+    "titleStart": "Your savings in the",
+    "titleHighlight": "palm of your hand",
+    "features": [
+      {
+        "id": "security",
+        "title": "Secure and reliable",
+        "description": "Your transactions are protected according to the highest security standards."
+      },
+      {
+        "id": "speed",
+        "title": "Fast and convenient",
+        "description": "Access your insurance services in just a few clicks."
+      }
+    ],
+    "stores": [
+      {
+        "id": "google-play",
+        "eyebrow": "Available on",
+        "label": "Google Play",
+        "ariaLabel": "Download Open Life from Google Play"
+      },
+      {
+        "id": "app-store",
+        "eyebrow": "Download on",
+        "label": "App Store",
+        "ariaLabel": "Download Open Life from the App Store"
+      }
+    ],
+    "screens": [
+      {
+        "id": "screen-dashboard",
+        "alt": "Open Life mobile dashboard"
+      },
+      {
+        "id": "screen-login",
+        "alt": "Open Life application login screen"
+      },
+      {
+        "id": "screen-simulator",
+        "alt": "Open Life mobile savings simulator"
+      }
+    ]
+  },
+  "narrative": {
+    "accessibilityTitle": "Open Life, your everyday savings solution",
+    "todayLabel": "Today",
+    "tomorrowLabel": "Tomorrow",
+    "phrases": [
+      "Manage your daily savings in 5 minutes from your phone.",
+      "Build your future day after day with Open Life."
+    ],
+    "todayCard": {
+      "title": "Today’s savings completed",
+      "value": "200 FCFA",
+      "description": "Well done! You are moving closer to your goals."
+    },
+    "tomorrowCard": {
+      "title": "Goal achieved",
+      "value": "Your project comes to life",
+      "description": "Keep moving forward with Open Life."
+    }
+  },
+  "homeFaq": {
+    "title": "Understanding Open Life",
+    "subtitle": "Answers to your essential questions",
+    "items": [
+      {
+        "id": "how-it-works",
+        "question": "HOW DOES IT WORK?",
+        "answer": "Download the Open Life application or call an adviser on (+237) 681 704 497 to open your account. Once your account has been opened, you will receive a code for checking your account and paying your premiums. You will then be an Open Life customer and can make daily premium payments to prepare your projects with complete peace of mind.",
+        "details": []
+      },
+      {
+        "id": "contract-guarantee",
+        "question": "WHAT DOES THE CONTRACT GUARANTEE?",
+        "answer": "The Open Life contract allows you to build savings day after day for your medium- and long-term projects. All premiums paid earn 2% interest per year. In the event of death or total and permanent disability, capital equal to the total revalued payments will be paid to the designated beneficiary.",
+        "details": []
+      },
+      {
+        "id": "contract-duration",
+        "question": "WHEN DOES THE CONTRACT TAKE EFFECT AND HOW LONG DOES IT LAST?",
+        "answer": "The contract takes effect after payment of the first premium. Its effective date is specified in the individual contract conditions. Its duration is selected when the application is signed. The recommended minimum duration is 2 years and the maximum duration is 15 years. The contract is automatically renewed annually when it reaches its expiry date.",
+        "details": []
+      },
+      {
+        "id": "early-withdrawal",
+        "question": "WHEN AND HOW CAN I USE MY SAVINGS BEFORE THE CONTRACT ENDS?",
+        "answer": "From the end of the sixth month of the contract, you can request a partial or full withdrawal of your savings through the application or by using the USSD code. Only a full withdrawal terminates the contract. No withdrawal fees are charged.",
+        "details": []
+      },
+      {
+        "id": "payment-delay",
+        "question": "HOW LONG DOES IT TAKE TO RECEIVE MY SAVINGS?",
+        "answer": "Revalued savings are paid within 48 hours through a direct transfer to your Orange Money or MTN Mobile Money account, according to your preference. The same processing time applies to the payment of the surrender value.",
+        "details": []
+      },
+      {
+        "id": "contract-funding",
+        "question": "HOW IS THE CONTRACT FUNDED?",
+        "answer": "The contract is funded by daily payments starting from 200 FCFA. The monthly ceiling is set at 1,000,000 FCFA. You may make additional voluntary payments at any time, including several times during the same day.",
+        "details": []
+      },
+      {
+        "id": "contract-fees",
+        "question": "WHAT FEES APPLY TO THE CONTRACT?",
+        "answer": "All charges applied to the contract are zero:",
+        "details": [
+          "Payment fees: 0%",
+          "Partial withdrawal fees: 0%",
+          "Full withdrawal fees: 0%"
+        ]
+      }
+    ]
+  },
+  "publicFooter": {
+    "logoAlt": "Open Life logo",
+    "tagline": "Insurance made simple.",
+    "countriesTitle": "Offices",
+    "cameroon": "Cameroon",
+    "centralAfricanRepublic": "Central African Republic",
+    "centralAfricanRepublicShort": "CAR",
+    "legalTitle": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "faq": "Frequently Asked Questions",
+    "followUs": "Follow us",
+    "facebookLabel": "Open Life on Facebook",
+    "linkedinLabel": "Open Life on LinkedIn",
+    "twitterLabel": "Open Life on Twitter",
+    "detailedLegalFirst": "Open Life is owned by ACAM Vie S.A., a public limited company with share capital of FCFA 5,000,000,000, governed by the Insurance Code and approved by the Cameroonian Ministry of Finance and CIMA.",
+    "detailedLegalSecond": "All rights reserved, No. 320 210 1354 of 27/04/2021, OAPI, Yaoundé, Cameroon.",
+    "simpleLegal": "Open Life is owned by ACAM Vie S.A. All rights reserved.",
+    "copyright": "© {{year}} OpenLife – owned by ACAM Vie.",
+    "developedBy": "Developed by"
+  },
+  "signToYourAccount": "Sign in to your account",
+  "emailOrPhoneNumber": "Email or phone number",
+  "password": "Password",
+  "signIn": "Sign In",
+  "forgotYourPassword": "Forgot your password?",
+  "makeASimulation": "Make a simulation",
+  "youMustEnterYourUsername": "You must enter your username",
+  "enterACorrectPassword": "Enter a correct password",
+  "enterYourUsername": "Enter your username",
+  "receiveTheCode": "Receive the code",
+  "backToLogin": "Back to login",
+  "role": "Role",
+  "status": "Status",
+  "code": "Code",
+  "actions": "Actions",
+  "anErrorOccurredWhileCreatingAccess": "An error occurred while creating access",
+  "viewDetails": "View details",
+  "accessList": "Access list",
+  "attention": "Attention",
+  "areYouSureYouWantToDeleteThisItem": "Are you sure you want to delete this item?",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "accessDetail": "Access detail",
+  "createANewAccess": "Create a new access",
+  "welcome": "Welcome",
+  "chooseAccessToContinue": "Choose an access to continue",
+  "loginAs": "Login as",
+  "firstName": "First name",
+  "lastName": "Last name",
+  "email": "Email",
+  "phoneNumber": "Phone number",
+  "edit": "Edit",
+  "createANewAccount": "Create a new account",
+  "accountList": "Account list",
+  "accountCreatedSuccessfully": "Account created successfully",
+  "anErrorHasOccurred": "An error has occurred",
+  "emailAddress": "Email address",
+  "chooseAPhoto": "Choose a photo",
+  "create": "Create",
+  "firstNameMustBeACharacterString": "First name must be a character string",
+  "nameMustBeAString": "Last name must be a character string",
+  "emailAddressMustBeString": "Email address must be a character string",
+  "enterACorrectEmailAddress": "Enter a correct email address",
+  "back": "Back",
+  "label": "Label",
+  "description": "Description",
+  "createANewRole": "Create a new role",
+  "allRoles": "All roles",
+  "confirmation": "Confirmation",
+  "yes": "Yes",
+  "no": "No",
+  "roleDeletedSuccessfully": "Role deleted successfully",
+  "roleCreatedSuccessfully": "Role created successfully",
+  "pleaseCompleteTheFormCorrectly": "Some fields are incomplete or incorrect. Check the information highlighted in red.",
+  "wholeNumberRequired": "Enter a whole number.",
+  "minimumPrimeAmount": "The minimum premium amount is 200 FCFA.",
+  "maximumPrimeAmount": "The maximum premium amount is 100,000 FCFA.",
+  "positiveDurationRequired": "The contract duration must be greater than zero.",
+  "invalidEmailAddress": "Enter a valid email address.",
+  "menu": "Menu",
+  "permission": "Permission",
+  "createANewAuthorization": "Create a new authorization",
+  "authorizationsList": "Authorizations list",
+  "authorizationCreatedSuccessfully": "Authorization created successfully",
+  "menus": "Menus",
+  "roles": "Roles",
+  "permissions": "Permissions",
+  "authorizationSuccessfullyModified": "Authorization modified successfully",
+  "editAuthorization": "Edit authorization",
+  "update": "Update",
+  "icon": "Icon",
+  "group": "Group",
+  "order": "Order",
+  "createANewMenu": "Create a new menu",
+  "allMenus": "All menus",
+  "url": "URL",
+  "groupMustBeANumber": "Group must be a number",
+  "orderMustBeANumber": "Order must be a number",
+  "editMenu": "Edit menu",
+  "name": "Name",
+  "animator": "Animator",
+  "distributionArea": "Distribution area",
+  "anErrorHasOccurredPleaseRefreshThePage": "An error has occurred. Please refresh the page.",
+  "animationTeamSuccessfullyRemoved": "Animation team successfully removed",
+  "anErrorOccurredWhileDeletingTheAnimationTeam": "An error occurred while deleting the animation team",
+  "createANewAnimationTeam": "Create a new animation team",
+  "listOfAnimationTeams": "List of animation teams",
+  "warning": "Warning",
+  "codeAnimationTeam": "Animation team code",
+  "newAnimationTeamSuccessfullyCreated": "New animation team successfully created",
+  "youMustFillInTheCodeFieldForTheAnimationTeam": "You must fill in the code field for the animation team",
+  "youMustFillInTheNameField": "You must fill in the name field",
+  "youMustSelectTheDistributionArea": "You must select the distribution area",
+  "animationTeamSuccessfullyUpdated": "Animation team successfully updated",
+  "updateTheAnimationTeam": "Update the animation team",
+  "allBusinessObjectives": "All business objectives",
+  "subscriptionBusinessObjectives": "Subscription business objectives",
+  "collectionBusinessObjectives": "Collection business objectives",
+  "consultDetails": "Consult details",
+  "setNewBusinessObjective": "Set new business objectives",
+  "value": "Value",
+  "nature": "Nature",
+  "target": "Target",
+  "parent": "Parent (value)",
+  "period": "Period",
+  "Partial success: :success objectives created, :error failed.": "Partial success: :success objectives created, :error failed.",
+  "All objectives failed to create.": "All objectives failed to create.",
+  "errorDetected": "error detected",
+  "errorsDetected": "errors detected",
+  "checkCardsForDetails": "Check the cards for more details.",
+  "startDateCannotBeAfterOrEqualEndDate": "Start date cannot be after or equal to end date",
+  "createNewBusinessObjective": "Create new business objective",
+  "startDate": "Start date",
+  "endDate": "End date",
+  "objectiveType": "Objective type",
+  "objectiveTarget": "Objective target",
+  "objectiveNature": "Objective nature",
+  "parentObjective": "Parent objective (search by value)",
+  "set": "Set",
+  "enteredValueIsIncorrect": "Entered value is incorrect",
+  "selectTarget": "You must select a target",
+  "invalidNature": "Invalid nature",
+  "keyFigures": "Key figures",
+  "accounts": "Accounts",
+  "redemptions": "Redemptions",
+  "collections": "Collections",
+  "payments": "Payments",
+  "validated": "Validated",
+  "rejected": "Rejected",
+  "inactive": "Inactive",
+  "processing": "Processing",
+  "inCreation": "In creation",
+  "inPayment": "In payment",
+  "initiated": "Initiated",
+  "pending": "Pending",
+  "collectionSum": "Collection sum",
+  "unpaidSum": "Unpaid sum",
+  "invalidType": "Invalid type",
+  "networkName": "Network name",
+  "parentNetwork": "Parent network",
+  "inspector": "Inspector",
+  "createNewBusinessNetwork": "Create new business network",
+  "businessNetworksListing": "Business networks listing",
+  "all": "All",
+  "allAccounts": "All accounts",
+  "enabled": "Enabled",
+  "enabledAccounts": "Enabled accounts",
+  "disabled": "Disabled",
+  "disabledAccounts": "Disabled accounts",
+  "missingUserId": "You must fill in your user ID",
+  "missingConfirmationCode": "You must fill in the confirmation code received by email",
+  "passwordsNotMatch": "Passwords must match",
+  "incorrectPassword": "Enter a correct password",
+  "incorrectEmail": "Enter a correct email address",
+  "missingEmail": "You must provide your email address",
+  "missingLastName": "You must provide your last name",
+  "missingFirstName": "You must provide your first name",
+  "duplicateFirstName": "You must provide your first name",
+  "duplicateLastName": "You must provide your last name",
+  "missingPhoneNumber": "You must provide your phone number",
+  "invalidPhoneNumber": "Phone number must be a string of characters",
+  "phoneNumberTooLong": "Phone number cannot exceed 12 characters",
+  "missingPassword": "Password is required",
+  "passwordLength": "Password must be at least 6 characters long",
+  "missingPasswordConfirmation": "You must confirm the password",
+  "phoneNumberMinLength": "Phone number must be at least 9 characters long",
+  "collection": "Collection",
+  "datesMustBeWithinParent": "Start and end dates must be within parent dates",
+  "network": "Network",
+  "animationTeam": "Animation Team",
+  "provider": "Provider",
+  "allContributors": "All contributors",
+  "activeContributors": "Active contributors",
+  "inactiveContributors": "Inactive contributors",
+  "professionalEmail": "Professional Email",
+  "createNewContributor": "Create a new contributor",
+  "contributorCode": "Contributor Code",
+  "address": "Address",
+  "gender": "Gender",
+  "personalEmail": "Personal Email",
+  "contributorNature": "Contributor Nature",
+  "contributorSuccessfullyCreated": "Contributor created successfully",
+  "male": "Male",
+  "female": "Female",
+  "youMustFillInContributorCodeField": "You must fill in the Contributor Code field",
+  "youMustFillInFirstNameField": "You must fill in the First Name field",
+  "firstNameCannotBeEmpty": "First Name cannot be empty",
+  "touMustFillInLastNameField": "You must fill in the Last Name field",
+  "lastNameCannotBeEmpty": "Last Name cannot be empty",
+  "youMustFillInProfessionalEmailField": "You must fill in the Professional Email field",
+  "enterAValidEmail": "Please enter a valid email address",
+  "professionalEmailCannotBeEmpty": "Professional Email cannot be empty",
+  "chooseAGender": "You must choose a gender",
+  "selectContributorNature": "You must select the contributor's nature",
+  "selectAnimationTeam": "You must select the animation team",
+  "employee": "Employee",
+  "nonEmployee": "Non-employee",
+  "contributorSuccessfullyUpdated": "Provider updated successfully",
+  "updateContributor": "Update contributor",
+  "enterValidEmailOrLeaveEmpty": "Please enter a valid email address or leave this field empty",
+  "enterValidEmailAddress": "Please enter a valid email address",
+  "zoneCode": "Zone Code",
+  "zoneName": "Zone Name",
+  "manager": "Manager",
+  "createNewDistributionZone": "Create a new distribution zone",
+  "distributionZonesListing": "Distribution zones listing",
+  "distributionZoneSuccessfullyCreated": "Distribution zone created successfully",
+  "YouMustFillInZoneCodeField": "You must fill in the Zone Code field",
+  "YouMustFillInZoneNameField": "You must fill in the Zone Name field",
+  "YouMustSelectANetwork": "You must select a network",
+  "DistributionZoneSuccessfullyUpdated": "Distribution zone updated successfully",
+  "CannotAssignThisPersonAsManager": "You cannot assign this person as the manager of this distribution zone",
+  "UpdateTheZone": "Update the zone",
+  "networkSuccessfullyCreated": "Network created successfully",
+  "networkCode": "Network Code",
+  "networkSuccessfullyUpdated": "Network updated successfully",
+  "updateBusinessNetwork": "Update business network",
+  "YouMustFillInLabelField": "You must fill in the Label field",
+  "LabelCannotBeEmpty": "Label cannot be empty",
+  "YouMustFillInIconField": "You must fill in the Icon field",
+  "IconCannotBeEmpty": "Icon cannot be empty",
+  "YouMustFillInGroupField": "You must fill in the Group field",
+  "GroupMustBeANumber": "The value of the Group field must be a number",
+  "GroupCannotBeNegativeNumber": "Group cannot be a negative number",
+  "YouMustFillInOrderField": "You must fill in the Order field",
+  "OrderMustBeANumber": "The value of the Order field must be a number",
+  "OrderCannotBeNegativeNumber": "The value of the Order field cannot be a negative number",
+  "YouMustSelectAMenu": "You must select a menu",
+  "YouMustSelectAPermission": "You must select a permission",
+  "allAccess": "All access",
+  "activeAccess": "Active access",
+  "inactiveAccess": "Inactive access",
+  "AnErrorOccurred": "An error occurred",
+  "createNewAccess": "Create new access",
+  "selectAnAccount": "Select an account",
+  "YouMustFillInAccountField": "You must fill in the Account field",
+  "AccountCannotBeEmpty": "Account cannot be empty",
+  "YouMustSelectARole": "You must select a role",
+  "RoleCannotBeEmpty": "Role cannot be empty",
+  "YouMustFillInStatusField": "You must fill in a status",
+  "StatusCannotBeEmpty": "Status cannot be empty",
+  "YouMustFillInCodeField": "You must fill in a code",
+  "CodeCannotBeEmpty": "Code cannot be empty",
+  "AccessSuccessfullyModified": "Access modified successfully",
+  "PleaseFillTheFormCorrectly": "Please fill the form correctly",
+  "ModifyAccess": "Modify access",
+  "collectionClonedSuccessfully": "Collection cloned successfully",
+  "receiptOpenedSuccessfully": "Receipt opened successfully",
+  "undefined": "Undefined",
+  "anErrorOccurredPleaseRetryLater": "An error occurred. Please try again later",
+  "showDetails": "Show details",
+  "duplicateThisCollection": "Duplicate this collection",
+  "viewReceipt": "View receipt",
+  "filterByPaymentSystem": "Filter by payment system",
+  "performCollection": "Perform collection",
+  "crtNumber": "CRT Number",
+  "paymentSystem": "Payment provider",
+  "date": "Date",
+  "paymentPhone": "Payment Phone",
+  "paymentRef": "Payment Ref.",
+  "paymentDate": "Payment Date",
+  "allCollections": "All collections",
+  "validatedCollections": "Validated",
+  "rejectedCollections": "Rejected",
+  "collectionBeingProcessed": "Collection being processed...",
+  "client": "Client",
+  "contract": "Contract",
+  "paymentMethod": "Payment method",
+  "collect": "Collect",
+  "phoneNumberCannotBeEmpty": "Phone Number cannot be empty",
+  "youMustFillInAmountField": "You must fill in the Amount field",
+  "minimumCollectionAmountIs200FCFA": "The minimum amount for a collection is 200 FCFA",
+  "maximumCollectionAmountIs100000FCFA": "The maximum amount for a collection is 100000 FCFA",
+  "paymentMethodIsRequired": "Payment Method is required",
+  "paymentSystemIsRequired": "Payment System is required",
+  "contractIsRequired": "Contract is required",
+  "PaymentStillBeingProcessed": "Your payment is still being processed",
+  "checkStatus": "Check status",
+  "contractCode": "Contract Code",
+  "collectionInformation": "Collection information",
+  "paymentInformation": "Payment information",
+  "debitedPhone": "Debited Phone",
+  "reference": "Reference",
+  "inProgress...": "In progress...",
+  "amount": "Amount",
+  "oldValue": "Old value",
+  "newValue": "New value",
+  "amendment": "Amendment",
+  "downloadLimit": "Download limit",
+  "account": "Account",
+  "contractModificationHistoryListing": "Contract modification history listing",
+  "contractInformation": "Contract information",
+  "durationInYears": "Duration (years)",
+  "contributor": "Contributor",
+  "effectiveDate": "Effective date",
+  "openSubscription": "Open subscription",
+  "premium": "Premium",
+  "subscriber": "Subscriber",
+  "dueDate": "Due date",
+  "closeContractHistory": "Close contract history",
+  "consultContractHistory": "Consult contract history",
+  "ctrNumber": "CTR Number",
+  "totalCollections": "Total collections",
+  "surrenderValue": "Surrender value",
+  "unpaidAmount": "Unpaid amount",
+  "allContracts": "All contracts",
+  "processingContracts": "Processing contracts",
+  "suspended": "Suspended",
+  "suspendedContracts": "Suspended contracts",
+  "expired": "Expired",
+  "expiredContracts": "Expired contracts",
+  "contractSuccessfullyReactivated": "Contract successfully reactivated",
+  "contractReactivationFailed": "Contract reactivation failed. Please try again",
+  "contractSuccessfullyAssigned": "Contract successfully assigned",
+  "allContractsSuccessfullyAssigned": "All contracts successfully assigned",
+  "assignmentFailed": "Assignment failed. Please try again",
+  "contractSuccessfullyOpened": "Contract successfully opened",
+  "suspendThisContract": "Suspend this contract",
+  "reactivateThisContract": "Reactivate this contract",
+  "downloadThisContract": "Download this contract",
+  "moreOptions": "More options",
+  "affect": "Affect",
+  "selectedContract": "Selected contract",
+  "selectedContracts": "Selected contracts",
+  "deleteContracts": "Delete contracts",
+  "deleteSelectedContracts": "Delete selected contracts",
+  "bulkActions": "Bulk actions",
+  "chooseContributor": "Choose contributor",
+  "chooseContributorToAssign": "Choose contributor to assign",
+  "thisContract": "This contract",
+  "theseContracts": "These contracts",
+  "chooseContributorAgain": "Choose contributor",
+  "subscriberInformation": "Subscriber information",
+  "lifeBeneficiary": "Life beneficiaries",
+  "deathBeneficiary": "Death beneficiaries",
+  "contactInCaseOfDeath": "Contacts in case of death",
+  "contractSuccessfullyUpdated": "Contract successfully updated",
+  "updateContract": "Update contract",
+  "optional": "Optional",
+  "finish": "Finish",
+  "next": "Next",
+  "primaryPhoneNumber": "Primary phone number",
+  "secondaryPhoneNumber": "Secondary phone number",
+  "dateOfBirth": "Date of birth",
+  "placeOfBirth": "Place of birth",
+  "uniqueIdentifierNumber": "Unique Identifier Number (UIN)",
+  "nationalIDNumber": "National ID Number",
+  "nationalIDExpirationDate": "National ID Expiration Date",
+  "maritalStatus": "Marital status",
+  "YouMustSelectAGender": "You must select a gender",
+  "affiliations": "Affiliations",
+  "allPayments": "All payments",
+  "initiatedPayments": "Initiated payments",
+  "pendingPayments": "Pending payments",
+  "rejectedPayments": "Rejected payments",
+  "validatedPayments": "Validated payments",
+  "loading": "Loading...",
+  "return": "Return",
+  "businessGoalDetails": "Business goal details",
+  "valeur": "Value",
+  "createdAt": "Created at",
+  "updatedAt": "Updated at",
+  "closeHistory": "Close history",
+  "viewModificationHistory": "View modification history",
+  "targetDetails": "Target details",
+  "responsible": "Responsible",
+  "businessGoalValue": "Business goal value",
+  "creationDate": "Creation date",
+  "updateDate": "Update date",
+  "modificationHistory": "Modification history",
+  "modificationHistoryListing": "Modification history listing",
+  "redemptionCode": "Redemption code",
+  "paymentType": "Payment type",
+  "paymentAmount": "Payment Amount",
+  "allRedemptions": "All Redemptions",
+  "inAcceptance": "In Acceptance",
+  "redemptionsInAcceptance": "Redemptions in Acceptance",
+  "inApproval": "In Approval",
+  "redemptionsInApproval": "Redemptions in Approval",
+  "inValidation": "In Validation",
+  "redemptionsInValidation": "Redemptions in Validation",
+  "redemptionsInPayment": "Redemptions in Payment",
+  "redemptionsRejected": "Redemptions Rejected",
+  "performNewRedemption": "Perform New Redemption",
+  "apporterDetails": "Contributor Details",
+  "disableContributor": "Disable Contributor",
+  "seeMore": "See More...",
+  "confirmDisable": "Are you sure you want to disable?",
+  "requestSuccessfullyAccepted": "Request Successfully Accepted",
+  "requestSuccessfullyConfirmed": "Request Successfully Confirmed",
+  "requestSuccessfullyApproved": "Request Successfully Approved",
+  "requestSuccessfullyValidated": "Request Successfully Validated",
+  "requestSuccessfullyPaid": "Request Successfully Paid",
+  "requestSuccessfullyRejected": "Request Successfully Rejected",
+  "contractNumber": "Contract Number",
+  "requestDate": "Request Date",
+  "redemptionType": "Redemption Type",
+  "paymentMode": "Payment Mode",
+  "beneficiaryInformation": "Beneficiary Information",
+  "idCardFront": "ID Card Front",
+  "idCardBack": "ID Card Back",
+  "paymentDetails": "Payment Details",
+  "openContract": "Open Contract",
+  "closeRedemptionProcessingHistory": "Close Redemption Processing History",
+  "viewRedemptionProcessingHistory": "View Redemption Processing History",
+  "inProgress": "In Progress...",
+  "areYouSureAcceptRedemptionRequest": "Are you sure you want to accept this redemption request?",
+  "reason": "Reason",
+  "areYouSureApproveRedemptionRequest": "Are you sure you want to approve this redemption request?",
+  "areYouSureValidateRedemptionRequest": "Are you sure you want to validate this redemption request?",
+  "areYouSurePayRedemptionRequest": "Are you sure you want to pay this redemption request?",
+  "areYouSureRejectRedemptionRequest": "Are you sure you want to reject this redemption request?",
+  "enterConfirmationCodeReceived": "Enter the confirmation code you received",
+  "fillBankingInformation": "Please fill in the banking information",
+  "requestSuccessfullyCompleted": "Request Successfully Completed",
+  "fillFormCorrectly": "Please fill the form correctly",
+  "idCardFrontScan": "ID Card Front Scan*",
+  "idCardBackScan": "ID Card Back Scan*",
+  "selectBeneficiary": "Select Beneficiary*",
+  "beneficiaryPhone": "Beneficiary Phone*",
+  "redemptionValue": "Redemption Value",
+  "bankCode": "Bank Code",
+  "branchCode": "Branch Code",
+  "accountNumber": "Account Number",
+  "key": "Key",
+  "motivation": "Motivation",
+  "expiryDate": "Expiry Date",
+  "openRedemption": "Open Redemption",
+  "type": "Type",
+  "initiationDate": "Initiation Date",
+  "entryReference": "Entry Reference",
+  "exitReference": "Exit Reference",
+  "validationDate": "Validation Date",
+  "openPayment": "Open Payment",
+  "durationYears": "Duration (Years)",
+  "referrer": "Provider",
+  "draft": "Draft",
+  "inConfirmation": "In Confirmation",
+  "subscriptionSuccessfullyCloned": "Subscription Successfully Cloned",
+  "paymentStatus": "Your payment is still being processed",
+  "clone": "Clone",
+  "transfer": "Transfer",
+  "modify": "Modify",
+  "confirm": "Confirm",
+  "pay": "Pay",
+  "createASubscription": "Create a Subscription",
+  "anErrorOccurred": "An error occurred",
+  "instructions": "Please fill in the form correctly",
+  "youAreAboutToTransferThisSubscription": "You are about to transfer this subscription.",
+  "selectAProvider": "Select a Provider",
+  "areYouSureToDeleteSubscription": "Are you sure you want to delete this subscription?",
+  "lifeBeneficiaries": "Life Beneficiaries",
+  "deathBeneficiaries": "Death Beneficiaries",
+  "contactPersonInCaseOfDeath": "Contact Person in Case of Death",
+  "subscriptionInformation": "Subscription Information",
+  "IDCardFront": "ID Card Front",
+  "IDCardBack": "ID Card Back",
+  "accessory": "Accessory",
+  "duration": "Duration",
+  "primaryPhone": "Primary Phone",
+  "secondaryPhone": "Secondary Phone",
+  "birthdate": "Date of Birth",
+  "birthplace": "Place of Birth",
+  "NIUnumber": "NIU Number",
+  "IDCardNumber": "ID Card Number",
+  "IDCardExpirationDate": "ID Card Expiration Date",
+  "year": "year(s)",
+  "beneficiaryNumber": "Beneficiary No.",
+  "filiation": "Filiation",
+  "unauthorized": "Unauthorized!",
+  "requestStatusToDate": "Request my status to date",
+  "taxation": "Taxation",
+  "netAmount": "Net Amount",
+  "collectionReference": "Collection Reference",
+  "collectionAmount": "Collection Amount",
+  "collectionDate": "Collection Date",
+  "fence": "Closed",
+  "contracts": "Contracts",
+  "subscriptions": "Subscriptions",
+  "commissions": "Commissions",
+  "requirements": "At least one uppercase letter, one lowercase letter, one digit, one of the mentioned special characters. Total length must be at least 6 characters.",
+  "seeLess": "See Less",
+  "fullName": "Full Name",
+  "accesses": "Accesses",
+  "createdOn": "Created On",
+  "updatedOn": "Updated On",
+  "accountUpdate": "Account Update",
+  "accountUpdatedSuccessfully": "Account Updated Successfully",
+  "securityMessage": "For security reasons, please reset your password.",
+  "buttonText": "Click the button below.",
+  "reset": "Reset",
+  "passwordReset": "Password Reset!",
+  "connectionMode": "Connection Mode",
+  "creation": "Creation",
+  "creationCollections": "In Creation",
+  "confirmation.": "In Confirmation",
+  "processingCollections": "Processing",
+  "payment": "In Payment",
+  "active": "Active",
+  "acceptance": "In Acceptance",
+  "approval": "In Approval",
+  "cancellation": "Cancellation",
+  "listingRedemptionProcessingHistory": "Listing of Redemption Processing History",
+  "comment": "Comment",
+  "redemptionRequestInformation": "Redemption Request Information",
+  "commissionHistoryListing": "Listing of Commission History",
+  "commissionInformation": "Commission Information",
+  "closeCommissionHistory": "Close Commission History",
+  "openCommissionHistory": "Open Commission History",
+  "theNameMustBeAString": "The name must be a string",
+  "theFirstNameMustBeAString": "The first name must be a string",
+  "theEmailMustBeAString": "The email address must be a string",
+  "provideAValidEmail": "Provide a valid email address",
+  "allCommission": "All Commissions",
+  "inApprovalCommission": "Commissions in Approval",
+  "inValidationCommission": "Commissions in Validation",
+  "inPaymentCommission": "Commissions in Payment",
+  "rejectedCommission": "Rejected Commissions",
+  "validatedCommission": "Validated Commissions",
+  "allSuscription": "All Subscriptions",
+  "draftSuscription": "Draft Subscriptions",
+  "processingSuscription": "Processing Subscriptions",
+  "inConfirmationSuscription": "Subscriptions in Confirmation",
+  "inPaymentSuscription": "Subscriptions in Payment",
+  "rejectedSuscription": "Rejected Subscriptions",
+  "validatedSuscription": "Validated Subscriptions",
+  "inConfirmationRedemptions": "Redemptions in Confirmation",
+  "echusContracts": "Echus Contracts",
+  "dashboard": "Dashboard",
+  "administration": "Administration",
+  "access": "Access",
+  "authorizations": "Authorizations",
+  "businessNetwork": "Business Network",
+  "businessGoals": "Business Goals",
+  "sales": "Sales",
+  "relationships": "Relationships",
+  "subscribers": "Subscribers",
+  "myAccount": "My Account",
+  "mySituation": "My Situation",
+  "supportAndAssistance": "Support and Assistance",
+  "profile": "Profile",
+  "seeMoreOnAccount": "See more on the account.",
+  "roleUpdatedSuccessfully": "Role updated successfully",
+  "updateRole": "Update Role",
+  "groupMustBeNumber": "Group must be a number",
+  "orderMustBeNumber": "Order must be a number",
+  "updateMenu": "Update Menu",
+  "networkCodeRequired": "You must provide the Network Code field",
+  "networkNameRequired": "You must provide the Network Name field",
+  "_allCollections": "All Collections",
+  "_creationCollections": "Collections in creation",
+  "_processingCollections": "Collections in processing",
+  "_validatedCollections": "Validated Collections",
+  "_rejectedCollections": "Rejected Collections",
+  "unAuthenticated": "Unauthenticated.",
+  "settings": "Settings",
+  "changePassword": "Change Password",
+  "resetCode": "Reset Code",
+  "newPassword": "New Password",
+  "confirmNewPassword": "Confirm New Password",
+  "changeMyPassword": "Change My Password",
+  "returnToLogin": "Return to Login",
+  "sendResetCode": "Resend the reset code",
+  "customizeOpenLife": "Customize Open Life according to your preferences.",
+  "sidenavColors": "Sidenav Colors",
+  "chooseSidenavType": "Choose between different sidenav types.",
+  "dark": "Dark",
+  "transparent": "Transparent",
+  "white": "White",
+  "navbarFixed": "Navbar Fixed",
+  "lightDark": "Light / Dark",
+  "durationMustBeGreatherThanZero": "Duration must be greater than zero",
+  "primeAmount": "Prime amount",
+  "contractDuration": "Contract duration",
+  "simulate": "Simulate",
+  "cumulativeGrossPrime": "Cumulative gross prime",
+  "redemptionValueAtTerm": "Redemption value at term",
+  "performASimulation": "Perform a simulation",
+  "evolutionOfRedemptionValues": "Evolution of redemption values",
+  "annee": "Year",
+  "rate": "Rate",
+  "welcomeToOpenLife": "Welcome to Open Life",
+  "subscriptionLeaveConfirmation": "Do you really want to leave the subscription? Any unsaved information will be lost.",
+  "subscriptionSubmissionFailed": "We could not save your subscription right now. Check your information and try again.",
+  "subscriptionSubmissionFailedWithReason": "We could not save your subscription: {{reason}}",
+  "fieldRequired": "This field is required.",
+  "yearUnit": "year(s)",
+  "selectAPerson": "Select a person",
+  "mainPhone": "Main phone",
+  "residenceAddress": "Residence address",
+  "idCNIOrIdPassport": "ID card number / Passport number",
+  "cniScan": "ID card scan",
+  "mainFace": "Main face",
+  "secondaryFace": "Secondary face",
+  "continue": "Continue",
+  "thePersonHasAlreadyBeenAdded": "This person has already been added.",
+  "affiliation": "Affiliation",
+  "add": "Add",
+  "beneficiary": "Beneficiary",
+  "names": "Names",
+  "save": "Save",
+  "welcomeMessage": "Welcome to Open Life",
+  "loginPage": "Login Page",
+  "setLanguage": "Set Language",
+  "affectThisContract": "Affect this contract",
+  "subscribe": "Subscribe",
+  "closeSubscriptionHistory": "Close subscription histories",
+  "consultSubscriptionHistory": "Consult subscription histories",
+  "listingSubscriptionProcessingHistory": "Listing subscription processes",
+  "accountInformation": "My Account Information!",
+  "phone": "Phone",
+  "updateAccount": "Update Account",
+  "disconnectAccount": "Disconnect this Account",
+  "administrator": "Administrator",
+  "customerService": "Customer Service",
+  "treasurer": "Treasurer",
+  "technicalReferent": "Technical Referent",
+  "pdf": "PDG",
+  "commercialDirector": "Commercial Director",
+  "tresorier": "Treasurer",
+  "mustBeAtLeast4Letters": "must be at least 4 capital letters. Eg: AABB",
+  "isNotAvalidMomoPhoneNumber": "^%{num} is not a valid MoMo phone number",
+  "isNotAvalidOmPhoneNumber": "^%{num} is not a valid OM phone number",
+  "isNotAvalidPhoneNumber": "^%{num} is not a valid phone number",
+  "isNotAvalidDate": "^%{num} is not a valid date",
+  "pleaseSelectAnElement": "Please select an element",
+  "cantBeEmpty": "This field cannot be empty.",
+  "accountType": "Account type",
+  "areYouSureYouWantToExportAllData": "Are you sure you want to export all data? Otherwise only visible data will be exported",
+  "subscriptionDate": "Subscription date",
+  "subscriberPhone": "Subscriber phone",
+  "providerPhone": "Provider phone",
+  "detail": "Detail",
+  "mutted": "Mutte",
+  "numberOfSubsriptions": "number of subsriptions",
+  "turnOver": "turnover",
+  "customers": "Customers",
+  "prospects": "Prospects",
+  "listingOf": "Listing of ",
+  "numberSub": "Number Sub.",
+  "closeMy": "Close my",
+  "consultMy": "Consult my",
+  "personalDetails": "Personal Details",
+  "identificationDocuments": "Identification Documents",
+  "importantDates": "Important Dates",
+  "validateds": "Validated",
+  "validees": "Validated",
+  "rejetees": "Rejected",
+  "expires": "Expired",
+  "subscriptionDeletedSuccessfully": "Subscription deleted successfully",
+  "provisionValue": "Provision value",
+  "successNotification": "Success notification",
+  "ok": "Ok",
+  "closeCollectionHistory": "Close collection history",
+  "consultCollectionHistory": "Consult collection history",
+  "listingCollectionProcessingHistory": "Listing of collection processing history",
+  "authorizeAnExceptionalRedemption": "Authorize redemption",
+  "areYouSureYouWantToAuthorizeAnExceptionalRedemption": "Are you sure you want to authorize an exceptional surrender for this contract?",
+  "requestCompletedSuccessfully": "Request completed successfully",
+  "openDetails": "Open details",
+  "refresh": "refresh",
+  "noGoalDefined": "No goal",
+  "noGoalsDefinedInfo": "No goals are defined for the selected period. The displayed values correspond to actual performance.",
+  "updateBusinessObjective": "Update Business Goal",
+  "read": "read",
+  "unread": "unread",
+  "maskAsRead": "Mark as read",
+  "title": "Title",
+  "item": "Item",
+  "message": "Message",
+  "read_at": "Read_at",
+  "allNotifications": "All notifications",
+  "readNotifications": "Read notifications",
+  "unreadNotifications": "Unread notifications",
+  "inProcessing": "In proccessing",
+  "resendCode": "Resend code",
+  "closeRedemptionListing": "Close redemption listing",
+  "consultRedemptionListing": "Consult redemption listing",
+  "buybackType": "Redemption type",
+  "hour": "hour",
+  "minute": "minute",
+  "second": "second",
+  "thereIs": "There is",
+  "viewMore": "View more",
+  "markAsRead": "Mark as Read",
+  "subscriptionConfirmedSuccessfully": "Subscription confirmed successfully",
+  "apporteurAccessCreation": "Apporteur Access Assignment",
+  "apporteurAccessMessage": "The assignment of apporteur access will be done when the person's provider account is created. Click the button below to be redirected to the provider creation form.",
+  "createApporteurAccount": "Create provider account",
+  "codeHasBeenSentSuccessfully": "Code has been sent successfully",
+  "accept": "Accept",
+  "usageConditions": "Usage conditions",
+  "enterConfirmationCode": "Enter confirmation code",
+  "confirmSubscription": "Confirm subscription",
+  "subscriptionConfirmationStep": "Confirmation",
+  "subscriptionPaymentStep": "Payment",
+  "subscriptionConfirmationImageAlt": "Subscription confirmation illustration",
+  "confirmationCodeRequired": "Enter the confirmation code received by email.",
+  "confirmationCodeMinimumLength": "The confirmation code must contain at least 4 digits.",
+  "subscriptionConfirmationFailed": "The confirmation code is incorrect or has expired. Check it and try again.",
+  "acceptUsageConditions": "Accept the terms of use",
+  "usageConditionsTitle": "Terms of use",
+  "payerPhone": "Payer's phone number",
+  "totalAmountToPay": "Total amount to pay",
+  "paymentMethodRequired": "Select a payment method.",
+  "paymentSystemRequired": "Select a payment provider.",
+  "paymentAmountRequired": "Enter the amount to pay.",
+  "paymentAmountPositive": "The amount to pay must be greater than zero.",
+  "paymentRequestSubmitted": "The payment request was sent successfully.",
+  "subscriptionSavedSuccessfully": "Subscription saved successfully",
+  "operationInProgressPleaseVerifyOnYourMobilePhone.": "Operation in progress. Please verify on your mobile phone.",
+  "thankYouForChoosingOpenLife": "Thank you for choosing Open Life.",
+  "listOfSubscriptions": "List of subscriptions",
+  "logInToMyAccount": "Log in to my account",
+  "slowConnection": "The connection is slow. Please check your internet connection.",
+  "noConnection": "No Internet connection. Please check your connection.",
+  "inProccessing": "In proccessing",
+  "redemptionsInProccessing": "Redemption in proccessing",
+  "downloadAmendment": "Download amendment",
+  "areYouSureCancelRedemptionRequest": "Are you sure that you want to cancel this redemption request?",
+  "redemptionSuccessfullyCanceled": "Redemption successfully canceled.",
+  "areYouWantingToExportAllData": "Are you wanting to export all the data? Otherwise only visible data will be exported",
+  "pdg": "Pdg",
+  "owner": "Owner",
+  "downloadExcel": "Downlaod excel file",
+  "exportExcel": "Export excel file",
+  "amendmentDownloadSuccessfully": "Amendment download successfully",
+  "contractDownloadSuccessfully": "Contract download successfully",
+  "backToHome": "Back to home",
+  "typeSignature": "Signature type",
+  "isNotSubscriber": "Is not subscriber",
+  "redemptionSum": "Redemption Sum",
+  "redemptionVal": "Redemption Value",
+  "validation": "Validation",
+  "cancelled": "Cancelled",
+  "uid": "uid",
+  "refreshThePage": "Refresh the page",
+  "filter": "Filter",
+  "partial": "Partial",
+  "total": "Total",
+  "exportAll": "Export all",
+  "goToHome": "Go to home",
+  "errorLoadingData": "Error loading data",
+  "anErrorOccurredWhileDeletingAccess": "An error occurred while deleting access",
+  "contractRedemption": "Contract redemptions",
+  "contractCollections": "Contract collections",
+  "details": "Details",
+  "youAreNotAuthorized": "You are not authorized",
+  "Geometry": "Geometry progress",
+  "Listing": "Manage businesses",
+  "youShouldFillForm": "You should fill form",
+  "approbationCommission": "Approbation of commission(s)",
+  "validationCommission": "Validation of commission(s)",
+  "paymentCommission": "Payment of commission(s)",
+  "approve": "Approve",
+  "validate": "Validate",
+  "paye": "Pay",
+  "chooseCommissionTo": "Choose commission(s) to ",
+  "sessionInactivityTitle": "Session locked",
+  "sessionInactivityMessage": "Your session was locked after 10 minutes of inactivity. Please enter your password to continue.",
+  "areYouSureApproveCommission": "Are you sure you wanna to approve the Commission(s)",
+  "areYouSureValidateCommission": "Are you sure you wanna to validate the Commission(s)",
+  "areYouSurePayCommission": "Are you sure you wanna to pay the Commission(s)",
+  "closeCommissionList": "Close commission list",
+  "openCommissionList": "Open commission list",
+  "PaymentDialogBox": "Payment dialog box",
+  "paymentRefIsRequired": "Payment's reference is required",
+  "YourRequestHasBeenRegistered": "Your request has been registered. You will receive your OPEN LIFE situation by email in five (5) minutes.",
+  "banckCode": "Bank code",
+  "accountKey": "Account key",
+  "regularize": "Regularize",
+  "areYouSureWannaPayRedemption": "Are you sure that you wanna pay this redemption?",
+  "pleaseFillAllRequiredFields": "Please fill the all the required fields",
+  "redemptionSuccessfullyPaid": "redemption successfully paid",
+  "areYouSureWannaRegularizeResource": "Are you sure you want to regularize this resource?",
+  "unEmployed": "Un employed",
+  "employed": "Employed",
+  "providerNature": "Provider nature",
+  "contractualStatus": "Contractual status",
+  "workContract": "Work contract",
+  "internshipLetter": "Internship letter",
+  "freeProviderContract": "Free provider contract",
+  "selectContractualStatus": "Please select contractual status",
+  "initDate": "Init Date",
+  "export": "Export",
+  "acceptRedemptions": "Accept redemptions",
+  "approbationRedemptions": "Approve redemptions",
+  "validationRedemptions": "Validate redemptions",
+  "paymentRedemptions": "Pay redemptions",
+  "areYouSureAcceptRedemptions": "Are you sure you want to accept theses redemptions",
+  "areYouSureApproveRedemptions": "Are you sure you want to approve theses redemptions",
+  "areYouSureValidateRedemptions": "Are you sure you want to validate theses redemptions",
+  "areYouSurePayRedemptions": "Are you sure you want to pay theses redemptions",
+  "areYouSureRejectRedemptionSRequest": "Are you sure you want to reject theses redemptions",
+  "rejectRedemptions": "Reject redemptions",
+  "products": "Products",
+  "max_contract": "Max contract number",
+  "max_collection_monthly": "Max collection monthly value",
+  "updateProduct": "Update the product",
+  "maxContractIsrequired": "max contract is required",
+  "maxCollectionMonthlyIsRequired": "max collection monthly is required",
+  "min_premium": "Min premium",
+  "max_premium": "Max_premium",
+  "PisteAudit": "Audit track",
+  "allAccountLogs": "All logs for accounts",
+  "allAccessLogs": "All logs for accesses",
+  "allSubscriptionLogs": "All logs for subscriptions",
+  "allLogs": "All logs",
+  "updateThe": "Update the ",
+  "customers_": "Customer",
+  "prospects_": "Propect",
+  "failure": "Failure",
+  "success": "Success",
+  "deactivate": "Deactivate",
+  "reactivate": "Reactivate",
+  "suspend": "Suspend",
+  "reassign": "Reassign",
+  "sendCode": "SendCode",
+  "action": "Action",
+  "modifier": "Modifier",
+  "result": "Result",
+  "redemption": "Redemption",
+  "allRedemptionLogs": "All logs for redemptions",
+  "allContractLogs": "All logs for contracts",
+  "allCommissionLogs": "All logs for commissions",
+  "allProviderLogs": "All logs for providers",
+  "allPasswordLogs": "All logs for passwords",
+  "error": "Error",
+  "allCollectionLogs": "All logs for collections",
+  "primaryInformations": "Primary informations",
+  "deviceInformation": "Device informations",
+  "modifierInformations": "Modifier informations",
+  "userAgent": "User agent",
+  "ipAddress": "Ip address",
+  "acceptlanguage": "Accept language",
+  "referer": "Referer",
+  "host": "Host",
+  "page": "Page",
+  "token": "Token",
+  "oldValues": "Old values",
+  "newValues": "New values",
+  "values": "Values",
+  "consultItem": "Consult item",
+  "filterTo": "FILTER",
+  "regularizeCommission": "Regularization of commissions",
+  "RegularizationDialogBox": "Dialog box for regularization",
+  "areYouSureRegularizeCommission": "Are you sure you wanna to regularize the Commission(s)",
+  "object": "Object",
+  "filterByObject": "Filter by object",
+  "subscriber_phone": "Subscriber phone",
+  "beneficiary_phone": "Beneficiary phone",
+  "errorMessageCommission": "The commissions related to this/these provider's phone hasn't been paid, you should check it out.",
+  "resetFilter": "reset Filter",
+  "some_errors_commissions": "Some commissions haven't been paid.",
+  "HelloMr/Mrs": "Hello Mr/Mrs",
+  "messageRedemptionOne": ", Your confirmation code for your contract redemption request ",
+  "messageRedeptionTwo": " for an amount of ",
+  "messageRedemtionThree": " has been sent via Email/SMS. Processing will be completed within 48 hours (excluding weekends) once your request is confirmed. ACAM Vie thanks you.",
+  "monthlyCollections": "Monthly Collections",
+  "StatementReceipts": "Statement of receipts",
+  "monthlyRedemptions": "Monthly Redemptions",
+  "StatementRedemptions": "Status of redemption",
+  "MonthlyEvolution": "Monthly Evolution",
+  "TotalAccounts": "Total Accounts",
+  "ActiveAccounts": "Active Accounts",
+  "SuspendedAccounts": "Suspended Accounts",
+  "InactiveAccounts": "Inactive Accounts",
+  "dateRange": "Date range",
+  "pickDate": "Pick a date",
+  "granularity": "Granularity",
+  "daily": "Daily",
+  "monthly": "Monthly",
+  "yearly": "Yearly",
+  "providers": "Providers",
+  "dailyLimit": "Daily granularity limits your dataset to 31 days.",
+  "annualLimit": "Annual granularity limits your dataset to 12 years.",
+  "monthlyLimit": "Monthly granularity limits your dataset to 13 months.",
+  "compareRedemption": "Compare with Redemptions",
+  "Continue": "Continue",
+  "Didn't receive a code?": "Didn't receive a code?",
+  "Your requested action need Two-Factor Authentication": "Your requested action need Two-Factor Authentication",
+  "Two Factor OTP sent by mail/sms": "Two Factor OTP sent by mail/sms",
+  "Two-Factor Authentification": "Two-Factor Authentification",
+  "A Two-Factor OTP has been sent to the user by email/sms.": "A Two-Factor OTP has been sent to the user by email/sms.",
+  "A Two-Factor OTP has been sent to you by email/sms.": "A Two-Factor OTP has been sent to you by email/sms.",
+  "Resend code": "Resend code",
+  "archive": "Archive",
+  "archivingWillExportAndWipeRange": "The archive will contain the logs from {{start}} to {{end}}.",
+  "archivingCleanupRangeInfo": "After archiving, the database will be cleaned for this range (from {{start}} 00:00:00 to {{end}} 23:59:59).",
+  "archivingWillExportAndWipeAll": "The archive will contain the entire log.",
+  "archivingCleanupAllInfo": "After archiving, the log database will be entirely emptied.",
+  "sessionExpiringTitle": "Session about to expire",
+  "sessionExpiringMessage": "Your session will expire in {{seconds}}s. Please enter your password to stay connected.",
+  "sessionExpiredTitle": "Session expired",
+  "sessionExpiredMessage": "Your session has expired. Please enter your password to continue.",
+  "identifier": "Id",
+  "stayConnected": "Stay connected",
+  "loginAgain": "Login again",
+  "reconnectionMissingToken": "Token missing in response",
+  "reconnectionFailed": "Reconnection failed",
+  "sessionRefreshed": "Session refreshed",
+  "archiveStarting": "Starting archive process...",
+  "archiveJobIdMissing": "Archive job ID missing from response",
+  "archiveFailed": "Archive failed",
+  "archiveDownloadSuccess": "Archive downloaded successfully",
+  "archiveInProgress": "Archive in progress",
+  "archiveProcessing": "Processing archive...",
+  "importStarting": "Parsing file...",
+  "importParsed": "File parsed: {{count}} logs found",
+  "importProcessingChunk": "Uploading chunk {{current}}/{{total}}...",
+  "importCompleted": "Import completed",
+  "importSuccessStats": "Import successful: {{inserted}} inserted, {{updated}} updated",
+  "unsupportedFileType": "Unsupported file type",
+  "emptyFile": "File is empty or contains no valid logs",
+  "importInProgress": "Import in progress",
+  "logout": "Logout",
+  "others": "Others",
+  "responsibilities": "Responsibilities",
+  "networks": "Networks",
+  "distributionAreas": "Distribution Areas",
+  "animationTeams": "Animation Teams",
+  "bulkAssignmentOfProviders": "Bulk assignment of providers",
+  "providersSuccessfullyAssignedToAnimationTeam": "Providers successfully assigned to animation team",
+  "animationTeamRequired": "Animation team is required",
+  "providersRequired": "At least one provider is required",
+  "searchProviders": "Search providers...",
+  "assign": "Assign",
+  "assignProviders": "Assign providers",
+  "assignToTeam": "Assign to team",
+  "providersCount": "Nb. Providers",
+  "roles.pdg": "CEO",
+  "roles.dcom": "Commercial Director",
+  "roles.mng": "Manager",
+  "roles.anm": "Animator",
+  "roles.app": "Provider",
+  "roles.admin": "Administrator",
+  "parentEntity": "Parent Entity",
+  "assignProvidersToTeam": "Assign providers to team",
+  "optionalForRootNetwork": "Optional - Root Network",
+  "rootNetworkReplacesOthers": "The root network replaces all other selected targets",
+  "cannotAddTargetWithRootNetwork": "Cannot add a target: a root network is already selected. Remove it first.",
+  "rootNetworkBaseConfigurationInfo": "You are defining the parent objective (root network). This configuration will serve as a base for other objectives.",
+  "rootNetworkMother": "Root Network",
+  "rootNetworkMotherInfo": "When the target is the root network, the configuration will be unique as it defines the objectives for the entire organization.",
+  "selectTargetToAdd": "Select target to add",
+  "searchTarget": "Search target...",
+  "globalActions": "Global Actions",
+  "resetAll": "Reset All",
+  "bulkCreateBusinessObjectives": "Bulk Create Business Objectives",
+  "generalInformation": "General Information",
+  "configureEachTarget": "Configure each target",
+  "step": "Step",
+  "targets": "targets",
+  "pleaseAddAtLeastOneTarget": "Please add at least one target",
+  "valueRequired": "Value is required and must be greater than 0",
+  "parentRequired": "Parent objective is required",
+  "startDateRequired": "Start date is required",
+  "endDateRequired": "End date is required",
+  "typeRequired": "Objective type is required",
+  "natureRequired": "Objective nature is required",
+  "createObjectives": "Create {{count}} objectives",
+  "sumOfValuesExceedsParent": "The sum of values exceeds the parent objective",
+  "Objective": "Objective",
+  "configureEach": "Configure each ",
+  "enterDescription": "Enter description",
+  "displayed": "displayed",
+  "ToAdd": "to add",
+  "youSelect": "You select a",
+  "pleaseFillAtLeastOneNature": "Please fill at least one nature (subscription or collection)",
+  "targetAdded": "Target added",
+  "cannotAddWithRootNetwork": "Cannot add a target: a root network is already selected",
+  "pleaseFillAtLeastOneObjective": "Please fill at least one objective",
+  "targetAlreadyAdded": "This target has already been added",
+  "targetRemoved": "Target removed",
+  "removeTarget": "Remove this target",
+  "invalidTarget": "Invalid target",
+  "allFieldsReset": "All fields have been reset",
+  "remaining": "remaining",
+  "objectivesCreatedSuccessfully": "Objectives created successfully",
+  "distribution_area": "Distribution area",
+  "animation_team": "Animation team",
+  "roles.inp": "Inspector",
+  "affiliationLink": "Affiliation link",
+  "affiliationLinkHint": "Share this link so your clients can subscribe through your portfolio",
+  "affiliationLinkShareTitle": "OpenLife - Daily savings",
+  "affiliationLinkShareText": "Hello, I invite you to discover OpenLife, the daily savings solution tailored to your needs. Click this link to run a free simulation:",
+  "copy": "Copy",
+  "copied": "Copied",
+  "share": "Share",
+  "linkCopied": "Link copied to clipboard",
+  "otpCode": "OTP Codes",
+  "otpCodeTab": "OTP Code",
+  "confirmationCodeTab": "Confirmation Code",
+  "otpCodeList": "OTP Code List",
+  "confirmationCodeList": "Confirmation Code List",
+  "twoFactorCode": "2FA Code",
+  "twoFactorExpiresAt": "2FA Expires At",
+  "resetToken": "Reset Token",
+  "resetTokenExpiresAt": "Reset Token Expires At",
+  "confirmationCode": "Confirmation Code",
+  "operationType": "Operation Type",
+  "operationCode": "Operation Code",
+  "channel": "Channel",
+  "usedAt": "Used At",
+  "codeType": "Code Type",
+  "codeType_2fa": "2FA",
+  "codeType_reset": "Reset",
+  "subscription": "Subscription",
+  "filters": "Filters",
+  "search": "Search",
+  "clear": "Clear",
+  "phoneNumberFilter": "Phone Number",
+  "emailFilter": "Email",
+  "codeFilter": "Code",
+  "noData": "No data available",
+  "created_at": "Created At",
+  "affiliationLogoutTitle": "Logout required",
+  "affiliationLogoutMessage": "You are currently logged in with an account. To subscribe via an affiliation link, you must first log out. You can also go back to the previous page.",
+  "goBack": "Go back",
+  "loggedOutSuccessfully": "Logged out successfully",
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "subtitle": "General terms and conditions of the Open Life contract",
+    "emphasisTerms": [
+      "Open Life",
+      "In the event of foreign war, rebellion, riots, insurrection, civil war or terrorism:",
+      "If the insured is murdered by the beneficiary:",
+      "Advance:",
+      "Reduction:",
+      "Surrender:",
+      "Nullity:",
+      "Termination:",
+      "Forfeiture:"
+    ],
+    "items": [
+      {
+        "id": "contract-basis",
+        "title": "Article 1: Basis of the contract – Incontestability",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "This Open Life contract is governed by the Insurance Code of the Inter-African Conference on Insurance Markets and is subject to the social and tax legislation in force in Cameroon. This legal and tax framework may be amended and may affect the current contract."
+          },
+          {
+            "type": "paragraph",
+            "text": "The statements made by the policyholder in the insurance application form the basis of the contract, which becomes incontestable as soon as it takes effect."
+          },
+          {
+            "type": "paragraph",
+            "text": "The insurance exists and takes effect only after the policy has been signed by each contracting party and the first premium has been paid, provided that the insured is alive at the time of payment."
+          },
+          {
+            "type": "paragraph",
+            "text": "The insurance application and the special conditions form an integral part of this policy."
+          }
+        ]
+      },
+      {
+        "id": "contract-purpose",
+        "title": "Article 2: Purpose of the contract",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "This Open Life contract is an individual savings contract intended to enable the insured to build up capital to finance projects or supplement retirement income, or to enable a beneficiary to build up capital for entering working life and/or higher education."
+          },
+          {
+            "type": "paragraph",
+            "text": "The Open Life contract therefore provides for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "If the insured is alive at the end of the contract, payment of the capital acquired on the contract end date. At the beneficiary's choice, payment is made either as a lump sum or as an immediate fixed-term annuity.",
+              "If the insured dies or becomes totally and permanently disabled before the end of the contract, payment to the designated beneficiary or beneficiaries of the capital acquired at the time of death or disability. This death benefit is settled without any additional payment or special deduction."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acquired-capital",
+        "title": "Article 3: Acquired capital",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The capital acquired on a given date is equal to the total contributions net of payment charges, increased by profit-sharing allocations and, where applicable, reduced by partial surrenders and outstanding advances."
+          }
+        ]
+      },
+      {
+        "id": "effective-date",
+        "title": "Article 4: Effective date – Right of withdrawal",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The contract takes effect after the policy has been signed and the first premium has been paid, provided that the insured person or persons are alive at the time of payment."
+          },
+          {
+            "type": "paragraph",
+            "text": "The contract automatically ends on the end date stated in the special conditions and upon the death of the insured."
+          },
+          {
+            "type": "paragraph",
+            "text": "Any policyholder who has signed the policy may withdraw from it by registered letter with acknowledgement of receipt, or by any equivalent means providing evidence, within thirty days from the date on which the first premium was paid."
+          },
+          {
+            "type": "paragraph",
+            "text": "Withdrawal results in reimbursement of the premium paid, less the cost of the policy, within a maximum period of thirty days from receipt of the withdrawal request."
+          },
+          {
+            "type": "paragraph",
+            "text": "After that period, any unreimbursed amounts automatically bear interest at the statutory rate increased by half for two months, and thereafter at twice the statutory rate."
+          }
+        ]
+      },
+      {
+        "id": "covered-risks",
+        "title": "Article 5: Covered risks – Exclusions",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The company covers all risks of death occurring during the term of the contract, whatever the cause, subject to the following provisions:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "In the event of foreign war, rebellion, riots, insurrection, civil war or terrorism: in accordance with Article 94 of the Insurance Code, coverage under this policy will take effect only under the conditions determined by the State after hostilities have ended.",
+              "If the insured is murdered by the beneficiary: in accordance with Article 78 of the Insurance Code, the insurance contract ceases to have effect in respect of any beneficiary convicted of intentionally causing the death of the insured."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "In accordance with Article 67 of the Insurance Code, the insurer pays the policyholder or the heirs, where the insured was murdered by the beneficiary, an amount equal to the contract's mathematical reserve."
+          }
+        ]
+      },
+      {
+        "id": "contract-duration",
+        "title": "Article 6: Contract term",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The contract is concluded for a minimum term of eight (8) years. After 10 years, and at the policyholder's written request, the contract may be renewed annually. Renewal may continue until the policyholder's 85th birthday."
+          }
+        ]
+      },
+      {
+        "id": "insured-obligations",
+        "title": "Article 7: Obligations of the insured",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Under Article 12 of the Insurance Code, the insured is required, among other things, to:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Answer accurately the questions asked by the insurer, particularly in the risk declaration form used when the contract is concluded, regarding circumstances that enable the insurer to assess the risks it is undertaking.",
+              "During the contract, disclose any new circumstances that either increase existing risks or create new risks and thereby make the answers previously given to the insurer inaccurate or obsolete. The insured must report these circumstances to the insurer within fifteen days of becoming aware of them. Where a countersigned letter is used, the insured must receive a receipt as evidence.",
+              "Notify the insurer, as soon as the insured becomes aware of it, of any claim likely to trigger the insurer's coverage.",
+              "Notify the insurer of changes of residence, postal address, landline and/or mobile telephone numbers and, where applicable, email addresses, social-media details, bank details and all geolocation information concerning the insured. The same information, except bank details, must where applicable be provided for beneficiaries, contact persons referred to in Article 8 of the Insurance Code, and the employer. The insurer may not rely on these provisions if it has failed to fulfil its own obligations."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "premium-payment",
+        "title": "Article 8: Payment of premiums",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The premium and related charges, whose amounts are stated in the special conditions of the contract, are payable in advance to the company or to its appointed representative holding written authority."
+          },
+          {
+            "type": "paragraph",
+            "text": "Premiums may be paid only through mobile payments. Cash payments are not permitted."
+          },
+          {
+            "type": "paragraph",
+            "text": "The premium amount and due dates are set out in the special conditions."
+          },
+          {
+            "type": "paragraph",
+            "text": "The insured may make additional payments on each premium due date. The amounts are determined by the insured, subject to a minimum of two hundred (200) CFA francs. However, the total daily premiums collected for each insured, including scheduled and voluntary payments, may not exceed 1,000,000 (one million) CFA francs per month."
+          }
+        ]
+      },
+      {
+        "id": "premium-default",
+        "title": "Article 9: Non-payment of premiums",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The insurer has no right of action to compel payment of premiums relating to Open Life contracts."
+          }
+        ]
+      },
+      {
+        "id": "advance-reduction-surrender",
+        "title": "Article 10: Advance – Reduction – Surrender",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Under Article 74 of the Insurance Code, the insurer may not refuse a reduction or surrender once 15% of the premiums or contributions provided for in the contract have been paid, or once at least two (2) annual premiums have been paid."
+          },
+          {
+            "type": "paragraph",
+            "text": "Under this contract, however, the insured is entitled to surrender savings without restriction from the end of the sixth month of the contract."
+          },
+          {
+            "type": "paragraph",
+            "text": "Advance: within the limit of the surrender value, the insurer may grant advances to the policyholder. The annual interest rate applicable to the advance must be clearly disclosed to the insured at the time of the transaction."
+          },
+          {
+            "type": "paragraph",
+            "text": "In accordance with Article 74 of the Insurance Code, this rate may not be lower than the maximum technical rate plus the profit-sharing rate distributed for the latest closed financial year, plus two percentage points. When granting the advance, the insurer must provide the contracting party with an amortisation schedule and an explanatory notice describing how interest and repayments are calculated."
+          },
+          {
+            "type": "paragraph",
+            "text": "Technical rate (0%) + distributed profit-sharing rate + 2%; the resulting rate may not exceed 7%."
+          },
+          {
+            "type": "paragraph",
+            "text": "The maximum interest rate is the rate referred to in Article 338(2) of the Insurance Code."
+          },
+          {
+            "type": "paragraph",
+            "text": "Reduction: at the policyholder's request, or where premiums have not been paid under the conditions of Article 5, the insurer must reduce the insured capital in proportion to the mathematical reserve already accumulated."
+          },
+          {
+            "type": "paragraph",
+            "text": "Reduction applies once at least two annual premiums or 15% of the premiums or contributions provided for in the contract have been paid, in accordance with Article 74 of the Insurance Code."
+          },
+          {
+            "type": "paragraph",
+            "text": "The reduced capital remains payable on the same dates and under the same conditions as the initial capital."
+          },
+          {
+            "type": "paragraph",
+            "text": "No further premiums are payable under a reduced contract, which may be surrendered before its term. The methods for calculating the surrender and reduction values are determined by general regulations that the insurer must make available to the policyholder. The policyholder may request these values at any time."
+          },
+          {
+            "type": "paragraph",
+            "text": "Surrender: at the policyholder's request, the insurer must pay the total or partial surrender value of the contract within no more than two (2) months. Once the documents required by the contract have been sent to the insurer, it has 15 days from receipt to pay the matured capital. Beyond the regulatory requirements, ACAM Vie will endeavour to pay the capital following a surrender under the conditions set out in Article 14."
+          },
+          {
+            "type": "paragraph",
+            "text": "Only a total surrender permanently terminates the contract, after which it cannot be reinstated."
+          },
+          {
+            "type": "paragraph",
+            "text": "The surrender values net of charges for the first eight years are shown in the ‘Surrender Values’ table in the special conditions."
+          }
+        ]
+      },
+      {
+        "id": "nullity-termination-forfeiture",
+        "title": "Article 11: Nullity – Termination – Forfeiture",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Nullity: under Article 18 of the Insurance Code, independently of ordinary grounds for nullity and subject to Article 80, the insurance contract is void in the event of intentional concealment or misrepresentation by the insured where it changes the subject matter of the risk or diminishes the insurer's assessment of it, even if the omitted or misrepresented risk had no effect on the claim."
+          },
+          {
+            "type": "paragraph",
+            "text": "Termination: the insured has the right to terminate the contract after six months from the subscription date. Termination requires the insurer to return the contract's mathematical reserve without any penalty."
+          },
+          {
+            "type": "paragraph",
+            "text": "Forfeiture: this contract contains no forfeiture provision in the event of late premium payments by the insured."
+          }
+        ]
+      },
+      {
+        "id": "limitation",
+        "title": "Article 12: Limitation period",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "In accordance with Article 28 of the Insurance Code, any action arising from this contract is time-barred two years after the event giving rise to it."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, this period does not begin:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "In the event of concealment, omission, or a false or inaccurate statement concerning the risk, until the day on which the insurer becomes aware of it.",
+              "In the event of a claim, until the day on which the parties concerned become aware of it, if they prove that they were previously unaware of it."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Where the insured's action against the insurer arises from a third party's claim, the limitation period begins only on the day that the third party brings legal proceedings against the insured or is compensated by the insured."
+          },
+          {
+            "type": "paragraph",
+            "text": "The limitation period is extended to ten years for life insurance contracts and for personal accident insurance contracts where the beneficiaries are the legal successors of the deceased insured."
+          }
+        ]
+      },
+      {
+        "id": "change-of-address",
+        "title": "Article 13: Change of address",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "In accordance with Article 7 above, any policyholder who changes their residence or email address must notify the company by registered letter and designate a residence or email address to which all communications may validly be sent."
+          },
+          {
+            "type": "paragraph",
+            "text": "If no such address is designated, those communications, including registered letters sent to the previous residence or email address known to the insurer, will remain fully effective."
+          }
+        ]
+      },
+      {
+        "id": "insured-information",
+        "title": "Article 14: Information provided to the insured",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "For as long as your contract requires periodic premium payments, no later than 30 June each year we will provide a contract statement containing the following information as at 31 December of the latest closed financial year:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "The surrender value.",
+              "The reduction value.",
+              "The guaranteed capital.",
+              "The contract premium.",
+              "The minimum guaranteed interest rate for the coming year.",
+              "The interest rate corresponding to the amount allocated to the contract's mathematical reserves directly from profit sharing for the previous financial year or from reversals of provisions for surplus participation."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These amounts may not take account of profit-sharing allocations that have not been definitively awarded."
+          },
+          {
+            "type": "paragraph",
+            "text": "Each year, the insurer undertakes to submit a proposal for revaluing the capital and insurance premium. The policyholder is free to accept or reject this proposal."
+          },
+          {
+            "type": "paragraph",
+            "text": "For contracts under which premiums are no longer payable, this information will be provided on request."
+          }
+        ]
+      },
+      {
+        "id": "profit-sharing",
+        "title": "Article 15: Policyholder profit sharing",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Under Articles 81 and 82 of the Insurance Code, insured persons share in the technical and financial profits generated by the company. The minimum total amount to be distributed among all insured persons for a financial year is determined as follows:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "90% of the technical profits generated during the financial year across all contracts.",
+              "85% of the financial profits."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The total policyholder profit-sharing amount is distributed in proportion to the mathematical reserve accumulated under each contract."
+          }
+        ]
+      },
+      {
+        "id": "payment-of-benefits",
+        "title": "Article 16: Payment of insured benefits",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Insured benefits are paid at the company's registered office after submission of the supporting documents required for settlement, including:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "A copy of the national identity card.",
+              "The insurance contract."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "If the insured dies, the beneficiary or beneficiaries must provide the following documents:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "A certified copy of the death certificate.",
+              "A certified copy of the insured's national identity card.",
+              "A certified copy of the identity card of each beneficiary.",
+              "A certified copy of the minor child's birth certificate, where necessary.",
+              "A life certificate or school attendance certificate for the minor child, where necessary.",
+              "A certified copy of the marriage certificate, where necessary.",
+              "A completed claim declaration form supplied by ACAM Vie."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Total, permanent and definitive disability is treated as death and gives entitlement to payment of the death benefit. The insured must provide a medical certificate stating the degree of incapacity and the medical report issued by the insurance company."
+          },
+          {
+            "type": "paragraph",
+            "text": "Payment of the amounts due is indivisible with respect to the company, which settles against a joint receipt from the interested parties."
+          },
+          {
+            "type": "paragraph",
+            "text": "The insurer has 24 hours where the beneficiary is the insured, and 48 hours otherwise, from receipt of the documents required under the contract to pay the guaranteed capital."
+          },
+          {
+            "type": "paragraph",
+            "text": "After the applicable deadlines, unpaid amounts automatically bear interest at the discount rate increased by half for two months and, after that two-month period, at twice the discount rate."
+          }
+        ]
+      },
+      {
+        "id": "complaints-mediation",
+        "title": "Article 17: Complaints and mediation",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "In relations between the insurer, policyholder and insured, errors, omissions or misunderstandings may arise and lead to disputes. In most cases, a timely call to the appropriate ACAM Vie department can resolve the issue quickly. If the response does not satisfy the insured, they may write to:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Open Life – ACAM Vie – Customer Service – PO Box 2000 Douala"
+          },
+          {
+            "type": "paragraph",
+            "text": "or"
+          },
+          {
+            "type": "email",
+            "text": "support.openlife@acamvie.com"
+          }
+        ]
+      },
+      {
+        "id": "arbitration",
+        "title": "Article 18: Arbitration",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "As this contract is entered into in good faith, in the event of a dispute you and we agree to abide by the decision of two appointed arbitrators, one chosen by each party. If they disagree, the two arbitrators will appoint a third arbitrator to decide between them. If no agreement can be reached on that appointment, the president of the court of first instance at your place of residence will make the appointment at the request of the most diligent party."
+          },
+          {
+            "type": "paragraph",
+            "text": "The majority decision of this arbitration panel will be binding on the parties and final. Each party will bear the fees of its own arbitrator, and the parties will share equally the fees of the third arbitrator and the arbitration costs."
+          }
+        ]
+      }
+    ]
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find the answers to your questions",
+    "items": [
+      {
+        "id": "what-is-open-life",
+        "question": "What is Open Life?",
+        "answer": "Open Life is a secure, fee-free and fully digital daily savings solution based on life insurance, designed to meet the needs of people with low incomes."
+      },
+      {
+        "id": "who-can-subscribe",
+        "question": "Who can subscribe to Open Life?",
+        "answer": "Anyone who is at least 18 years old and wishes to build savings can subscribe to Open Life."
+      },
+      {
+        "id": "where-money-goes",
+        "question": "Who should I give my money to as part of this savings plan?",
+        "answer": "The savings are transferred directly from the customer to their account through USSD or the Open Life application."
+      },
+      {
+        "id": "savings-interest",
+        "question": "Does my savings earn interest?",
+        "answer": "Yes. Your savings earn interest at an annual rate of 2%."
+      },
+      {
+        "id": "contract-duration",
+        "question": "How long does my contract last?",
+        "answer": "The minimum contract duration is one year."
+      },
+      {
+        "id": "savings-access",
+        "question": "When can I access my savings?",
+        "answer": "You can access your savings after six full months."
+      },
+      {
+        "id": "withdrawals-per-year",
+        "question": "After six months, how many withdrawals can I make per year?",
+        "answer": "You can make six withdrawals per year, at a rate of one withdrawal every two months."
+      },
+      {
+        "id": "self-subscription",
+        "question": "Can I subscribe to Open Life by myself?",
+        "answer": "No. You must visit a distributor with your national identity card to open your online savings account."
+      },
+      {
+        "id": "minimum-daily-savings",
+        "question": "What is the minimum amount I can save per day?",
+        "answer": "The minimum premium is 200 FCFA per day."
+      },
+      {
+        "id": "maximum-daily-savings",
+        "question": "What is the maximum amount I can save per day?",
+        "answer": "There is no maximum daily amount."
+      },
+      {
+        "id": "voluntary-payments",
+        "question": "Can I make voluntary payments into my account?",
+        "answer": "Yes. You can make voluntary payments as many times as you wish."
+      }
+    ]
+  },
+  "loginExperience": {
+    "storyRegionLabel": "Introduction to Open Life",
+    "backHomeLabel": "Return to the Open Life home page",
+    "logoAlt": "Open Life logo",
+    "carouselPagination": "Choose a presentation",
+    "goToSlide": "Show presentation {{number}}",
+    "previousSlide": "Show the previous presentation",
+    "nextSlide": "Show the next presentation",
+    "pauseCarousel": "Pause the carousel",
+    "playCarousel": "Resume the carousel",
+    "slides": {
+      "family": {
+        "imageAlt": "A smiling family spending time together",
+        "eyebrow": "Family savings",
+        "title": "Build the projects that bring you together.",
+        "description": "Track your savings and move confidently towards the moments that matter to your family."
+      },
+      "future": {
+        "imageAlt": "A parent sharing a joyful moment with their child",
+        "eyebrow": "Future plans",
+        "title": "Help their plans grow from today.",
+        "description": "Regular savings help you prepare gradually for the next milestones in their life."
+      },
+      "protection": {
+        "imageAlt": "A father spending time with his two children",
+        "eyebrow": "Protection",
+        "title": "Protect the people who matter, simply.",
+        "description": "Keep a clear view of your savings and prepare for your loved ones’ future at your own pace."
+      }
+    },
+    "formSubtitle": "Simple, secure access to your personal space.",
+    "phone": "Phone",
+    "switchToEnglish": "Switch to English",
+    "switchToFrench": "Switch to French",
+    "enableDarkTheme": "Enable dark theme",
+    "enableLightTheme": "Enable light theme",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "consultFaq": "View frequently asked questions"
+  },
+  "accessSelection": {
+    "eyebrow": "Secure workspace",
+    "loading": "Loading accesses",
+    "welcome": "Hello {{name}}",
+    "title": "Choose your workspace",
+    "subtitle": "Find the tools and information related to your mission by selecting the appropriate access.",
+    "continueAs": "Continue as {{role}}",
+    "defaultRoleDescription": "Access the features associated with this role.",
+    "noAccess": "No access is currently associated with your account.",
+    "securityText": "Your permissions are verified each time you select a workspace.",
+    "roles": {
+      "ADMIN": "Manage the platform, accounts and permissions.",
+      "APP": "Track your prospects, subscriptions and sales activity.",
+      "SOUS": "View and manage your policies and personal information.",
+      "DCOM": "Oversee business performance and sales activity.",
+      "SCL": "Support customers and handle their requests.",
+      "TECH": "Manage operations and the platform’s technical monitoring.",
+      "TRE": "Monitor collections and financial operations.",
+      "PDG": "Access the global view and executive indicators.",
+      "INP": "Review assigned files and operations.",
+      "MNG": "Coordinate your team and monitor its activity.",
+      "ANM": "Develop the network and support field teams."
+    }
+  },
+  "twoFactorPolicy": "2FA Policy",
+  "Confirm your password": "Confirm your password",
+  "For your security, please confirm your current password before changing your two-factor authentication settings.": "For your security, please confirm your current password before changing your two-factor authentication settings.",
+  "Current password": "Current password",
+  "Please enter your current password.": "Please enter your current password.",
+  "Incorrect password.": "Incorrect password.",
+  "Configure my 2FA": "Configure my 2FA",
+  "Two-factor authentication required": "Two-factor authentication required",
+  "Two-factor reconfiguration required": "Two-factor reconfiguration required",
+  "Rule type": "Rule type",
+  "Role": "Role",
+  "Permission": "Permission",
+  "Specific account": "Specific account",
+  "Account UID": "Account UID",
+  "Copy the account identifier from the Accounts page.": "Copy the account identifier from the Accounts page.",
+  "Two-factor authentication is exempted": "Two-factor authentication is exempted",
+  "Use a specific grace period for this rule": "Use a specific grace period for this rule",
+  "Grace period (days)": "Grace period (days)",
+  "Description (optional)": "Description (optional)",
+  "Save": "Save",
+  "Global two-factor policy": "Global two-factor policy",
+  "Applies to every account that isn't covered by a more specific role, permission, or account rule below.": "Applies to every account that isn't covered by a more specific role, permission, or account rule below.",
+  "Require two-factor authentication by default": "Require two-factor authentication by default",
+  "Default grace period (days)": "Default grace period (days)",
+  "Rules by role, permission, or account": "Rules by role, permission, or account",
+  "Priority: a rule on a specific account always wins; otherwise, the strictest matching role/permission rule applies; otherwise, the global policy above applies.": "Priority: a rule on a specific account always wins; otherwise, the strictest matching role/permission rule applies; otherwise, the global policy above applies.",
+  "Add rule": "Add rule",
+  "Type": "Type",
+  "Target": "Target",
+  "Requirement": "Requirement",
+  "Grace period": "Grace period",
+  "Description": "Description",
+  "Actions": "Actions",
+  "No specific rule yet: the global policy applies to everyone.": "No specific rule yet: the global policy applies to everyone.",
+  "Required": "Required",
+  "Exempted": "Exempted",
+  "Default": "Default",
+  "Force a reconfiguration": "Force a reconfiguration",
+  "Immediately clears an account's two-factor method and trusted devices, and blocks it until it is reconfigured (e.g. suspected compromise).": "Immediately clears an account's two-factor method and trusted devices, and blocks it until it is reconfigured (e.g. suspected compromise).",
+  "Force reconfiguration": "Force reconfiguration",
+  "Unable to load the two-factor policy.": "Unable to load the two-factor policy.",
+  "Unable to update the two-factor policy.": "Unable to update the two-factor policy.",
+  "Unable to save this rule.": "Unable to save this rule.",
+  "Unable to delete this rule.": "Unable to delete this rule.",
+  "Unable to reset two-factor authentication for this account.": "Unable to reset two-factor authentication for this account.",
+  "Receive the code by": "Receive the code by",
+  "Allowed two-factor methods": "Allowed two-factor methods",
+  "Methods left unchecked are hidden everywhere: profile settings, authenticator app setup, and the delivery channel picker in the code entry window.": "Methods left unchecked are hidden everywhere: profile settings, authenticator app setup, and the delivery channel picker in the code entry window.",
+  "Authenticator app": "Authenticator app",
+  "Disable two-factor authentication": "Disable two-factor authentication",
+  "Two-factor authentication has been made mandatory for your account by an administrator — you can't disable it yourself.": "Two-factor authentication has been made mandatory for your account by an administrator — you can't disable it yourself.",
+  "You can't disable two-factor authentication: it has been made mandatory for your account.": "You can't disable two-factor authentication: it has been made mandatory for your account.",
+  "Two-factor authentication disabled successfully.": "Two-factor authentication disabled successfully."
+}

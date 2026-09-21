@@ -1,0 +1,12 @@
+.copyrightBox {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: fit-content;
+	margin-inline: auto;
+	margin-bottom: 24px;
+	border-radius: 0.5rem;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+}

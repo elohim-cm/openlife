@@ -1,0 +1,25 @@
+name: Deploy in continue
+on:
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST_PROD }}
+        username: ${{ secrets.USER_NAME_PROD }}
+        password: ${{ secrets.PASSWORD_PROD }}
+        port: ${{ secrets.PORT_PROD }}
+        script: |
+          cd /var/www/openlife-web
+          ls
+          git pull https://zeroloader30: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@github.com/karbura-team/acamvie-openlife-platform-web.git
+          npm install
+          npm run build
+          pm2 restart openlife
+          

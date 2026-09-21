@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    image: openlife_web
+    container_name: openlife_web_container
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3050:3050"

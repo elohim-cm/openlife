@@ -1,0 +1,37 @@
+import { z } from 'zod';
+
+const getUuid= val => {
+    return val?.uid || '';
+};
+
+const getName= val => {
+    return val?.name || '';
+}
+
+const bussinessGoalUpdateValidation = t => z.object({
+    type: z.preprocess(val => (val?.name || ''), z.string().refine((value) => {
+        const allowedTypes = ['network', 'distribution_area', 'animation_team', 'provider'];
+
+        return value === null || allowedTypes.includes(value);
+    }, { message: t("invalidType") })).optional(),
+
+    target: z.preprocess(val => getUuid(val), z.string({required_error: t('selectTarget')})).optional(),
+
+    value: z.string().optional().refine((value) => {
+        return (parseInt(value) !== null && value > 0);
+    }, { message: t('enteredValueIsIncorrect') }),
+
+    nature: z.preprocess(val => (val?.name || ''), z.string().refine((value) => {
+        const allowedNatures = ['collection', 'subscription'];
+        return value === null || allowedNatures.includes(value);
+    }, { message: t("invalidNature") })),
+
+    description: z.string().nullable(),
+
+    begin_date: z.string().nullable(),
+    end_date: z.string().nullable(),
+
+    parent: z.preprocess(val => getUuid(val), z.string().nullable().optional()),
+});
+
+export default bussinessGoalUpdateValidation;

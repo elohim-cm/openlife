@@ -1,0 +1,80 @@
+@import "variables";
+
+.__stepper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.__stepper-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  & > div {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgba(116, 116, 116, 0.30);
+    cursor: pointer;
+
+    .__icon {
+      display: inline-flex;
+      width: 40px;
+      padding: 8px 0;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      background: rgba(116, 116, 116, 0.30);
+      border-radius: 20px;
+    }
+    .__text {
+      margin-left: 5px;
+      word-wrap: break-word;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    .__stepper-label-shell {
+      min-width: 0;
+      white-space: nowrap;
+    }
+    &.active {
+      color: $primary;
+      .__icon {
+        background: $primary;
+        color: #fff;
+      }
+    }
+
+  }
+}
+
+.__stepper-view {
+  position: relative;
+  display: grid;
+  margin-top: 16px;
+  & > div {
+    display: flex;
+    grid-area: 1 / 1;
+    width: 100%;
+    min-width: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    &.active {
+      z-index: 1;
+      pointer-events: auto;
+      will-change: transform, opacity;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .__stepper-view > div,
+  .__stepper-view > div.active {
+    transform: none;
+  }
+}

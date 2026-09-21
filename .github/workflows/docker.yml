@@ -1,0 +1,19 @@
+name: Docker Next Deployment
+
+on:
+  push:
+    branches: [ production ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to production
+      uses: appleboy/ssh-action@master
+      with:
+        username: ${{ secrets.USER_NAME_PROD }}
+        password: ${{ secrets.PASSWORD_PROD }}
+        host: ${{ secrets.HOST_PROD }}
+        port: ${{ secrets.PORT_PROD }}
+        script: 'cd /var/www/openlife-web-containerized && ./server_deploy.sh'

@@ -1,0 +1,11 @@
+.__sidenav-children {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 10px;
+  }
+}

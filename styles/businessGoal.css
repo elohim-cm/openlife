@@ -1,0 +1,16 @@
+.MuiOutlinedInput-notchedOutline.css-at8z4h{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0;
+}
+
+.css-56fmdg-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border: 0;
+    border-bottom: 1px solid green;
+    border-radius: 0;
+
+}
+.MuiFormControl-root.MuiTextField-root.css-epo07f{
+    width: 100%!important;
+}
+/*//.date-piker-input input::attributes[inputmode="text"]{}*/
